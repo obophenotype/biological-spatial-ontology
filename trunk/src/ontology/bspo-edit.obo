@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 10:09:2009 09:32
-saved-by: Melissa  Haendel
-auto-generated-by: OBO-Edit 2.1-beta1
+date: 31:05:2013 11:32
+saved-by: wasila.dahdul
+auto-generated-by: OBO-Edit 2.1.1-beta7
 synonymtypedef: vertebrate "synonym typically used in the context of vertebrate anatomy" NARROW
 default-namespace: spatial
 remark: based on FBql
@@ -13,21 +13,21 @@ name: left side
 synonym: "left" EXACT []
 is_a: BSPO:0000054 ! anatomical side
 relationship: BSPO:0000110 BSPO:0000007 ! right side
-relationship: starts_axis BSPO:0000017 ! left/right axis
+relationship: starts_axis BSPO:0000017 ! left-right axis
 
 [Term]
 id: BSPO:0000001
 name: upper side
 synonym: "upper" EXACT []
 is_a: BSPO:0000054 ! anatomical side
-relationship: starts_axis BSPO:0000011 ! upper/lower axis
+relationship: starts_axis BSPO:0000011 ! upper-lower axis
 
 [Term]
 id: BSPO:0000002
 name: lower side
 synonym: "lower" EXACT []
 is_a: BSPO:0000054 ! anatomical side
-relationship: finishes_axis BSPO:0000011 ! upper/lower axis
+relationship: finishes_axis BSPO:0000011 ! upper-lower axis
 
 [Term]
 id: BSPO:00000021
@@ -42,14 +42,14 @@ name: deep side
 synonym: "deep" EXACT []
 is_a: BSPO:0000054 ! anatomical side
 relationship: BSPO:0000107 BSPO:0000004 ! superficial side
-relationship: starts_axis BSPO:0000012 ! deep/superficial axis
+relationship: starts_axis BSPO:0000012 ! deep-superficial axis
 
 [Term]
 id: BSPO:0000004
 name: superficial side
 synonym: "superficial" EXACT []
 is_a: BSPO:0000054 ! anatomical side
-relationship: finishes_axis BSPO:0000012 ! deep/superficial axis
+relationship: finishes_axis BSPO:0000012 ! deep-superficial axis
 
 [Term]
 id: BSPO:0000005
@@ -71,23 +71,25 @@ id: BSPO:0000007
 name: right side
 synonym: "right" EXACT []
 is_a: BSPO:0000054 ! anatomical side
-relationship: finishes_axis BSPO:0000017 ! left/right axis
+relationship: finishes_axis BSPO:0000017 ! left-right axis
 
 [Term]
 id: BSPO:0000008
-name: parasagittal section
-def: "Sagittal section that divides bilateral body into unequal left and right sections." [BSPO:mah]
-is_a: BSPO:0000417 ! sagittal section
+name: parasagittal plane
+def: "Sagittal plane that divides a bilateral body into unequal left and right parts." [BSPO:mah]
+synonym: "parasagittal section" EXACT []
+is_a: BSPO:0000417 ! sagittal plane
 
 [Term]
 id: BSPO:0000009
-name: midsaggital section
-def: "Sagittal section that divides bilateral body into equal left and right sections." [BSPO:mah]
+name: midline plane
+def: "Sagittal plane that divides bilateral body into equal left and right parts." [BSPO:mah]
 synonym: "median plane" RELATED []
 synonym: "median sagittal plane" EXACT []
 synonym: "midsagittal plane" EXACT []
+synonym: "midsagittal section" EXACT []
 xref: FMA:74563
-is_a: BSPO:0000417 ! sagittal section
+is_a: BSPO:0000417 ! sagittal plane
 
 [Term]
 id: BSPO:0000010
@@ -99,19 +101,19 @@ relationship: passes_through CARO:0000000 ! anatomical entity
 
 [Term]
 id: BSPO:0000011
-name: upper/lower axis
+name: upper-lower axis
 def: "An anatomical axis determined by gravity." [BSPO:cjm]
 is_a: BSPO:0000010 ! anatomical axis
 
 [Term]
 id: BSPO:0000012
-name: deep/superficial axis
+name: deep-superficial axis
 is_a: BSPO:0000010 ! anatomical axis
 
 [Term]
 id: BSPO:0000013
-name: anterior/posterior axis
-def: "An axis that bisects an organism from head end to opposite end of body or tail." [BSPO:cjm]
+name: anterior-posterior axis
+def: "An axis that extends through an organism from head end to opposite end of body or tail." [BSPO:cjm]
 synonym: "A-P axis" EXACT []
 synonym: "anteroposterior axis" EXACT []
 synonym: "AP axis" EXACT []
@@ -120,11 +122,11 @@ synonym: "craniocaudal axis" NARROW vertebrate []
 synonym: "rostral/caudal" NARROW vertebrate []
 synonym: "rostrocaudal axis" NARROW vertebrate []
 is_a: BSPO:0000010 ! anatomical axis
-relationship: BSPO:0000104 BSPO:0000016 ! dorsal/ventral axis
+relationship: BSPO:0000104 BSPO:0000016 ! dorsal-ventral axis
 
 [Term]
 id: BSPO:0000014
-name: apical/basal axis
+name: apical-basal axis
 comment: In plants, this is the axis that runs from the shoot to the root.
 synonym: "apical/basal" EXACT []
 synonym: "longitudinal axis" EXACT []
@@ -132,68 +134,76 @@ is_a: BSPO:0000010 ! anatomical axis
 
 [Term]
 id: BSPO:0000015
-name: proximal/distal axis
-def: "from tip of an appendage (distal) to where it joins the body (proximal)." [http://en.wikipedia.org/wiki/Anatomical_terms_of_location]
+name: proximal-distal axis
+def: "An axis that extends from tip of an appendage (distal) to where it joins the body (proximal)." [http://en.wikipedia.org/wiki/Anatomical_terms_of_location]
 synonym: "proximal/distal" EXACT []
 synonym: "proximodistal" EXACT []
 is_a: BSPO:0000010 ! anatomical axis
 
 [Term]
 id: BSPO:0000016
-name: dorsal/ventral axis
-def: "An axis that bisects an organism from back (e.g. spinal column) to front (e.g. belly)." [BSPO:cjm]
+name: dorsal-ventral axis
+def: "An axis that extends through an organism from back (e.g. spinal column) to front (e.g. belly)." [BSPO:cjm]
+synonym: "D-V axis" EXACT []
 synonym: "dorsoventral axis" EXACT []
+synonym: "DV axis" EXACT []
 is_a: BSPO:0000010 ! anatomical axis
 
 [Term]
 id: BSPO:0000017
-name: left/right axis
+name: left-right axis
 def: "An axis that bisects an organism from left to right sides of body, through a sagittal section." [BSPO:cjm]
 synonym: "dextro-sinister axis" EXACT []
+synonym: "L-R axis" EXACT []
 synonym: "left to right axis" EXACT []
+synonym: "LR axis" EXACT []
 is_a: BSPO:0000010 ! anatomical axis
 intersection_of: BSPO:0000010 ! anatomical axis
-intersection_of: orthogonal_to BSPO:0000417 ! sagittal section
+intersection_of: orthogonal_to BSPO:0000417 ! sagittal plane
+relationship: orthogonal_to BSPO:0000417 ! sagittal plane
 
 [Term]
 id: BSPO:0000018
-name: transverse section
-def: "Anatomical section that divides body into anterior and posterior sections." [BSPO:mah]
+name: transverse plane
+def: "Anatomical plane that divides body into anterior and posterior sections." [BSPO:mah]
 synonym: "axial plane" EXACT []
 synonym: "axial section" EXACT []
 synonym: "cross-section" RELATED []
-synonym: "transverse plane" EXACT []
+synonym: "transverse section" EXACT []
 xref: FMA:12247
-is_a: BSPO:0000400 ! anatomical section
+is_a: BSPO:0000400 ! anatomical plane
 
 [Term]
 id: BSPO:0000019
-name: horizontal section
-def: "Anatomical section that divides bilateral body into dorsal and ventral sections." [BSPO:mah]
+name: horizontal plane
+def: "Anatomical plane that divides bilateral body into dorsal and ventral parts." [BSPO:mah]
 synonym: "coronal section" RELATED []
 synonym: "frontal section" RELATED []
+synonym: "horizontal section" EXACT []
 xref: FMA:52810
-is_a: BSPO:0000400 ! anatomical section
+is_a: BSPO:0000400 ! anatomical plane
 
 [Term]
 id: BSPO:0000020
 name: upper-lower gradient
 is_a: BSPO:0000051 ! anatomical gradient
 intersection_of: BSPO:0000051 ! anatomical gradient
-intersection_of: follows_axis BSPO:0000011 ! upper/lower axis
+intersection_of: follows_axis BSPO:0000011 ! upper-lower axis
+relationship: follows_axis BSPO:0000011 ! upper-lower axis
 
 [Term]
 id: BSPO:0000021
 name: deep-superficial gradient
 is_a: BSPO:0000051 ! anatomical gradient
 intersection_of: BSPO:0000051 ! anatomical gradient
-intersection_of: follows_axis BSPO:0000012 ! deep/superficial axis
+intersection_of: follows_axis BSPO:0000012 ! deep-superficial axis
+relationship: follows_axis BSPO:0000012 ! deep-superficial axis
 
 [Term]
 id: BSPO:0000022
 name: superior side
-synonym: "superior" EXACT []
 synonym: "cranial" RELATED []
+synonym: "superior" EXACT []
 is_a: BSPO:0000054 ! anatomical side
 
 [Term]
@@ -201,30 +211,35 @@ id: BSPO:0000023
 name: apical-basal gradient
 is_a: BSPO:0000051 ! anatomical gradient
 intersection_of: BSPO:0000051 ! anatomical gradient
-intersection_of: follows_axis BSPO:0000014 ! apical/basal axis
+intersection_of: follows_axis BSPO:0000014 ! apical-basal axis
+relationship: follows_axis BSPO:0000014 ! apical-basal axis
 
 [Term]
 id: BSPO:0000024
 name: proximal-distal gradient
 is_a: BSPO:0000051 ! anatomical gradient
 intersection_of: BSPO:0000051 ! anatomical gradient
-intersection_of: follows_axis BSPO:0000015 ! proximal/distal axis
+intersection_of: follows_axis BSPO:0000015 ! proximal-distal axis
+relationship: follows_axis BSPO:0000015 ! proximal-distal axis
 
 [Term]
 id: BSPO:0000025
 name: inferior side
-synonym: "inferior" EXACT []
 synonym: "caudal" EXACT []
+synonym: "inferior" EXACT []
 is_a: BSPO:0000054 ! anatomical side
 
 [Term]
 id: BSPO:0000026
 name: antero-dorsal region
 synonym: "anterodorsal region " EXACT []
-is_a: BSPO:0000070 ! anatomical region
+is_a: BSPO:0000071 ! anterior region
+is_a: BSPO:0000079 ! dorsal region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000055 ! anterior side
 intersection_of: overlaps BSPO:0000063 ! dorsal side
+relationship: overlaps BSPO:0000055 ! anterior side
+relationship: overlaps BSPO:0000063 ! dorsal side
 created_by: Melissa  Haendel
 creation_date: 2009-06-15T01:01:38Z
 
@@ -232,10 +247,13 @@ creation_date: 2009-06-15T01:01:38Z
 id: BSPO:0000027
 name: antero-ventral region
 synonym: "anteroventral region " EXACT []
-is_a: BSPO:0000070 ! anatomical region
+is_a: BSPO:0000071 ! anterior region
+is_a: BSPO:0000084 ! ventral region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000055 ! anterior side
 intersection_of: overlaps BSPO:0000068 ! ventral side
+relationship: overlaps BSPO:0000055 ! anterior side
+relationship: overlaps BSPO:0000068 ! ventral side
 created_by: Melissa  Haendel
 creation_date: 2009-06-15T01:04:59Z
 
@@ -243,10 +261,13 @@ creation_date: 2009-06-15T01:04:59Z
 id: BSPO:0000028
 name: postero-lateral region
 synonym: "posterolateral region" EXACT []
-is_a: BSPO:0000070 ! anatomical region
+is_a: BSPO:0000072 ! posterior region
+is_a: BSPO:0000082 ! lateral region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000056 ! posterior side
 intersection_of: overlaps BSPO:0000066 ! lateral side
+relationship: overlaps BSPO:0000056 ! posterior side
+relationship: overlaps BSPO:0000066 ! lateral side
 created_by: Melissa  Haendel
 creation_date: 2009-06-15T01:06:01Z
 
@@ -254,10 +275,13 @@ creation_date: 2009-06-15T01:06:01Z
 id: BSPO:0000029
 name: antero-lateral region
 synonym: "anterolateral region" EXACT []
-is_a: BSPO:0000070 ! anatomical region
+is_a: BSPO:0000071 ! anterior region
+is_a: BSPO:0000082 ! lateral region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000055 ! anterior side
 intersection_of: overlaps BSPO:0000066 ! lateral side
+relationship: overlaps BSPO:0000055 ! anterior side
+relationship: overlaps BSPO:0000066 ! lateral side
 created_by: Melissa  Haendel
 creation_date: 2009-06-15T01:07:18Z
 
@@ -265,10 +289,13 @@ creation_date: 2009-06-15T01:07:18Z
 id: BSPO:0000030
 name: postero-dorsal region
 synonym: "posterodorsal region" EXACT []
-is_a: BSPO:0000070 ! anatomical region
+is_a: BSPO:0000072 ! posterior region
+is_a: BSPO:0000079 ! dorsal region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000056 ! posterior side
 intersection_of: overlaps BSPO:0000063 ! dorsal side
+relationship: overlaps BSPO:0000056 ! posterior side
+relationship: overlaps BSPO:0000063 ! dorsal side
 created_by: Melissa  Haendel
 creation_date: 2009-06-15T01:08:13Z
 
@@ -278,6 +305,7 @@ name: upper region
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000001 ! upper side
+relationship: overlaps BSPO:0000001 ! upper side
 
 [Term]
 id: BSPO:0000032
@@ -285,6 +313,7 @@ name: lower region
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000002 ! lower side
+relationship: overlaps BSPO:0000002 ! lower side
 
 [Term]
 id: BSPO:0000033
@@ -292,6 +321,7 @@ name: deep region
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000003 ! deep side
+relationship: overlaps BSPO:0000003 ! deep side
 
 [Term]
 id: BSPO:0000034
@@ -299,23 +329,27 @@ name: superficial region
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000004 ! superficial side
+relationship: overlaps BSPO:0000004 ! superficial side
 
 [Term]
 id: BSPO:0000035
 name: postero-ventral region
 synonym: "posteroventral region" EXACT []
-is_a: BSPO:0000070 ! anatomical region
+is_a: BSPO:0000072 ! posterior region
+is_a: BSPO:0000084 ! ventral region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000056 ! posterior side
 intersection_of: overlaps BSPO:0000068 ! ventral side
+relationship: overlaps BSPO:0000056 ! posterior side
+relationship: overlaps BSPO:0000068 ! ventral side
 created_by: Melissa  Haendel
 creation_date: 2009-06-15T01:08:38Z
 
 [Term]
 id: BSPO:0000036
 name: anterior-most region
-synonym: "anteriormost" EXACT []
 synonym: "anterior-most" EXACT []
+synonym: "anteriormost" EXACT []
 is_a: BSPO:0000071 ! anterior region
 created_by: Melissa  Haendel
 creation_date: 2009-06-16T08:49:03Z
@@ -323,8 +357,8 @@ creation_date: 2009-06-16T08:49:03Z
 [Term]
 id: BSPO:0000037
 name: posterior-most region
-synonym: "posteriormost" EXACT []
 synonym: "posterior-most" EXACT []
+synonym: "posteriormost" EXACT []
 is_a: BSPO:0000072 ! posterior region
 created_by: Melissa  Haendel
 creation_date: 2009-06-16T08:49:50Z
@@ -332,8 +366,8 @@ creation_date: 2009-06-16T08:49:50Z
 [Term]
 id: BSPO:0000038
 name: dorsal-most region
-synonym: "dorsalmost" EXACT []
 synonym: "dorsal-most" EXACT []
+synonym: "dorsalmost" EXACT []
 is_a: BSPO:0000079 ! dorsal region
 created_by: Melissa  Haendel
 creation_date: 2009-06-16T08:50:26Z
@@ -341,8 +375,8 @@ creation_date: 2009-06-16T08:50:26Z
 [Term]
 id: BSPO:0000039
 name: ventral-most region
-synonym: "ventralmost" EXACT []
 synonym: "ventral-most" EXACT []
+synonym: "ventralmost" EXACT []
 is_a: BSPO:0000084 ! ventral region
 created_by: Melissa  Haendel
 creation_date: 2009-06-16T08:51:07Z
@@ -352,23 +386,29 @@ id: BSPO:0000040
 name: upper/lower compartment boundary
 is_a: BSPO:0000092 ! anatomical compartment boundary
 intersection_of: BSPO:0000092 ! anatomical compartment boundary
-intersection_of: has_axis BSPO:0000011 ! upper/lower axis
+intersection_of: has_axis BSPO:0000011 ! upper-lower axis
+relationship: has_axis BSPO:0000011 ! upper-lower axis
 
 [Term]
 id: BSPO:0000041
 name: deep/superficial compartment boundary
 is_a: BSPO:0000092 ! anatomical compartment boundary
 intersection_of: BSPO:0000092 ! anatomical compartment boundary
-intersection_of: has_axis BSPO:0000012 ! deep/superficial axis
+intersection_of: has_axis BSPO:0000012 ! deep-superficial axis
+relationship: has_axis BSPO:0000012 ! deep-superficial axis
 
 [Term]
 id: BSPO:0000042
 name: antero-medial margin
 synonym: "anteromedial margin" EXACT []
-is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000050 ! antero-medial region
+is_a: BSPO:0000671 ! anterior margin
+is_a: BSPO:0000683 ! medial margin
 intersection_of: BSPO:0000006 ! anatomical margin
 intersection_of: overlaps BSPO:0000055 ! anterior side
 intersection_of: overlaps BSPO:0000067 ! medial side
+relationship: overlaps BSPO:0000055 ! anterior side
+relationship: overlaps BSPO:0000067 ! medial side
 created_by: Melissa  Haendel
 creation_date: 2009-09-10T08:49:57Z
 
@@ -377,23 +417,29 @@ id: BSPO:0000043
 name: apical/basal compartment boundary
 is_a: BSPO:0000092 ! anatomical compartment boundary
 intersection_of: BSPO:0000092 ! anatomical compartment boundary
-intersection_of: has_axis BSPO:0000014 ! apical/basal axis
+intersection_of: has_axis BSPO:0000014 ! apical-basal axis
+relationship: has_axis BSPO:0000014 ! apical-basal axis
 
 [Term]
 id: BSPO:0000044
 name: proximal/distal compartment boundary
 is_a: BSPO:0000092 ! anatomical compartment boundary
 intersection_of: BSPO:0000092 ! anatomical compartment boundary
-intersection_of: has_axis BSPO:0000015 ! proximal/distal axis
+intersection_of: has_axis BSPO:0000015 ! proximal-distal axis
+relationship: has_axis BSPO:0000015 ! proximal-distal axis
 
 [Term]
 id: BSPO:0000045
 name: antero-lateral margin
 synonym: "anterolateral margin" EXACT []
-is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000029 ! antero-lateral region
+is_a: BSPO:0000671 ! anterior margin
+is_a: BSPO:0000682 ! lateral margin
 intersection_of: BSPO:0000006 ! anatomical margin
 intersection_of: overlaps BSPO:0000055 ! anterior side
 intersection_of: overlaps BSPO:0000066 ! lateral side
+relationship: overlaps BSPO:0000055 ! anterior side
+relationship: overlaps BSPO:0000066 ! lateral side
 created_by: Melissa  Haendel
 creation_date: 2009-09-10T08:50:37Z
 
@@ -401,21 +447,29 @@ creation_date: 2009-09-10T08:50:37Z
 id: BSPO:0000046
 name: postero-medial margin
 synonym: "posteromedial margin" EXACT []
-is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000064 ! postero-medial region
+is_a: BSPO:0000672 ! posterior margin
+is_a: BSPO:0000683 ! medial margin
 intersection_of: BSPO:0000006 ! anatomical margin
 intersection_of: overlaps BSPO:0000056 ! posterior side
 intersection_of: overlaps BSPO:0000067 ! medial side
+relationship: overlaps BSPO:0000056 ! posterior side
+relationship: overlaps BSPO:0000067 ! medial side
 created_by: Melissa  Haendel
 creation_date: 2009-09-10T08:51:07Z
 
 [Term]
 id: BSPO:0000047
 name: postero-lateral margin
-synonym: "postero-lateral margin" EXACT []
-is_a: BSPO:0000006 ! anatomical margin
+synonym: "posterolateral margin" EXACT []
+is_a: BSPO:0000028 ! postero-lateral region
+is_a: BSPO:0000672 ! posterior margin
+is_a: BSPO:0000682 ! lateral margin
 intersection_of: BSPO:0000006 ! anatomical margin
 intersection_of: overlaps BSPO:0000056 ! posterior side
 intersection_of: overlaps BSPO:0000066 ! lateral side
+relationship: overlaps BSPO:0000056 ! posterior side
+relationship: overlaps BSPO:0000066 ! lateral side
 created_by: Melissa  Haendel
 creation_date: 2009-09-10T08:51:42Z
 
@@ -423,10 +477,14 @@ creation_date: 2009-09-10T08:51:42Z
 id: BSPO:0000048
 name: dorso-medial margin
 synonym: "dorso-medial margin" EXACT []
-is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000069 ! dorso-medial region
+is_a: BSPO:0000679 ! dorsal margin
+is_a: BSPO:0000683 ! medial margin
 intersection_of: BSPO:0000006 ! anatomical margin
 intersection_of: overlaps BSPO:0000063 ! dorsal side
 intersection_of: overlaps BSPO:0000067 ! medial side
+relationship: overlaps BSPO:0000063 ! dorsal side
+relationship: overlaps BSPO:0000067 ! medial side
 created_by: Melissa  Haendel
 creation_date: 2009-09-10T08:52:04Z
 
@@ -434,10 +492,14 @@ creation_date: 2009-09-10T08:52:04Z
 id: BSPO:0000049
 name: ventro-medial margin
 synonym: "ventromedial margin" EXACT []
-is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000112 ! ventro-medial region
+is_a: BSPO:0000683 ! medial margin
+is_a: BSPO:0000684 ! ventral margin
 intersection_of: BSPO:0000006 ! anatomical margin
 intersection_of: overlaps BSPO:0000067 ! medial side
 intersection_of: overlaps BSPO:0000068 ! ventral side
+relationship: overlaps BSPO:0000067 ! medial side
+relationship: overlaps BSPO:0000068 ! ventral side
 created_by: Melissa  Haendel
 creation_date: 2009-09-10T08:52:48Z
 
@@ -445,10 +507,13 @@ creation_date: 2009-09-10T08:52:48Z
 id: BSPO:0000050
 name: antero-medial region
 synonym: "anteromedial region" EXACT []
-is_a: BSPO:0000070 ! anatomical region
+is_a: BSPO:0000071 ! anterior region
+is_a: BSPO:0000083 ! medial region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000055 ! anterior side
 intersection_of: overlaps BSPO:0000067 ! medial side
+relationship: overlaps BSPO:0000055 ! anterior side
+relationship: overlaps BSPO:0000067 ! medial side
 created_by: Melissa  Haendel
 creation_date: 2009-09-10T08:55:32Z
 
@@ -465,7 +530,8 @@ xref: FBcv:0000142
 xref: FBql:00005256
 is_a: BSPO:0000051 ! anatomical gradient
 intersection_of: BSPO:0000051 ! anatomical gradient
-intersection_of: has_axis BSPO:0000013 ! anterior/posterior axis
+intersection_of: has_axis BSPO:0000013 ! anterior-posterior axis
+relationship: has_axis BSPO:0000013 ! anterior-posterior axis
 
 [Term]
 id: BSPO:0000053
@@ -474,7 +540,8 @@ xref: FBcv:0000143
 xref: FBql:00005255
 is_a: BSPO:0000051 ! anatomical gradient
 intersection_of: BSPO:0000051 ! anatomical gradient
-intersection_of: has_axis BSPO:0000016 ! dorsal/ventral axis
+intersection_of: has_axis BSPO:0000016 ! dorsal-ventral axis
+relationship: has_axis BSPO:0000016 ! dorsal-ventral axis
 
 [Term]
 id: BSPO:0000054
@@ -492,7 +559,7 @@ xref: FBql:00005848
 is_a: BSPO:0000054 ! anatomical side
 relationship: BSPO:0000096 BSPO:0000056 ! posterior side
 relationship: BSPO:0000113 BSPO:0000056 ! posterior side
-relationship: starts_axis BSPO:0000013 ! anterior/posterior axis
+relationship: starts_axis BSPO:0000013 ! anterior-posterior axis
 
 [Term]
 id: BSPO:0000056
@@ -503,7 +570,7 @@ xref: FBcv:0000065
 xref: FBql:00005849
 is_a: BSPO:0000054 ! anatomical side
 relationship: BSPO:0000099 BSPO:0000055 ! anterior side
-relationship: finishes_axis BSPO:0000013 ! anterior/posterior axis
+relationship: finishes_axis BSPO:0000013 ! anterior-posterior axis
 
 [Term]
 id: BSPO:0000057
@@ -513,7 +580,7 @@ xref: FBcv:0000054
 xref: FBql:00005854
 is_a: BSPO:0000054 ! anatomical side
 relationship: BSPO:0000113 BSPO:0000058 ! basal side
-relationship: starts_axis BSPO:0000014 ! apical/basal axis
+relationship: starts_axis BSPO:0000014 ! apical-basal axis
 
 [Term]
 id: BSPO:0000058
@@ -523,7 +590,7 @@ synonym: "basal" EXACT []
 xref: FBcv:0000055
 xref: FBql:00005855
 is_a: BSPO:0000054 ! anatomical side
-relationship: finishes_axis BSPO:0000014 ! apical/basal axis
+relationship: finishes_axis BSPO:0000014 ! apical-basal axis
 
 [Term]
 id: BSPO:0000059
@@ -552,7 +619,7 @@ xref: FBcv:0000066
 xref: FBql:00005852
 is_a: BSPO:0000054 ! anatomical side
 relationship: BSPO:0000113 BSPO:0000062 ! distal side
-relationship: starts_axis BSPO:0000015 ! proximal/distal axis
+relationship: starts_axis BSPO:0000015 ! proximal-distal axis
 
 [Term]
 id: BSPO:0000062
@@ -562,7 +629,7 @@ xref: FBcv:0000058
 xref: FBql:00005853
 is_a: BSPO:0000054 ! anatomical side
 relationship: BSPO:0000097 BSPO:0000061 ! proximal side
-relationship: finishes_axis BSPO:0000015 ! proximal/distal axis
+relationship: finishes_axis BSPO:0000015 ! proximal-distal axis
 
 [Term]
 id: BSPO:0000063
@@ -574,16 +641,19 @@ xref: FBql:00005842
 is_a: BSPO:0000054 ! anatomical side
 relationship: BSPO:0000098 BSPO:0000066 ! lateral side
 relationship: BSPO:0000113 BSPO:0000068 ! ventral side
-relationship: starts_axis BSPO:0000016 ! dorsal/ventral axis
+relationship: starts_axis BSPO:0000016 ! dorsal-ventral axis
 
 [Term]
 id: BSPO:0000064
 name: postero-medial region
 synonym: "posteromedial region" EXACT []
-is_a: BSPO:0000070 ! anatomical region
+is_a: BSPO:0000072 ! posterior region
+is_a: BSPO:0000083 ! medial region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000056 ! posterior side
 intersection_of: overlaps BSPO:0000067 ! medial side
+relationship: overlaps BSPO:0000056 ! posterior side
+relationship: overlaps BSPO:0000067 ! medial side
 created_by: Melissa  Haendel
 creation_date: 2009-09-10T08:56:39Z
 
@@ -621,16 +691,19 @@ synonym: "ventral" EXACT []
 xref: FBcv:0000070
 xref: FBql:00005843
 is_a: BSPO:0000054 ! anatomical side
-relationship: finishes_axis BSPO:0000016 ! dorsal/ventral axis
+relationship: finishes_axis BSPO:0000016 ! dorsal-ventral axis
 
 [Term]
 id: BSPO:0000069
 name: dorso-medial region
 synonym: "dorsomedial region" EXACT []
-is_a: BSPO:0000070 ! anatomical region
+is_a: BSPO:0000079 ! dorsal region
+is_a: BSPO:0000083 ! medial region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000063 ! dorsal side
 intersection_of: overlaps BSPO:0000067 ! medial side
+relationship: overlaps BSPO:0000063 ! dorsal side
+relationship: overlaps BSPO:0000067 ! medial side
 created_by: Melissa  Haendel
 creation_date: 2009-09-10T08:57:22Z
 
@@ -648,6 +721,7 @@ xref: FBql:00005848
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000055 ! anterior side
+relationship: overlaps BSPO:0000055 ! anterior side
 
 [Term]
 id: BSPO:0000072
@@ -656,6 +730,7 @@ xref: FBql:00005849
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000056 ! posterior side
+relationship: overlaps BSPO:0000056 ! posterior side
 
 [Term]
 id: BSPO:0000073
@@ -664,6 +739,7 @@ xref: FBql:00005854
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000057 ! apical side
+relationship: overlaps BSPO:0000057 ! apical side
 
 [Term]
 id: BSPO:0000074
@@ -672,6 +748,7 @@ xref: FBql:00005855
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000058 ! basal side
+relationship: overlaps BSPO:0000058 ! basal side
 
 [Term]
 id: BSPO:0000075
@@ -680,6 +757,7 @@ xref: FBql:00015851
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000059 ! central side
+relationship: overlaps BSPO:0000059 ! central side
 
 [Term]
 id: BSPO:0000076
@@ -689,6 +767,7 @@ xref: FBql:00005851
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000060 ! contralateral side
+relationship: overlaps BSPO:0000060 ! contralateral side
 
 [Term]
 id: BSPO:0000077
@@ -697,6 +776,7 @@ xref: FBql:00005852
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000061 ! proximal side
+relationship: overlaps BSPO:0000061 ! proximal side
 
 [Term]
 id: BSPO:0000078
@@ -705,6 +785,7 @@ xref: FBql:00005853
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000062 ! distal side
+relationship: overlaps BSPO:0000062 ! distal side
 
 [Term]
 id: BSPO:0000079
@@ -713,16 +794,20 @@ xref: FBql:00005842
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000063 ! dorsal side
+relationship: overlaps BSPO:0000063 ! dorsal side
 
 [Term]
 id: BSPO:0000080
 name: dorso-lateral region
 synonym: "dorsolateral region" EXACT []
 xref: FBql:00005845
-is_a: BSPO:0000070 ! anatomical region
+is_a: BSPO:0000079 ! dorsal region
+is_a: BSPO:0000082 ! lateral region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000063 ! dorsal side
 intersection_of: overlaps BSPO:0000066 ! lateral side
+relationship: overlaps BSPO:0000063 ! dorsal side
+relationship: overlaps BSPO:0000066 ! lateral side
 
 [Term]
 id: BSPO:0000081
@@ -731,6 +816,7 @@ xref: FBql:00005850
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000065 ! ipsilateral side
+relationship: overlaps BSPO:0000065 ! ipsilateral side
 
 [Term]
 id: BSPO:0000082
@@ -739,6 +825,7 @@ xref: FBql:00005844
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000066 ! lateral side
+relationship: overlaps BSPO:0000066 ! lateral side
 
 [Term]
 id: BSPO:0000083
@@ -747,6 +834,7 @@ xref: FBql:00005847
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000067 ! medial side
+relationship: overlaps BSPO:0000067 ! medial side
 
 [Term]
 id: BSPO:0000084
@@ -755,17 +843,21 @@ xref: FBql:00005843
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000068 ! ventral side
+relationship: overlaps BSPO:0000068 ! ventral side
 
 [Term]
 id: BSPO:0000085
 name: ventro-lateral region
-comment: This is an example of a composition of two axis positions
+comment: This is an example of a composition of two axis positions.
 synonym: "ventrolateral region" EXACT []
 xref: FBql:00005846
-is_a: BSPO:0000070 ! anatomical region
+is_a: BSPO:0000082 ! lateral region
+is_a: BSPO:0000084 ! ventral region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000066 ! lateral side
 intersection_of: overlaps BSPO:0000068 ! ventral side
+relationship: overlaps BSPO:0000066 ! lateral side
+relationship: overlaps BSPO:0000068 ! ventral side
 
 [Term]
 id: BSPO:0000086
@@ -832,14 +924,43 @@ is_a: BSPO:0000092 ! anatomical compartment boundary
 id: BSPO:0000112
 name: ventro-medial region
 def: "The region corresponding to the ventral surface of the entity, towards the midline." [BSPO:wd]
-synonym: "ventromedial region" EXACT []
 synonym: "medioventral region" EXACT []
-is_a: BSPO:0000070 ! anatomical region
+synonym: "ventromedial region" EXACT []
+is_a: BSPO:0000083 ! medial region
+is_a: BSPO:0000084 ! ventral region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000067 ! medial side
 intersection_of: overlaps BSPO:0000068 ! ventral side
+relationship: overlaps BSPO:0000067 ! medial side
+relationship: overlaps BSPO:0000068 ! ventral side
 created_by: Melissa  Haendel
 creation_date: 2009-09-10T08:57:54Z
+
+[Term]
+id: BSPO:0000127
+name: peripheral region
+is_a: BSPO:0000070 ! anatomical region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: overlaps BSPO:0000129 ! peripheral side
+relationship: overlaps BSPO:0000129 ! peripheral side
+
+[Term]
+id: BSPO:0000128
+name: axial region
+is_a: BSPO:0000070 ! anatomical region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: overlaps BSPO:0000130 ! axial side
+relationship: overlaps BSPO:0000130 ! axial side
+
+[Term]
+id: BSPO:0000129
+name: peripheral side
+is_a: BSPO:0000054 ! anatomical side
+
+[Term]
+id: BSPO:0000130
+name: axial side
+is_a: BSPO:0000054 ! anatomical side
 
 [Term]
 id: BSPO:0000371
@@ -848,6 +969,7 @@ xref: FBql:00005848
 is_a: BSPO:0000005 ! anatomical surface
 intersection_of: BSPO:0000005 ! anatomical surface
 intersection_of: surface_of BSPO:0000055 ! anterior side
+relationship: surface_of BSPO:0000055 ! anterior side
 
 [Term]
 id: BSPO:0000372
@@ -856,6 +978,7 @@ xref: FBql:00005849
 is_a: BSPO:0000005 ! anatomical surface
 intersection_of: BSPO:0000005 ! anatomical surface
 intersection_of: surface_of BSPO:0000056 ! posterior side
+relationship: surface_of BSPO:0000056 ! posterior side
 
 [Term]
 id: BSPO:0000373
@@ -864,6 +987,7 @@ xref: FBql:00005854
 is_a: BSPO:0000005 ! anatomical surface
 intersection_of: BSPO:0000005 ! anatomical surface
 intersection_of: surface_of BSPO:0000057 ! apical side
+relationship: surface_of BSPO:0000057 ! apical side
 
 [Term]
 id: BSPO:0000374
@@ -872,6 +996,7 @@ xref: FBql:00005855
 is_a: BSPO:0000005 ! anatomical surface
 intersection_of: BSPO:0000005 ! anatomical surface
 intersection_of: surface_of BSPO:0000058 ! basal side
+relationship: surface_of BSPO:0000058 ! basal side
 
 [Term]
 id: BSPO:0000376
@@ -880,6 +1005,7 @@ xref: FBql:00005851
 is_a: BSPO:0000005 ! anatomical surface
 intersection_of: BSPO:0000005 ! anatomical surface
 intersection_of: surface_of BSPO:0000060 ! contralateral side
+relationship: surface_of BSPO:0000060 ! contralateral side
 
 [Term]
 id: BSPO:0000377
@@ -888,6 +1014,7 @@ xref: FBql:00005852
 is_a: BSPO:0000005 ! anatomical surface
 intersection_of: BSPO:0000005 ! anatomical surface
 intersection_of: surface_of BSPO:0000061 ! proximal side
+relationship: surface_of BSPO:0000061 ! proximal side
 
 [Term]
 id: BSPO:0000378
@@ -896,6 +1023,7 @@ xref: FBql:00005853
 is_a: BSPO:0000005 ! anatomical surface
 intersection_of: BSPO:0000005 ! anatomical surface
 intersection_of: surface_of BSPO:0000062 ! distal side
+relationship: surface_of BSPO:0000062 ! distal side
 
 [Term]
 id: BSPO:0000379
@@ -904,6 +1032,7 @@ xref: FBql:00005842
 is_a: BSPO:0000005 ! anatomical surface
 intersection_of: BSPO:0000005 ! anatomical surface
 intersection_of: surface_of BSPO:0000063 ! dorsal side
+relationship: surface_of BSPO:0000063 ! dorsal side
 
 [Term]
 id: BSPO:0000381
@@ -912,6 +1041,7 @@ xref: FBql:00005850
 is_a: BSPO:0000005 ! anatomical surface
 intersection_of: BSPO:0000005 ! anatomical surface
 intersection_of: surface_of BSPO:0000065 ! ipsilateral side
+relationship: surface_of BSPO:0000065 ! ipsilateral side
 
 [Term]
 id: BSPO:0000382
@@ -920,6 +1050,7 @@ xref: FBql:00005844
 is_a: BSPO:0000005 ! anatomical surface
 intersection_of: BSPO:0000005 ! anatomical surface
 intersection_of: surface_of BSPO:0000066 ! lateral side
+relationship: surface_of BSPO:0000066 ! lateral side
 
 [Term]
 id: BSPO:0000383
@@ -928,6 +1059,7 @@ xref: FBql:00005847
 is_a: BSPO:0000005 ! anatomical surface
 intersection_of: BSPO:0000005 ! anatomical surface
 intersection_of: surface_of BSPO:0000067 ! medial side
+relationship: surface_of BSPO:0000067 ! medial side
 
 [Term]
 id: BSPO:0000384
@@ -936,13 +1068,15 @@ xref: FBql:00005843
 is_a: BSPO:0000005 ! anatomical surface
 intersection_of: BSPO:0000005 ! anatomical surface
 intersection_of: surface_of BSPO:0000068 ! ventral side
+relationship: surface_of BSPO:0000068 ! ventral side
 
 [Term]
 id: BSPO:0000400
-name: anatomical section
+name: anatomical plane
 def: "A flat 2D plane intersecting an anatomical continuant, dividing it into two adjacent portions." [BSPO:cjm]
 comment: These anatomical sections are applicable to most bilaterally symmetrical animals, but bipedal animals such as humans have more complex usage of these terms. For example, in post-embryonic humans a coronal plane is vertical and a transverse plane is horizontal, but for embryos and quadrupeds a coronal plane is horizontal and a transverse plane is vertical.
 synonym: "anatomical cross-section" EXACT []
+synonym: "anatomical section" EXACT []
 synonym: "cross-section" RELATED []
 synonym: "plane" EXACT []
 synonym: "section" EXACT []
@@ -950,143 +1084,187 @@ xref: FMA:242982
 
 [Term]
 id: BSPO:0000417
-name: sagittal section
-def: "Anatomical section that divides bilateral body into roughly mirror image left and right sections. Bilaterally symmetric organisms have a single sagittal plane." [BSPO:cjm, BSPO:mah]
+name: sagittal plane
+def: "Anatomical plane that divides a bilateral body into left and right parts. Bilaterally symmetric organisms have a single sagittal plane." [BSPO:cjm, BSPO:mah]
 synonym: "left/right plane" EXACT []
-synonym: "sagittal plane" EXACT []
 synonym: "median plane" EXACT []
+synonym: "sagittal section" EXACT []
 xref: FMA:11361
-is_a: BSPO:0000400 ! anatomical section
+is_a: BSPO:0000400 ! anatomical plane
 
 [Term]
 id: BSPO:0000671
 name: anterior margin
 is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000071 ! anterior region
 intersection_of: BSPO:0000006 ! anatomical margin
 intersection_of: overlaps BSPO:0000055 ! anterior side
+relationship: overlaps BSPO:0000055 ! anterior side
 
 [Term]
 id: BSPO:0000672
 name: posterior margin
 is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000072 ! posterior region
 intersection_of: BSPO:0000006 ! anatomical margin
 intersection_of: overlaps BSPO:0000056 ! posterior side
+relationship: overlaps BSPO:0000056 ! posterior side
 
 [Term]
 id: BSPO:0000673
 name: apical margin
 is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000073 ! apical region
 intersection_of: BSPO:0000006 ! anatomical margin
 intersection_of: overlaps BSPO:0000057 ! apical side
+relationship: overlaps BSPO:0000057 ! apical side
 
 [Term]
 id: BSPO:0000674
 name: basal margin
 is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000074 ! basal region
 intersection_of: BSPO:0000006 ! anatomical margin
 intersection_of: overlaps BSPO:0000058 ! basal side
+relationship: overlaps BSPO:0000058 ! basal side
 
 [Term]
 id: BSPO:0000677
 name: proximal margin
 is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000077 ! proximal region
 intersection_of: BSPO:0000006 ! anatomical margin
 intersection_of: overlaps BSPO:0000061 ! proximal side
+relationship: overlaps BSPO:0000061 ! proximal side
 
 [Term]
 id: BSPO:0000678
 name: distal margin
 is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000078 ! distal region
 intersection_of: BSPO:0000006 ! anatomical margin
 intersection_of: overlaps BSPO:0000062 ! distal side
+relationship: overlaps BSPO:0000062 ! distal side
 
 [Term]
 id: BSPO:0000679
 name: dorsal margin
 is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000079 ! dorsal region
 intersection_of: BSPO:0000006 ! anatomical margin
 intersection_of: overlaps BSPO:0000063 ! dorsal side
+relationship: overlaps BSPO:0000063 ! dorsal side
 
 [Term]
 id: BSPO:0000680
 name: dorso-lateral margin
 synonym: "dorsolateral margin" EXACT []
-is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000080 ! dorso-lateral region
+is_a: BSPO:0000679 ! dorsal margin
+is_a: BSPO:0000682 ! lateral margin
 intersection_of: BSPO:0000006 ! anatomical margin
 intersection_of: overlaps BSPO:0000063 ! dorsal side
 intersection_of: overlaps BSPO:0000066 ! lateral side
+relationship: overlaps BSPO:0000063 ! dorsal side
+relationship: overlaps BSPO:0000066 ! lateral side
 
 [Term]
 id: BSPO:0000682
 name: lateral margin
 is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000082 ! lateral region
 intersection_of: BSPO:0000006 ! anatomical margin
 intersection_of: overlaps BSPO:0000066 ! lateral side
+relationship: overlaps BSPO:0000066 ! lateral side
 
 [Term]
 id: BSPO:0000683
 name: medial margin
 is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000083 ! medial region
 intersection_of: BSPO:0000006 ! anatomical margin
 intersection_of: overlaps BSPO:0000067 ! medial side
+relationship: overlaps BSPO:0000067 ! medial side
 
 [Term]
 id: BSPO:0000684
 name: ventral margin
 is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000084 ! ventral region
 intersection_of: BSPO:0000006 ! anatomical margin
 intersection_of: overlaps BSPO:0000068 ! ventral side
+relationship: overlaps BSPO:0000068 ! ventral side
 
 [Term]
 id: BSPO:0000685
 name: ventro-lateral margin
 comment: This is an example of a composition of two axis positions
 synonym: "ventrolateral margin" EXACT []
-is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000085 ! ventro-lateral region
+is_a: BSPO:0000682 ! lateral margin
+is_a: BSPO:0000684 ! ventral margin
 intersection_of: BSPO:0000006 ! anatomical margin
 intersection_of: overlaps BSPO:0000066 ! lateral side
 intersection_of: overlaps BSPO:0000068 ! ventral side
+relationship: overlaps BSPO:0000066 ! lateral side
+relationship: overlaps BSPO:0000068 ! ventral side
 
 [Term]
 id: BSPO:0000686
 name: antero-dorsal margin
 synonym: "anterodorsal margin" EXACT []
-is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000026 ! antero-dorsal region
+is_a: BSPO:0000671 ! anterior margin
+is_a: BSPO:0000679 ! dorsal margin
 intersection_of: BSPO:0000006 ! anatomical margin
 intersection_of: overlaps BSPO:0000055 ! anterior side
 intersection_of: overlaps BSPO:0000063 ! dorsal side
+relationship: overlaps BSPO:0000055 ! anterior side
+relationship: overlaps BSPO:0000063 ! dorsal side
 
 [Term]
 id: BSPO:0000687
 name: postero-dorsal margin
 synonym: "posterodorsal margin" EXACT []
-is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000030 ! postero-dorsal region
+is_a: BSPO:0000672 ! posterior margin
+is_a: BSPO:0000679 ! dorsal margin
 intersection_of: BSPO:0000006 ! anatomical margin
 intersection_of: overlaps BSPO:0000056 ! posterior side
 intersection_of: overlaps BSPO:0000063 ! dorsal side
+relationship: overlaps BSPO:0000056 ! posterior side
+relationship: overlaps BSPO:0000063 ! dorsal side
 
 [Term]
 id: BSPO:0000688
 name: antero-ventral margin
 synonym: "anteroventral margin" EXACT []
-is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000027 ! antero-ventral region
+is_a: BSPO:0000671 ! anterior margin
+is_a: BSPO:0000684 ! ventral margin
 intersection_of: BSPO:0000006 ! anatomical margin
 intersection_of: overlaps BSPO:0000055 ! anterior side
 intersection_of: overlaps BSPO:0000068 ! ventral side
+relationship: overlaps BSPO:0000055 ! anterior side
+relationship: overlaps BSPO:0000068 ! ventral side
 
 [Term]
 id: BSPO:0000689
 name: postero-ventral margin
 synonym: "posteroventral margin" EXACT []
-is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000035 ! postero-ventral region
+is_a: BSPO:0000672 ! posterior margin
+is_a: BSPO:0000684 ! ventral margin
 intersection_of: BSPO:0000006 ! anatomical margin
 intersection_of: overlaps BSPO:0000056 ! posterior side
 intersection_of: overlaps BSPO:0000068 ! ventral side
+relationship: overlaps BSPO:0000056 ! posterior side
+relationship: overlaps BSPO:0000068 ! ventral side
 
 [Term]
 id: BSPO:0001001
-name: medial axis
-def: "From centre of organism to one or other side." [BSPO:cjm]
+name: medial-lateral axis
+def: "An axis that extends from the center of organism to one or other side." [BSPO:cjm]
 comment: Properly, the ML axis is a half axis; practically, its usage is less clumsy and less linguistically biased than "left-right". The terms may still be used relatively to describe locations along the LR axis. The gills are medial to the operculum, but lateral to the heart.
 synonym: "medio-lateral axis" EXACT []
 synonym: "mediolateral axis" EXACT []
@@ -1098,6 +1276,11 @@ is_a: BSPO:0000010 ! anatomical axis
 id: CARO:0000000
 name: anatomical entity
 def: "Biological entity that is either an individual member of a biological species or constitutes the structural organization of an individual member of a biological species." [CARO:MAH]
+
+[Typedef]
+id: adjacent_to
+name: adjacent_to
+comment: todo - add to ro/bfo
 
 [Typedef]
 id: BSPO:0000095
@@ -1204,14 +1387,6 @@ is_transitive: true
 inverse_of: BSPO:0000108 ! superficial_to
 
 [Typedef]
-id: BSPO:0001107
-name: immediately_deep_to
-def: "This relation holds when both the deep_to and ajdacent_to relationship similarly hold." [BSPO:cjm]
-is_a: BSPO:0000107 ! deep_to
-intersection_of: BSPO:0000107 ! deep_to
-intersection_of: adjacent_to
-
-[Typedef]
 id: BSPO:0000108
 name: superficial_to
 def: "Near the outer surface of the organism. Thus, skin is superficial to the muscle layer." [BSPO:cjm]
@@ -1227,7 +1402,7 @@ id: BSPO:0000110
 name: left_of
 def: "Closer to the left side of the organism. Example: The dorsal fin is right of the left pectoral fin, but is left of the right eye. On the type level: X left_of Y <=> every instance x of X is left_of some instance y of Y, and there exists some organism o such that x part_of o and y part_of o." [BSPO:cjm]
 is_transitive: true
-inverse_of_on_instance_level: BSPO:0000111 ! right_of
+inverse_of: BSPO:0000111 ! right_of
 
 [Typedef]
 id: BSPO:0000111
@@ -1236,11 +1411,18 @@ def: "Closer to the right side of the organism. Example: The dorsal fin is right
 is_transitive: true
 
 [Typedef]
+id: BSPO:0000113
+name: opposite_to
+alt_id: opposite_to
+def: "Direcly opposite to. i.e. on the opposite side through the axis." [BSPO:cjm]
+is_a: BSPO:0000105 ! ipsilateral_to
+
+[Typedef]
 id: BSPO:0000120
 name: in_left_side_of
 def: "X in_left_side_of Y <=> if Y is subdivided into two left and right portions, X is part_of the left portion." [BSPO:PATO_mtg_2009]
 is_a: BSPO:0000126 ! in_lateral_side_of
-inverse_of_on_instance_level: BSPO:0000121 ! right_side_of
+inverse_of: BSPO:0000121 ! in_right_side_of
 
 [Typedef]
 id: BSPO:0000121
@@ -1273,29 +1455,11 @@ id: BSPO:0000126
 name: in_lateral_side_of
 def: "X in_lateral_side_of Y <=> if X is in_left_side_of Y or X is in_right_side_of Y. X is often, but not always a paired structure" [UBERON:cjm]
 
-[Term]
-id: BSPO:0000127
-name: peripheral region
-is_a: BSPO:0000070 ! anatomical region
-intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: overlaps BSPO:0000129 ! peripheral side
-
-[Term]
-id: BSPO:0000128
-name: axial region
-is_a: BSPO:0000070 ! anatomical region
-intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: overlaps BSPO:0000130 ! axial side
-
-[Term]
-id: BSPO:0000129
-name: peripheral side 
-is_a: BSPO:0000054 ! anatomical side
-
-[Term]
-id: BSPO:0000130
-name: axial side
-is_a: BSPO:0000054 ! anatomical side
+[Typedef]
+id: BSPO:0001107
+name: immediately_deep_to
+def: "This relation holds when both the deep_to and ajdacent_to relationship similarly hold." [BSPO:cjm]
+is_a: BSPO:0000107 ! deep_to
 
 [Typedef]
 id: finishes_axis
@@ -1310,12 +1474,23 @@ name: follows_axis
 range: BSPO:0000010 ! anatomical axis
 
 [Typedef]
+id: has_axis
+name: has_axis
+
+[Typedef]
 id: has_end_point
 name: has_end_point
 def: "A relation between an axis and a part of an organism, in which the part defines the initial point of the axis." [BSPO:cjm]
 comment: Axes can be defined in a given species by subtyping the relevant axis type and stating a end and end point
 domain: BSPO:0000010 ! anatomical axis
 range: CARO:0000000 ! anatomical entity
+
+[Typedef]
+id: has_part
+name: has_part
+xref: BFO:0000051
+is_transitive: true
+inverse_of: part_of ! part_of
 
 [Typedef]
 id: has_start_point
@@ -1326,24 +1501,23 @@ domain: BSPO:0000010 ! anatomical axis
 range: CARO:0000000 ! anatomical entity
 
 [Typedef]
-id: BSPO:0000113
-alt_id: opposite_to
-name: opposite_to
-def: "Direcly opposite to. i.e. on the opposite side through the axis." [BSPO:cjm]
-is_a: BSPO:0000105 ! ipsilateral_to
-
-[Typedef]
 id: orthogonal_to
 name: orthogonal_to
 def: "crossing at right angles" [BSPO:cjm]
 domain: BSPO:0000010 ! anatomical axis
-range: BSPO:0000400 ! anatomical section
+range: BSPO:0000400 ! anatomical plane
 
 [Typedef]
 id: overlaps
 name: overlaps
 def: "x overlaps y iff they have some part in common." [BSPO:cjm]
 comment: "(forall (x y) (iff (overlaps x y) (exists (z) (and (part_of z x) (part_of z y)))))" CLIF []
+
+[Typedef]
+id: part_of
+name: part_of
+xref: BFO:0000050
+is_transitive: true
 
 [Typedef]
 id: passes_through
@@ -1364,24 +1538,3 @@ name: surface_of
 comment: placeholder. used for relation between anatomical surface and an anatomical side.
 domain: BSPO:0000005 ! anatomical surface
 
-[Typedef]
-id: has_axis
-name: has_axis
-
-[Typedef]
-id: adjacent_to
-name: adjacent_to
-comment: todo - add to ro/bfo
-
-[Typedef]
-id: part_of
-name: part_of
-xref: BFO:0000050
-is_transitive: true
-
-[Typedef]
-id: has_part
-name: has_part
-xref: BFO:0000051
-is_transitive: true
-inverse_of: part_of ! part_of
