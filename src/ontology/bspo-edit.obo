@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 31:05:2013 11:32
+date: 31:05:2013 13:11
 saved-by: wasila.dahdul
 auto-generated-by: OBO-Edit 2.1.1-beta7
 synonymtypedef: vertebrate "synonym typically used in the context of vertebrate anatomy" NARROW
@@ -548,6 +548,7 @@ id: BSPO:0000054
 name: anatomical side
 def: "An anatomical region bounded by a plane perpendicular to an axis through the middle." [BSPO:cjm]
 xref: FBql:00005841
+is_a: BSPO:0000070 ! anatomical region
 
 [Term]
 id: BSPO:0000055
@@ -634,7 +635,6 @@ relationship: finishes_axis BSPO:0000015 ! proximal-distal axis
 [Term]
 id: BSPO:0000063
 name: dorsal side
-comment: rename to 'dorsally located'?
 synonym: "dorsal" EXACT []
 xref: FBcv:0000059
 xref: FBql:00005842
@@ -1280,7 +1280,7 @@ def: "Biological entity that is either an individual member of a biological spec
 [Typedef]
 id: adjacent_to
 name: adjacent_to
-comment: todo - add to ro/bfo
+comment: todo - add to ro/bfo.
 
 [Typedef]
 id: BSPO:0000095
@@ -1291,7 +1291,7 @@ is_obsolete: true
 [Typedef]
 id: BSPO:0000096
 name: anterior_to
-def: "x anterior_to y iff x is further along the antero-posterior axis than y, towards the head. An antero-posterior axis is an axis that bisects an organism from head end to opposite end of body or tail." [BSPO:cjm]
+def: "x anterior_to y iff x is further along the antero-posterior axis than y, towards the head. An antero-posterior axis is an axis that extends through an organism from head end to opposite end of body or tail." [BSPO:cjm]
 synonym: "rostral_to" EXACT []
 xref: FBcv:0000039
 xref: FBql:00005863
@@ -1310,7 +1310,7 @@ inverse_of: BSPO:0000100 ! proximal_to
 [Typedef]
 id: BSPO:0000098
 name: dorsal_to
-def: "x dorsal_to y iff x is further along the dorso-ventral axis than y, towards the back. A dorso-ventral axis is an axis that bisects an organism from back (e.g. spinal column) to front (e.g. belly)." [BSPO:cjm]
+def: "x dorsal_to y iff x is further along the dorso-ventral axis than y, towards the back. A dorso-ventral axis is an axis that extends through an organism from back (e.g. spinal column) to front (e.g. belly)." [BSPO:cjm]
 synonym: "superior_to" RELATED []
 xref: FBcv:0000041
 xref: FBql:00005865
@@ -1320,7 +1320,7 @@ inverse_of: BSPO:0000102 ! ventral_to
 [Typedef]
 id: BSPO:0000099
 name: posterior_to
-def: "x posterior_to y iff x is further along the antero-posterior axis than y, towards the body/tail. An antero-posterior axis is an axis that bisects an organism from head end to opposite end of body or tail." [BSPO:cjm]
+def: "x posterior_to y iff x is further along the antero-posterior axis than y, towards the body/tail. An antero-posterior axis is an axis that extends through an organism from head end to opposite end of body or tail." [BSPO:cjm]
 synonym: "caudal_to" NARROW vertebrate []
 xref: FBcv:0000045
 xref: FBql:00005864
@@ -1346,7 +1346,7 @@ inverse_of: BSPO:0000109 ! surrounded_by
 [Typedef]
 id: BSPO:0000102
 name: ventral_to
-def: "x ventral_to y iff x is further along the dorso-ventral axis than y, towards the front. A dorso-ventral axis is an axis that bisects an organism from back (e.g. spinal column) to front (e.g. belly)." [BSPO:cjm]
+def: "x ventral_to y iff x is further along the dorso-ventral axis than y, towards the front. A dorso-ventral axis is an axis that extends through an organism from back (e.g. spinal column) to front (e.g. belly)." [BSPO:cjm]
 synonym: "inferior_to" EXACT []
 xref: FBcv:0000049
 xref: FBql:00005866
