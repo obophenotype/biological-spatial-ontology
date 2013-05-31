@@ -1,8 +1,8 @@
 format-version: 1.2
 data-version: releases/2013-05-17
-date: 10:09:2009 09:32
-saved-by: Melissa  Haendel
-auto-generated-by: OBO-Edit 2.1-beta1
+date: 31:05:2013 11:32
+saved-by: wasila.dahdul
+auto-generated-by: OBO-Edit 2.1.1-beta7
 synonymtypedef: vertebrate "synonym typically used in the context of vertebrate anatomy" NARROW
 default-namespace: spatial
 remark: based on FBql
@@ -13,22 +13,22 @@ id: BSPO:0000000
 name: left side
 synonym: "left" EXACT []
 is_a: BSPO:0000054 ! anatomical side
-relationship: BSPO:0000110 BSPO:0000007 ! left_of right side
-relationship: starts_axis BSPO:0000017 ! left/right axis
+relationship: BSPO:0000110 BSPO:0000007 ! right side
+relationship: starts_axis BSPO:0000017 ! left-right axis
 
 [Term]
 id: BSPO:0000001
 name: upper side
 synonym: "upper" EXACT []
 is_a: BSPO:0000054 ! anatomical side
-relationship: starts_axis BSPO:0000011 ! upper/lower axis
+relationship: starts_axis BSPO:0000011 ! upper-lower axis
 
 [Term]
 id: BSPO:0000002
 name: lower side
 synonym: "lower" EXACT []
 is_a: BSPO:0000054 ! anatomical side
-relationship: finishes_axis BSPO:0000011 ! upper/lower axis
+relationship: finishes_axis BSPO:0000011 ! upper-lower axis
 
 [Term]
 id: BSPO:00000021
@@ -42,15 +42,15 @@ id: BSPO:0000003
 name: deep side
 synonym: "deep" EXACT []
 is_a: BSPO:0000054 ! anatomical side
-relationship: BSPO:0000107 BSPO:0000004 ! deep_to superficial side
-relationship: starts_axis BSPO:0000012 ! deep/superficial axis
+relationship: BSPO:0000107 BSPO:0000004 ! superficial side
+relationship: starts_axis BSPO:0000012 ! deep-superficial axis
 
 [Term]
 id: BSPO:0000004
 name: superficial side
 synonym: "superficial" EXACT []
 is_a: BSPO:0000054 ! anatomical side
-relationship: finishes_axis BSPO:0000012 ! deep/superficial axis
+relationship: finishes_axis BSPO:0000012 ! deep-superficial axis
 
 [Term]
 id: BSPO:0000005
@@ -72,23 +72,25 @@ id: BSPO:0000007
 name: right side
 synonym: "right" EXACT []
 is_a: BSPO:0000054 ! anatomical side
-relationship: finishes_axis BSPO:0000017 ! left/right axis
+relationship: finishes_axis BSPO:0000017 ! left-right axis
 
 [Term]
 id: BSPO:0000008
-name: parasagittal section
-def: "Sagittal section that divides bilateral body into unequal left and right sections." [BSPO:mah]
-is_a: BSPO:0000417 ! sagittal section
+name: parasagittal plane
+def: "Sagittal plane that divides a bilateral body into unequal left and right parts." [BSPO:mah]
+synonym: "parasagittal section" EXACT []
+is_a: BSPO:0000417 ! sagittal plane
 
 [Term]
 id: BSPO:0000009
-name: midsaggital section
-def: "Sagittal section that divides bilateral body into equal left and right sections." [BSPO:mah]
+name: midline plane
+def: "Sagittal plane that divides bilateral body into equal left and right parts." [BSPO:mah]
 synonym: "median plane" RELATED []
 synonym: "median sagittal plane" EXACT []
 synonym: "midsagittal plane" EXACT []
+synonym: "midsagittal section" EXACT []
 xref: FMA:74563
-is_a: BSPO:0000417 ! sagittal section
+is_a: BSPO:0000417 ! sagittal plane
 
 [Term]
 id: BSPO:0000010
@@ -100,19 +102,19 @@ relationship: passes_through CARO:0000000 ! anatomical entity
 
 [Term]
 id: BSPO:0000011
-name: upper/lower axis
+name: upper-lower axis
 def: "An anatomical axis determined by gravity." [BSPO:cjm]
 is_a: BSPO:0000010 ! anatomical axis
 
 [Term]
 id: BSPO:0000012
-name: deep/superficial axis
+name: deep-superficial axis
 is_a: BSPO:0000010 ! anatomical axis
 
 [Term]
 id: BSPO:0000013
-name: anterior/posterior axis
-def: "An axis that bisects an organism from head end to opposite end of body or tail." [BSPO:cjm]
+name: anterior-posterior axis
+def: "An axis that extends through an organism from head end to opposite end of body or tail." [BSPO:cjm]
 synonym: "A-P axis" EXACT []
 synonym: "anteroposterior axis" EXACT []
 synonym: "AP axis" EXACT []
@@ -121,11 +123,11 @@ synonym: "craniocaudal axis" NARROW vertebrate []
 synonym: "rostral/caudal" NARROW vertebrate []
 synonym: "rostrocaudal axis" NARROW vertebrate []
 is_a: BSPO:0000010 ! anatomical axis
-relationship: BSPO:0000104 BSPO:0000016 ! approximately_perpendicular_to dorsal/ventral axis
+relationship: BSPO:0000104 BSPO:0000016 ! dorsal-ventral axis
 
 [Term]
 id: BSPO:0000014
-name: apical/basal axis
+name: apical-basal axis
 comment: In plants, this is the axis that runs from the shoot to the root.
 synonym: "apical/basal" EXACT []
 synonym: "longitudinal axis" EXACT []
@@ -133,65 +135,70 @@ is_a: BSPO:0000010 ! anatomical axis
 
 [Term]
 id: BSPO:0000015
-name: proximal/distal axis
-def: "from tip of an appendage (distal) to where it joins the body (proximal)." [http://en.wikipedia.org/wiki/Anatomical_terms_of_location]
+name: proximal-distal axis
+def: "An axis that extends from tip of an appendage (distal) to where it joins the body (proximal)." [http://en.wikipedia.org/wiki/Anatomical_terms_of_location]
 synonym: "proximal/distal" EXACT []
 synonym: "proximodistal" EXACT []
 is_a: BSPO:0000010 ! anatomical axis
 
 [Term]
 id: BSPO:0000016
-name: dorsal/ventral axis
-def: "An axis that bisects an organism from back (e.g. spinal column) to front (e.g. belly)." [BSPO:cjm]
+name: dorsal-ventral axis
+def: "An axis that extends through an organism from back (e.g. spinal column) to front (e.g. belly)." [BSPO:cjm]
+synonym: "D-V axis" EXACT []
 synonym: "dorsoventral axis" EXACT []
+synonym: "DV axis" EXACT []
 is_a: BSPO:0000010 ! anatomical axis
 
 [Term]
 id: BSPO:0000017
-name: left/right axis
+name: left-right axis
 def: "An axis that bisects an organism from left to right sides of body, through a sagittal section." [BSPO:cjm]
 synonym: "dextro-sinister axis" EXACT []
+synonym: "L-R axis" EXACT []
 synonym: "left to right axis" EXACT []
+synonym: "LR axis" EXACT []
 is_a: BSPO:0000010 ! anatomical axis
 intersection_of: BSPO:0000010 ! anatomical axis
-intersection_of: orthogonal_to BSPO:0000417 ! sagittal section
-relationship: orthogonal_to BSPO:0000417 ! sagittal section
+intersection_of: orthogonal_to BSPO:0000417 ! sagittal plane
+relationship: orthogonal_to BSPO:0000417 ! sagittal plane
 
 [Term]
 id: BSPO:0000018
-name: transverse section
-def: "Anatomical section that divides body into anterior and posterior sections." [BSPO:mah]
+name: transverse plane
+def: "Anatomical plane that divides body into anterior and posterior sections." [BSPO:mah]
 synonym: "axial plane" EXACT []
 synonym: "axial section" EXACT []
 synonym: "cross-section" RELATED []
-synonym: "transverse plane" EXACT []
+synonym: "transverse section" EXACT []
 xref: FMA:12247
-is_a: BSPO:0000400 ! anatomical section
+is_a: BSPO:0000400 ! anatomical plane
 
 [Term]
 id: BSPO:0000019
-name: horizontal section
-def: "Anatomical section that divides bilateral body into dorsal and ventral sections." [BSPO:mah]
+name: horizontal plane
+def: "Anatomical plane that divides bilateral body into dorsal and ventral parts." [BSPO:mah]
 synonym: "coronal section" RELATED []
 synonym: "frontal section" RELATED []
+synonym: "horizontal section" EXACT []
 xref: FMA:52810
-is_a: BSPO:0000400 ! anatomical section
+is_a: BSPO:0000400 ! anatomical plane
 
 [Term]
 id: BSPO:0000020
 name: upper-lower gradient
 is_a: BSPO:0000051 ! anatomical gradient
 intersection_of: BSPO:0000051 ! anatomical gradient
-intersection_of: follows_axis BSPO:0000011 ! upper/lower axis
-relationship: follows_axis BSPO:0000011 ! upper/lower axis
+intersection_of: follows_axis BSPO:0000011 ! upper-lower axis
+relationship: follows_axis BSPO:0000011 ! upper-lower axis
 
 [Term]
 id: BSPO:0000021
 name: deep-superficial gradient
 is_a: BSPO:0000051 ! anatomical gradient
 intersection_of: BSPO:0000051 ! anatomical gradient
-intersection_of: follows_axis BSPO:0000012 ! deep/superficial axis
-relationship: follows_axis BSPO:0000012 ! deep/superficial axis
+intersection_of: follows_axis BSPO:0000012 ! deep-superficial axis
+relationship: follows_axis BSPO:0000012 ! deep-superficial axis
 
 [Term]
 id: BSPO:0000022
@@ -205,16 +212,16 @@ id: BSPO:0000023
 name: apical-basal gradient
 is_a: BSPO:0000051 ! anatomical gradient
 intersection_of: BSPO:0000051 ! anatomical gradient
-intersection_of: follows_axis BSPO:0000014 ! apical/basal axis
-relationship: follows_axis BSPO:0000014 ! apical/basal axis
+intersection_of: follows_axis BSPO:0000014 ! apical-basal axis
+relationship: follows_axis BSPO:0000014 ! apical-basal axis
 
 [Term]
 id: BSPO:0000024
 name: proximal-distal gradient
 is_a: BSPO:0000051 ! anatomical gradient
 intersection_of: BSPO:0000051 ! anatomical gradient
-intersection_of: follows_axis BSPO:0000015 ! proximal/distal axis
-relationship: follows_axis BSPO:0000015 ! proximal/distal axis
+intersection_of: follows_axis BSPO:0000015 ! proximal-distal axis
+relationship: follows_axis BSPO:0000015 ! proximal-distal axis
 
 [Term]
 id: BSPO:0000025
@@ -380,16 +387,16 @@ id: BSPO:0000040
 name: upper/lower compartment boundary
 is_a: BSPO:0000092 ! anatomical compartment boundary
 intersection_of: BSPO:0000092 ! anatomical compartment boundary
-intersection_of: has_axis BSPO:0000011 ! upper/lower axis
-relationship: has_axis BSPO:0000011 ! upper/lower axis
+intersection_of: has_axis BSPO:0000011 ! upper-lower axis
+relationship: has_axis BSPO:0000011 ! upper-lower axis
 
 [Term]
 id: BSPO:0000041
 name: deep/superficial compartment boundary
 is_a: BSPO:0000092 ! anatomical compartment boundary
 intersection_of: BSPO:0000092 ! anatomical compartment boundary
-intersection_of: has_axis BSPO:0000012 ! deep/superficial axis
-relationship: has_axis BSPO:0000012 ! deep/superficial axis
+intersection_of: has_axis BSPO:0000012 ! deep-superficial axis
+relationship: has_axis BSPO:0000012 ! deep-superficial axis
 
 [Term]
 id: BSPO:0000042
@@ -411,16 +418,16 @@ id: BSPO:0000043
 name: apical/basal compartment boundary
 is_a: BSPO:0000092 ! anatomical compartment boundary
 intersection_of: BSPO:0000092 ! anatomical compartment boundary
-intersection_of: has_axis BSPO:0000014 ! apical/basal axis
-relationship: has_axis BSPO:0000014 ! apical/basal axis
+intersection_of: has_axis BSPO:0000014 ! apical-basal axis
+relationship: has_axis BSPO:0000014 ! apical-basal axis
 
 [Term]
 id: BSPO:0000044
 name: proximal/distal compartment boundary
 is_a: BSPO:0000092 ! anatomical compartment boundary
 intersection_of: BSPO:0000092 ! anatomical compartment boundary
-intersection_of: has_axis BSPO:0000015 ! proximal/distal axis
-relationship: has_axis BSPO:0000015 ! proximal/distal axis
+intersection_of: has_axis BSPO:0000015 ! proximal-distal axis
+relationship: has_axis BSPO:0000015 ! proximal-distal axis
 
 [Term]
 id: BSPO:0000045
@@ -455,7 +462,7 @@ creation_date: 2009-09-10T08:51:07Z
 [Term]
 id: BSPO:0000047
 name: postero-lateral margin
-synonym: "postero-lateral margin" EXACT []
+synonym: "posterolateral margin" EXACT []
 is_a: BSPO:0000028 ! postero-lateral region
 is_a: BSPO:0000672 ! posterior margin
 is_a: BSPO:0000682 ! lateral margin
@@ -524,8 +531,8 @@ xref: FBcv:0000142
 xref: FBql:00005256
 is_a: BSPO:0000051 ! anatomical gradient
 intersection_of: BSPO:0000051 ! anatomical gradient
-intersection_of: has_axis BSPO:0000013 ! anterior/posterior axis
-relationship: has_axis BSPO:0000013 ! anterior/posterior axis
+intersection_of: has_axis BSPO:0000013 ! anterior-posterior axis
+relationship: has_axis BSPO:0000013 ! anterior-posterior axis
 
 [Term]
 id: BSPO:0000053
@@ -534,8 +541,8 @@ xref: FBcv:0000143
 xref: FBql:00005255
 is_a: BSPO:0000051 ! anatomical gradient
 intersection_of: BSPO:0000051 ! anatomical gradient
-intersection_of: has_axis BSPO:0000016 ! dorsal/ventral axis
-relationship: has_axis BSPO:0000016 ! dorsal/ventral axis
+intersection_of: has_axis BSPO:0000016 ! dorsal-ventral axis
+relationship: has_axis BSPO:0000016 ! dorsal-ventral axis
 
 [Term]
 id: BSPO:0000054
@@ -551,9 +558,9 @@ synonym: "rostral" EXACT []
 xref: FBcv:0000053
 xref: FBql:00005848
 is_a: BSPO:0000054 ! anatomical side
-relationship: BSPO:0000096 BSPO:0000056 ! anterior_to posterior side
-relationship: BSPO:0000113 BSPO:0000056 ! opposite_to posterior side
-relationship: starts_axis BSPO:0000013 ! anterior/posterior axis
+relationship: BSPO:0000096 BSPO:0000056 ! posterior side
+relationship: BSPO:0000113 BSPO:0000056 ! posterior side
+relationship: starts_axis BSPO:0000013 ! anterior-posterior axis
 
 [Term]
 id: BSPO:0000056
@@ -563,8 +570,8 @@ synonym: "posterior" EXACT []
 xref: FBcv:0000065
 xref: FBql:00005849
 is_a: BSPO:0000054 ! anatomical side
-relationship: BSPO:0000099 BSPO:0000055 ! posterior_to anterior side
-relationship: finishes_axis BSPO:0000013 ! anterior/posterior axis
+relationship: BSPO:0000099 BSPO:0000055 ! anterior side
+relationship: finishes_axis BSPO:0000013 ! anterior-posterior axis
 
 [Term]
 id: BSPO:0000057
@@ -573,8 +580,8 @@ synonym: "apical" EXACT []
 xref: FBcv:0000054
 xref: FBql:00005854
 is_a: BSPO:0000054 ! anatomical side
-relationship: BSPO:0000113 BSPO:0000058 ! opposite_to basal side
-relationship: starts_axis BSPO:0000014 ! apical/basal axis
+relationship: BSPO:0000113 BSPO:0000058 ! basal side
+relationship: starts_axis BSPO:0000014 ! apical-basal axis
 
 [Term]
 id: BSPO:0000058
@@ -584,7 +591,7 @@ synonym: "basal" EXACT []
 xref: FBcv:0000055
 xref: FBql:00005855
 is_a: BSPO:0000054 ! anatomical side
-relationship: finishes_axis BSPO:0000014 ! apical/basal axis
+relationship: finishes_axis BSPO:0000014 ! apical-basal axis
 
 [Term]
 id: BSPO:0000059
@@ -612,8 +619,8 @@ synonym: "proximal" EXACT []
 xref: FBcv:0000066
 xref: FBql:00005852
 is_a: BSPO:0000054 ! anatomical side
-relationship: BSPO:0000113 BSPO:0000062 ! opposite_to distal side
-relationship: starts_axis BSPO:0000015 ! proximal/distal axis
+relationship: BSPO:0000113 BSPO:0000062 ! distal side
+relationship: starts_axis BSPO:0000015 ! proximal-distal axis
 
 [Term]
 id: BSPO:0000062
@@ -622,8 +629,8 @@ synonym: "distal" EXACT []
 xref: FBcv:0000058
 xref: FBql:00005853
 is_a: BSPO:0000054 ! anatomical side
-relationship: BSPO:0000097 BSPO:0000061 ! distal_to proximal side
-relationship: finishes_axis BSPO:0000015 ! proximal/distal axis
+relationship: BSPO:0000097 BSPO:0000061 ! proximal side
+relationship: finishes_axis BSPO:0000015 ! proximal-distal axis
 
 [Term]
 id: BSPO:0000063
@@ -633,9 +640,9 @@ synonym: "dorsal" EXACT []
 xref: FBcv:0000059
 xref: FBql:00005842
 is_a: BSPO:0000054 ! anatomical side
-relationship: BSPO:0000098 BSPO:0000066 ! dorsal_to lateral side
-relationship: BSPO:0000113 BSPO:0000068 ! opposite_to ventral side
-relationship: starts_axis BSPO:0000016 ! dorsal/ventral axis
+relationship: BSPO:0000098 BSPO:0000066 ! lateral side
+relationship: BSPO:0000113 BSPO:0000068 ! ventral side
+relationship: starts_axis BSPO:0000016 ! dorsal-ventral axis
 
 [Term]
 id: BSPO:0000064
@@ -685,7 +692,7 @@ synonym: "ventral" EXACT []
 xref: FBcv:0000070
 xref: FBql:00005843
 is_a: BSPO:0000054 ! anatomical side
-relationship: finishes_axis BSPO:0000016 ! dorsal/ventral axis
+relationship: finishes_axis BSPO:0000016 ! dorsal-ventral axis
 
 [Term]
 id: BSPO:0000069
@@ -842,7 +849,7 @@ relationship: overlaps BSPO:0000068 ! ventral side
 [Term]
 id: BSPO:0000085
 name: ventro-lateral region
-comment: This is an example of a composition of two axis positions
+comment: This is an example of a composition of two axis positions.
 synonym: "ventrolateral region" EXACT []
 xref: FBql:00005846
 is_a: BSPO:0000082 ! lateral region
@@ -1066,10 +1073,11 @@ relationship: surface_of BSPO:0000068 ! ventral side
 
 [Term]
 id: BSPO:0000400
-name: anatomical section
+name: anatomical plane
 def: "A flat 2D plane intersecting an anatomical continuant, dividing it into two adjacent portions." [BSPO:cjm]
 comment: These anatomical sections are applicable to most bilaterally symmetrical animals, but bipedal animals such as humans have more complex usage of these terms. For example, in post-embryonic humans a coronal plane is vertical and a transverse plane is horizontal, but for embryos and quadrupeds a coronal plane is horizontal and a transverse plane is vertical.
 synonym: "anatomical cross-section" EXACT []
+synonym: "anatomical section" EXACT []
 synonym: "cross-section" RELATED []
 synonym: "plane" EXACT []
 synonym: "section" EXACT []
@@ -1077,13 +1085,13 @@ xref: FMA:242982
 
 [Term]
 id: BSPO:0000417
-name: sagittal section
-def: "Anatomical section that divides bilateral body into roughly mirror image left and right sections. Bilaterally symmetric organisms have a single sagittal plane." [BSPO:cjm, BSPO:mah]
+name: sagittal plane
+def: "Anatomical plane that divides a bilateral body into left and right parts. Bilaterally symmetric organisms have a single sagittal plane." [BSPO:cjm, BSPO:mah]
 synonym: "left/right plane" EXACT []
 synonym: "median plane" EXACT []
-synonym: "sagittal plane" EXACT []
+synonym: "sagittal section" EXACT []
 xref: FMA:11361
-is_a: BSPO:0000400 ! anatomical section
+is_a: BSPO:0000400 ! anatomical plane
 
 [Term]
 id: BSPO:0000671
@@ -1256,8 +1264,8 @@ relationship: overlaps BSPO:0000068 ! ventral side
 
 [Term]
 id: BSPO:0001001
-name: medial axis
-def: "From centre of organism to one or other side." [BSPO:cjm]
+name: medial-lateral axis
+def: "An axis that extends from the center of organism to one or other side." [BSPO:cjm]
 comment: Properly, the ML axis is a half axis; practically, its usage is less clumsy and less linguistically biased than "left-right". The terms may still be used relatively to describe locations along the LR axis. The gills are medial to the operculum, but lateral to the heart.
 synonym: "medio-lateral axis" EXACT []
 synonym: "mediolateral axis" EXACT []
@@ -1269,6 +1277,11 @@ is_a: BSPO:0000010 ! anatomical axis
 id: CARO:0000000
 name: anatomical entity
 def: "Biological entity that is either an individual member of a biological species or constitutes the structural organization of an individual member of a biological species." [CARO:MAH]
+
+[Typedef]
+id: adjacent_to
+name: adjacent_to
+comment: todo - add to ro/bfo
 
 [Typedef]
 id: BSPO:0000095
@@ -1450,11 +1463,6 @@ def: "This relation holds when both the deep_to and ajdacent_to relationship sim
 is_a: BSPO:0000107 ! deep_to
 
 [Typedef]
-id: adjacent_to
-name: adjacent_to
-comment: todo - add to ro/bfo
-
-[Typedef]
 id: finishes_axis
 name: finishes_axis
 comment: A directional axis can be divided by a plane. Following Allen Interval Algebra terminology we say that the side on which the axis initiates starts the axis, with the other side finishing the axis. If s finishes_axis x, and x has_end_point p, then x overlaps p
@@ -1498,7 +1506,7 @@ id: orthogonal_to
 name: orthogonal_to
 def: "crossing at right angles" [BSPO:cjm]
 domain: BSPO:0000010 ! anatomical axis
-range: BSPO:0000400 ! anatomical section
+range: BSPO:0000400 ! anatomical plane
 
 [Typedef]
 id: overlaps
