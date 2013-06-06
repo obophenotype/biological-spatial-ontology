@@ -1,7 +1,4 @@
 format-version: 1.2
-date: 31:05:2013 13:11
-saved-by: wasila.dahdul
-auto-generated-by: OBO-Edit 2.1.1-beta7
 synonymtypedef: vertebrate "synonym typically used in the context of vertebrate anatomy" NARROW
 default-namespace: spatial
 remark: based on FBql
@@ -1337,11 +1334,11 @@ is_transitive: true
 
 [Typedef]
 id: BSPO:0000101
-name: surrounds
+name: obsolete surrounds
 xref: FBcv:0000048
 xref: FBql:00005861
-is_transitive: true
-inverse_of: BSPO:0000109 ! surrounded_by
+is_obsolete: true
+replaced_by: RO:0002221 ! surrounds
 
 [Typedef]
 id: BSPO:0000102
@@ -1394,8 +1391,9 @@ is_transitive: true
 
 [Typedef]
 id: BSPO:0000109
-name: surrounded_by
-is_transitive: true
+name: obsolete surrounded_by
+is_obsolete: true
+replaced_by: RO:0002219 ! surrounded by
 
 [Typedef]
 id: BSPO:0000110
@@ -1512,6 +1510,7 @@ id: overlaps
 name: overlaps
 def: "x overlaps y iff they have some part in common." [BSPO:cjm]
 comment: "(forall (x y) (iff (overlaps x y) (exists (z) (and (part_of z x) (part_of z y)))))" CLIF []
+xref: RO:0002131
 
 [Typedef]
 id: part_of
