@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 12:06:2013 21:31
+date: 12:06:2013 21:55
 saved-by: djs93
 auto-generated-by: OBO-Edit 2.2
 synonymtypedef: vertebrate "synonym typically used in the context of vertebrate anatomy" NARROW
@@ -57,6 +57,7 @@ name: anatomical surface
 def: "A 2D surface of an anatomical continuant" [BSPO:cjm]
 comment: to be merged into CARO
 synonym: "surface" EXACT []
+is_a: CARO:0000010 ! anatomical boundary
 
 [Term]
 id: BSPO:0000006
@@ -97,6 +98,7 @@ name: anatomical axis
 def: "A straight line through space, intersecting an anatomical entity." [BSPO:cjm]
 comment: axis directions are defined in terms of axes
 xref: http://upload.wikimedia.org/wikipedia/commons/3/34/Anatomical_Directions_and_Axes.JPG
+is_a: CARO:0000008 ! anatomical line
 relationship: passes_through CARO:0000000 ! anatomical entity
 
 [Term]
@@ -713,6 +715,7 @@ name: anatomical region
 def: "A 3D region in space without well-defined compartmental boundaries; for example, the dorsal region of an ectoderm." [BSPO:cjm]
 comment: to be merged into CARO
 xref: FBql:00005841
+is_a: CARO:0000003 ! anatomical structure
 
 [Term]
 id: BSPO:0000071
@@ -864,6 +867,7 @@ id: BSPO:0000086
 name: anatomical compartment
 comment: to be merged into CARO
 xref: FBql:00005873
+is_a: CARO:0000003 ! anatomical structure
 
 [Term]
 id: BSPO:0000087
@@ -905,6 +909,7 @@ id: BSPO:0000092
 name: anatomical compartment boundary
 comment: to be merged into CARO
 xref: FBql:00005881
+is_a: CARO:0000010 ! anatomical boundary
 
 [Term]
 id: BSPO:0000093
@@ -1081,6 +1086,7 @@ synonym: "cross-section" RELATED []
 synonym: "plane" EXACT []
 synonym: "section" EXACT []
 xref: FMA:242982
+is_a: CARO:0000010 ! anatomical boundary
 
 [Term]
 id: BSPO:0000417
@@ -1276,6 +1282,33 @@ is_a: BSPO:0000010 ! anatomical axis
 id: CARO:0000000
 name: anatomical entity
 def: "Biological entity that is either an individual member of a biological species or constitutes the structural organization of an individual member of a biological species." [CARO:MAH]
+
+[Term]
+id: CARO:0000003
+name: anatomical structure
+is_a: CARO:0000006 ! material anatomical entity
+
+[Term]
+id: CARO:0000006
+name: material anatomical entity
+is_a: CARO:0000000 ! anatomical entity
+
+[Term]
+id: CARO:0000007
+name: immaterial anatomical entity
+is_a: CARO:0000000 ! anatomical entity
+
+[Term]
+id: CARO:0000008
+name: anatomical line
+def: "A one dimensional, immaterial anatomical entity." [CC:DOS]
+is_a: CARO:0000007 ! immaterial anatomical entity
+
+[Term]
+id: CARO:0000010
+name: anatomical boundary
+def: "A non-material anatomical entity of two dimensions. Anatomical boundaries are contiguous structures." [CC:DOS]
+is_a: CARO:0000007 ! immaterial anatomical entity
 
 [Typedef]
 id: adjacent_to
