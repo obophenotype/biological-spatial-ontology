@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 12:06:2013 21:55
-saved-by: djs93
-auto-generated-by: OBO-Edit 2.2
+date: 12:06:2013 16:16
+saved-by: haendel
+auto-generated-by: OBO-Edit 2.3-beta5
 synonymtypedef: vertebrate "synonym typically used in the context of vertebrate anatomy" NARROW
 default-namespace: spatial
 remark: based on FBql
@@ -83,11 +83,11 @@ is_a: BSPO:0000417 ! sagittal plane
 
 [Term]
 id: BSPO:0000009
-name: midline plane
+name: midsagittal plane
 def: "Sagittal plane that divides bilateral body into equal left and right parts." [BSPO:mah]
 synonym: "median plane" RELATED []
 synonym: "median sagittal plane" EXACT []
-synonym: "midsagittal plane" EXACT []
+synonym: "midline plane" EXACT []
 synonym: "midsagittal section" EXACT []
 xref: FMA:74563
 is_a: BSPO:0000417 ! sagittal plane
@@ -1091,7 +1091,7 @@ is_a: CARO:0000010 ! anatomical boundary
 [Term]
 id: BSPO:0000417
 name: sagittal plane
-def: "Anatomical plane that divides a bilateral body into left and right parts. Bilaterally symmetric organisms have a single sagittal plane." [BSPO:cjm, BSPO:mah]
+def: "Anatomical plane that divides a bilateral body into left and right parts. Bilaterally symmetric organisms have a single midsagittal plane." [BSPO:cjm, BSPO:mah]
 synonym: "left/right plane" EXACT []
 synonym: "median plane" EXACT []
 synonym: "sagittal section" EXACT []
