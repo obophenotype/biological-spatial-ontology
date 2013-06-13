@@ -1097,7 +1097,7 @@ is_a: CARO:0000010 ! anatomical boundary
 [Term]
 id: BSPO:0000417
 name: sagittal plane
-def: "Anatomical plane that divides a bilateral body into left and right parts. Bilaterally symmetric organisms have a single midsagittal plane." [BSPO:cjm, BSPO:mah]
+def: "Anatomical plane that divides a bilateral body into left and right parts, not necessarily of even size." [BSPO:cjm, BSPO:mah, BSPO:DOS]
 synonym: "left/right plane" EXACT []
 synonym: "median plane" EXACT []
 synonym: "sagittal section" EXACT []
@@ -1358,6 +1358,12 @@ xref: FBcv:0000041
 xref: FBql:00005865
 is_transitive: true
 inverse_of: BSPO:0000102 ! ventral_to
+
+[Typedef]
+id: BSPO:0005001
+name: intersects_midsagital_plane_of
+def: "X intersects_median_plane of iff X crosses the midine plane of Y." []
+is_a: part_of
 
 [Typedef]
 id: BSPO:0000099
