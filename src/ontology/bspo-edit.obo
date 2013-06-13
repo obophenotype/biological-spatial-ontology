@@ -1466,42 +1466,50 @@ name: in_left_side_of
 def: "X in_left_side_of Y <=> if Y is subdivided into two left and right portions, X is part_of the left portion." [BSPO:PATO_mtg_2009]
 is_a: BSPO:0000126 ! in_lateral_side_of
 inverse_of: BSPO:0000121 ! in_right_side_of
+holds_over_chain: part_of in_left_side_of
 
 [Typedef]
 id: BSPO:0000121
 name: in_right_side_of
 def: "X in_right_side_of Y <=> if Y is subdivided into two left and right portions, X is part_of the right portion." [BSPO:PATO_mtg_2009]
 is_a: BSPO:0000126 ! in_lateral_side_of
+holds_over_chain: part_of in_right_side_of
+
 
 [Typedef]
 id: BSPO:0000122
 name: in_posterior_side_of
 def: "X posterior_side_of Y <=> if Y is subdivided into two anterior and posterior portions, X is part_of the posterior portion." [BSPO:PATO_mtg_2009]
 is_a: part_of ! part_of
+holds_over_chain: part_of in_posterior_side_of
 
 [Typedef]
 id: BSPO:0000123
 name: in_anterior_side_of
 def: "X anterior_side_of Y <=> if Y is subdivided into two anterior and posterior portions, X is part_of the anterior portion." [BSPO:PATO_mtg_2009]
 is_a: part_of ! part_of
+holds_over_chain: part_of in_anterior_side_of
 
 [Typedef]
 id: BSPO:0000124
 name: in_proximal_side_of
 def: "x in_proximal_side_of y <=> if y is subdivided into two proximal and distal portions, y is part_of the proximal portion." [BSPO:PATO_mtg_2009]
 is_a: part_of ! part_of
+holds_over_chain: part_of in_anterior_side_of
 
 [Typedef]
 id: BSPO:0000125
 name: in_distal_side_of
 def: "x in_distal_side_of y <=> if y is subdivided into two proximal and distal portions, y is part_of the distal portion." [BSPO:PATO_mtg_2009]
 is_a: part_of ! part_of
+holds_over_chain: part_of in_distal_side_of
 
 [Typedef]
 id: BSPO:0000126
 name: in_lateral_side_of
 def: "X in_lateral_side_of Y <=> if X is in_left_side_of Y or X is in_right_side_of Y. X is often, but not always a paired structure" [UBERON:cjm]
 is_a: part_of ! part_of
+holds_over_chain: part_of in_lateral_side_of
 
 [Typedef]
 id: BSPO:0001107
