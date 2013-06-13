@@ -125,6 +125,9 @@ synonym: "rostral/caudal" NARROW vertebrate []
 synonym: "rostrocaudal axis" NARROW vertebrate []
 is_a: BSPO:0000010 ! anatomical axis
 relationship: BSPO:0000104 BSPO:0000016 ! dorsal-ventral axis
+intersection_of: BSPO:0000010 ! anatomical axis
+intersection_of: orthogonal_to BSPO:0000018 ! transverse plane
+relationship: orthogonal_to BSPO:0000018 ! transverse plane
 
 [Term]
 id: BSPO:0000014
@@ -150,6 +153,9 @@ synonym: "D-V axis" EXACT []
 synonym: "dorsoventral axis" EXACT []
 synonym: "DV axis" EXACT []
 is_a: BSPO:0000010 ! anatomical axis
+intersection_of: BSPO:0000010 ! anatomical axis
+intersection_of: orthogonal_to BSPO:0000019 ! horizontal plane
+relationship: orthogonal_to BSPO:0000019 ! horizontal plane
 
 [Term]
 id: BSPO:0000017
