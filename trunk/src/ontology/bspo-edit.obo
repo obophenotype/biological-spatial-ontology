@@ -188,6 +188,7 @@ def: "Anatomical plane that divides bilateral body into dorsal and ventral parts
 synonym: "coronal section" RELATED []
 synonym: "frontal section" RELATED []
 synonym: "horizontal section" EXACT []
+synonym: "horizontal anatomical plane" EXACT [FMA:52810]
 xref: FMA:52810
 is_a: BSPO:0000400 ! anatomical plane
 
