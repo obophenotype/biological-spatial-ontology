@@ -58,6 +58,7 @@ def: "A 2D surface of an anatomical continuant" [BSPO:cjm]
 comment: to be merged into CARO
 synonym: "surface" EXACT []
 is_a: CARO:0000010 ! anatomical boundary
+xref: FMA:24137 ! Anatomical surface
 
 [Term]
 id: BSPO:0000006
@@ -89,7 +90,7 @@ synonym: "median plane" RELATED []
 synonym: "median sagittal plane" EXACT []
 synonym: "midline plane" EXACT []
 synonym: "midsagittal section" EXACT []
-xref: FMA:74563
+xref: FMA:74563 ! Median sagittal plane
 is_a: BSPO:0000417 ! sagittal plane
 
 [Term]
@@ -873,6 +874,7 @@ relationship: overlaps BSPO:0000068 ! ventral side
 id: BSPO:0000086
 name: anatomical compartment
 comment: to be merged into CARO
+xref: FMA:9647 ! Anatomical compartment
 xref: FBql:00005873
 is_a: CARO:0000003 ! anatomical structure
 
