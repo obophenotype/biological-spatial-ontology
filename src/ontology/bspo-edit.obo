@@ -1432,13 +1432,6 @@ domain: BSPO:0000010
 range: CARO:0000000
 
 [Typedef]
-id: immediately_deep_to
-name: immediately_deep_to
-def: "This relation holds when both the deep_to and ajdacent_to relationship similarly hold." [BSPO:cjm]
-xref: BSPO:0001107
-is_a: deep_to ! deep_to
-
-[Typedef]
 id: in_anterior_side_of
 name: in_anterior_side_of
 def: "X anterior_side_of Y <=> if Y is subdivided into two anterior and posterior portions, X is part_of the anterior portion." [BSPO:PATO_mtg_2009]
@@ -1624,3 +1617,56 @@ xref: BSPO:0000103
 property_value: seeAlso FBcv:0000050
 property_value: seeAlso FBql:00005862
 
+
+[Term]
+id: immediately_anterior_to
+name: immediately_anterior_to
+is_a: anterior_to
+def: "x immediately_anterior_to  iff x anterior_to y and x is contiguous with y." [BSPO:curators]
+inverse_of: immediately_posterior_to
+
+[Term]
+id: immediately_deep_to
+name: immediately_deep_to
+is_a: deep_to
+def: "x immediately_deep_to  iff x deep_to y and x is contiguous with y." [BSPO:curators]
+inverse_of: immediately_superficial_to
+xref: BSPO:0001107
+
+[Term]
+id: immediately_distal_to
+name: immediately_distal_to
+is_a: distal_to
+def: "x immediately_distal_to  iff x distal_to y and x is contiguous with y." [BSPO:curators]
+inverse_of: immediately_proximal_to
+
+[Term]
+id: immediately_dorsal_to
+name: immediately_dorsal_to
+is_a: dorsal_to
+def: "x immediately_dorsal_to  iff x dorsal_to y and x is contiguous with y." [BSPO:curators]
+inverse_of: immediately_ventral_to
+
+[Term]
+id: immediately_posterior_to
+name: immediately_posterior_to
+is_a: posterior_to
+def: "x immediately_posterior_to  iff x posterior_to y and x is contiguous with y." [BSPO:curators]
+
+[Term]
+id: immediately_proximal_to
+name: immediately_proximal_to
+is_a: proximal_to
+def: "x immediately_proximal_to  iff x proximal_to y and x is contiguous with y." [BSPO:curators]
+
+[Term]
+id: immediately_superficial_to
+name: immediately_superficial_to
+is_a: superficial_to
+def: "x immediately_superficial_to  iff x superficial_to y and x is contiguous with y." [BSPO:curators]
+
+[Term]
+id: immediately_ventral_to
+name: immediately_ventral_to
+is_a: ventral_to
+def: "x immediately_ventral_to  iff x ventral_to y and x is contiguous with y." [BSPO:curators]
