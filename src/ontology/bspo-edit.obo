@@ -1325,7 +1325,8 @@ is_a: CARO:0000007 ! immaterial anatomical entity
 [Typedef]
 id: adjacent_to
 name: adjacent_to
-comment: todo - add to ro/bfo.
+xref: RO:0002220
+is_symmetric: true
 
 [Typedef]
 id: anatomical_relation
