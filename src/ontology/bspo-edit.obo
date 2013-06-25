@@ -1617,7 +1617,6 @@ xref: BSPO:0000103
 property_value: seeAlso FBcv:0000050
 property_value: seeAlso FBql:00005862
 
-
 [Term]
 id: immediately_anterior_to
 name: immediately_anterior_to
@@ -1670,3 +1669,16 @@ id: immediately_ventral_to
 name: immediately_ventral_to
 is_a: ventral_to
 def: "x immediately_ventral_to y iff x ventral_to y and x is contiguous with y." [BSPO:curators]
+
+[Term]
+id: immediately_left_of
+name: immediately_left_of
+is_a: left_of
+def: "x immediately_left_of y iff x left_of y and x is contiguous with y." [BSPO:curators]
+inverse_of: immediately_right_of
+
+[Term]
+id: immediately_right_of
+name: immediately_right_of
+is_a: right_of
+def: "x immediately_right_of y iff x right_of y and x is contiguous with y." [BSPO:curators]
