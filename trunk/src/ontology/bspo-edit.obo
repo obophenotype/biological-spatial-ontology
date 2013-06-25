@@ -13,7 +13,7 @@ id: BSPO:0000000
 name: left side
 synonym: "left" EXACT []
 is_a: BSPO:0000054 ! anatomical side
-relationship: BSPO:0000110 BSPO:0000007 ! right side
+relationship: left_of BSPO:0000007 ! right side
 relationship: starts_axis BSPO:0000017 ! left-right axis
 
 [Term]
@@ -42,7 +42,7 @@ id: BSPO:0000003
 name: deep side
 synonym: "deep" EXACT []
 is_a: BSPO:0000054 ! anatomical side
-relationship: BSPO:0000107 BSPO:0000004 ! superficial side
+relationship: deep_to BSPO:0000004 ! superficial side
 relationship: starts_axis BSPO:0000012 ! deep-superficial axis
 
 [Term]
@@ -126,7 +126,7 @@ synonym: "craniocaudal axis" NARROW vertebrate []
 synonym: "rostral/caudal" NARROW vertebrate []
 synonym: "rostrocaudal axis" NARROW vertebrate []
 is_a: BSPO:0000010 ! anatomical axis
-relationship: BSPO:0000104 BSPO:0000016 ! dorsal-ventral axis
+relationship: approximately_perpendicular_to BSPO:0000016 ! dorsal-ventral axis
 intersection_of: BSPO:0000010 ! anatomical axis
 intersection_of: orthogonal_to BSPO:0000018 ! transverse plane
 relationship: orthogonal_to BSPO:0000018 ! transverse plane
@@ -569,8 +569,8 @@ synonym: "rostral" EXACT []
 xref: FBcv:0000053
 xref: FBql:00005848
 is_a: BSPO:0000054 ! anatomical side
-relationship: BSPO:0000096 BSPO:0000056 ! posterior side
-relationship: BSPO:0000113 BSPO:0000056 ! posterior side
+relationship: anterior_to BSPO:0000056 ! posterior side
+relationship: opposite_to BSPO:0000056 ! posterior side
 relationship: starts_axis BSPO:0000013 ! anterior-posterior axis
 
 [Term]
@@ -581,7 +581,7 @@ synonym: "posterior" EXACT []
 xref: FBcv:0000065
 xref: FBql:00005849
 is_a: BSPO:0000054 ! anatomical side
-relationship: BSPO:0000099 BSPO:0000055 ! anterior side
+relationship: posterior_to BSPO:0000055 ! anterior side
 relationship: finishes_axis BSPO:0000013 ! anterior-posterior axis
 
 [Term]
@@ -591,7 +591,7 @@ synonym: "apical" EXACT []
 xref: FBcv:0000054
 xref: FBql:00005854
 is_a: BSPO:0000054 ! anatomical side
-relationship: BSPO:0000113 BSPO:0000058 ! basal side
+relationship: opposite_to BSPO:0000058 ! basal side
 relationship: starts_axis BSPO:0000014 ! apical-basal axis
 
 [Term]
@@ -630,7 +630,7 @@ synonym: "proximal" EXACT []
 xref: FBcv:0000066
 xref: FBql:00005852
 is_a: BSPO:0000054 ! anatomical side
-relationship: BSPO:0000113 BSPO:0000062 ! distal side
+relationship: opposite_to BSPO:0000062 ! distal side
 relationship: starts_axis BSPO:0000015 ! proximal-distal axis
 
 [Term]
@@ -640,7 +640,7 @@ synonym: "distal" EXACT []
 xref: FBcv:0000058
 xref: FBql:00005853
 is_a: BSPO:0000054 ! anatomical side
-relationship: BSPO:0000097 BSPO:0000061 ! proximal side
+relationship: distal_to BSPO:0000061 ! proximal side
 relationship: finishes_axis BSPO:0000015 ! proximal-distal axis
 
 [Term]
@@ -650,8 +650,8 @@ synonym: "dorsal" EXACT []
 xref: FBcv:0000059
 xref: FBql:00005842
 is_a: BSPO:0000054 ! anatomical side
-relationship: BSPO:0000098 BSPO:0000066 ! lateral side
-relationship: BSPO:0000113 BSPO:0000068 ! ventral side
+relationship: dorsal_to BSPO:0000066 ! lateral side
+relationship: opposite_to BSPO:0000068 ! ventral side
 relationship: starts_axis BSPO:0000016 ! dorsal-ventral axis
 
 [Term]
