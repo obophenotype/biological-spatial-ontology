@@ -6,6 +6,7 @@ synonymtypedef: vertebrate "synonym typically used in the context of vertebrate 
 default-namespace: spatial
 remark: based on FBql
 ontology: bspo
+xref: BSPO:0015000
 
 [Term]
 id: BSPO:0000000
@@ -1397,15 +1398,18 @@ name: finishes_axis
 comment: A directional axis can be divided by a plane. Following Allen Interval Algebra terminology we say that the side on which the axis initiates starts the axis, with the other side finishing the axis. If s finishes_axis x, and x has_end_point p, then x overlaps p
 domain: BSPO:0000054
 range: BSPO:0000010
+xref: BSPO:0015001
 
 [Typedef]
 id: follows_axis
 name: follows_axis
 range: BSPO:0000010
+xref: BSPO:0015002
 
 [Typedef]
 id: has_axis
 name: has_axis
+xref: BSPO:0015003
 
 [Typedef]
 id: has_end_point
@@ -1414,6 +1418,7 @@ def: "A relation between an axis and a part of an organism, in which the part de
 comment: Axes can be defined in a given species by subtyping the relevant axis type and stating a end and end point
 domain: BSPO:0000010
 range: CARO:0000000
+xref: BSPO:0015004
 
 [Typedef]
 id: has_part
@@ -1533,6 +1538,7 @@ name: orthogonal_to
 def: "crossing at right angles" [BSPO:cjm]
 domain: BSPO:0000010
 range: BSPO:0000400
+xref: BSPO:0015005
 
 [Typedef]
 id: overlaps
@@ -1552,6 +1558,7 @@ id: passes_through
 name: passes_through
 def: "Intersects at two points." [BSPO:cjm]
 domain: BSPO:0000010
+xref: BSPO:0015006
 
 [Typedef]
 id: posterior_to
@@ -1586,6 +1593,7 @@ name: starts_axis
 comment: A directional axis can be divided by a plane. Following Allen Interval Algebra terminology we say that the side on which the axis initiates starts the axis, with the other side finishing the axis. . If s starts_axis x, and x has_start_point p, then x overlaps p
 domain: BSPO:0000054
 range: BSPO:0000010
+xref: BSPO:0015007
 
 [Typedef]
 id: superficial_to
@@ -1599,6 +1607,7 @@ id: surface_of
 name: surface_of
 comment: placeholder. used for relation between anatomical surface and an anatomical side.
 domain: BSPO:0000005
+xref: BSPO:0015008
 
 [Typedef]
 id: ventral_to
@@ -1623,6 +1632,7 @@ name: immediately_anterior_to
 is_a: anterior_to
 def: "x immediately_anterior_to y iff x anterior_to y and x is contiguous with y." [BSPO:curators]
 inverse_of: immediately_posterior_to
+xref: BSPO:0015009
 
 [Term]
 id: immediately_deep_to
@@ -1638,6 +1648,7 @@ name: immediately_distal_to
 is_a: distal_to
 def: "x immediately_distal_to y iff x distal_to y and x is contiguous with y." [BSPO:curators]
 inverse_of: immediately_proximal_to
+xref: BSPO:0015010
 
 [Term]
 id: immediately_dorsal_to
@@ -1645,30 +1656,35 @@ name: immediately_dorsal_to
 is_a: dorsal_to
 def: "x immediately_dorsal_to y iff x dorsal_to y and x is contiguous with y." [BSPO:curators]
 inverse_of: immediately_ventral_to
+xref: BSPO:0015011
 
 [Term]
 id: immediately_posterior_to
 name: immediately_posterior_to
 is_a: posterior_to
 def: "x immediately_posterior_to y iff x posterior_to y and x is contiguous with y." [BSPO:curators]
+xref: BSPO:0015012
 
 [Term]
 id: immediately_proximal_to
 name: immediately_proximal_to
 is_a: proximal_to
 def: "x immediately_proximal_to y iff x proximal_to y and x is contiguous with y." [BSPO:curators]
+xref: BSPO:0015013
 
 [Term]
 id: immediately_superficial_to
 name: immediately_superficial_to
 is_a: superficial_to
 def: "x immediately_superficial_to y iff x superficial_to y and x is contiguous with y." [BSPO:curators]
+xref: BSPO:0015014
 
 [Term]
 id: immediately_ventral_to
 name: immediately_ventral_to
 is_a: ventral_to
 def: "x immediately_ventral_to y iff x ventral_to y and x is contiguous with y." [BSPO:curators]
+xref: BSPO:0015015
 
 [Term]
 id: immediately_left_of
@@ -1676,6 +1692,7 @@ name: immediately_left_of
 is_a: left_of
 def: "x immediately_left_of y iff x left_of y and x is contiguous with y." [BSPO:curators]
 inverse_of: immediately_right_of
+xref: BSPO:0015016
 
 [Term]
 id: immediately_right_of
