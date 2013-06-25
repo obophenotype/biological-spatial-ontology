@@ -87,7 +87,7 @@ id: BSPO:0000009
 name: midsagittal plane
 def: "Sagittal plane that divides bilateral body into equal left and right parts." [BSPO:mah]
 synonym: "median plane" RELATED []
-synonym: "median sagittal plane" EXACT []
+synonym: "median sagittal plane" EXACT [FMA:74563]
 synonym: "midline plane" EXACT []
 synonym: "midsagittal section" EXACT []
 xref: FMA:74563 ! Median sagittal plane
