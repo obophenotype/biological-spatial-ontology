@@ -87,6 +87,7 @@ is_a: BSPO:0000417 ! sagittal plane
 id: BSPO:0000009
 name: midsagittal plane
 def: "Sagittal plane that divides bilateral body into equal left and right parts." [BSPO:mah]
+comment: only in bilaterally symmetrical organisms
 synonym: "median plane" RELATED []
 synonym: "median sagittal plane" EXACT [FMA:74563]
 synonym: "midline plane" EXACT []
@@ -1106,7 +1107,10 @@ synonym: "left/right plane" EXACT []
 synonym: "median plane" EXACT []
 synonym: "sagittal section" EXACT []
 xref: FMA:11361
-is_a: BSPO:0000400 ! anatomical plane
+intersection_of: BSPO:0000400 ! anatomical plane
+intersection_of: parallel_to BSPO:0000013 ! anterior-posterior axis
+intersection_of: parallel_to BSPO:0000016 ! dorsal-ventral axis
+intersection_of: orthogonal_to BSPO:0000017 ! left-right axis
 
 [Term]
 id: BSPO:0000671
@@ -1356,12 +1360,18 @@ domain: BSPO:0000010
 range: BSPO:0000010
 
 [Typedef]
+id: parallel_to
+name: parallel_to
+def: "x is parallel t y iff x and y are lines or planes which when extended indefinitely do not cross." [BSPO:curators]
+
+[Typedef]
 id: contralateral_to
 name: contralateral_to
 def: "On the opposite side from. For example, the left arm is contralateral to the right arm (and the right leg)." [BSPO:cjm]
 xref: BSPO:0000106
 property_value: seeAlso FBql:00005851
 is_symmetric: true
+is_a: in_lateral_side_of ! in_lateral_side_of
 
 [Typedef]
 id: deep_to
@@ -1500,6 +1510,8 @@ def: "On the same side as. For example, the left arm is ipsilateral to the left 
 xref: BSPO:0000105
 property_value: seeAlso FBql:00005850
 is_symmetric: true
+is_a: in_lateral_side_of ! in_lateral_side_of
+disjoint_from: contralateral_to
 
 [Typedef]
 id: left_of
@@ -1627,6 +1639,20 @@ property_value: seeAlso FBcv:0000050
 property_value: seeAlso FBql:00005862
 
 [Typedef]
+id: in_superficial_part_of
+name: in_superficial_part_of
+def: "X superficial_part_of Y <=> if Y is subdivided into two superficial and deep portions, X is part_of the superficial portion." [BSPO:cjm]
+is_a: part_of
+xref: BSPO:0001100
+
+[Typedef]
+id: in_deep_part_of
+name: in_deep_part_of
+def: "X superficial_part_of Y <=> if Y is subdivided into two superficial and deep portions, X is part_of the deep portion." [BSPO:cjm]
+is_a: part_of
+xref: BSPO:0001101
+
+[Typedef]
 id: immediately_anterior_to
 name: immediately_anterior_to
 is_a: anterior_to
@@ -1700,3 +1726,48 @@ name: immediately_right_of
 is_a: right_of
 def: "x immediately_right_of y iff x right_of y and x is contiguous with y." [BSPO:curators]
 xref: BSPO:0015017
+
+[Typedef]
+id: preaxial_to
+name: preaxial_to
+def: "x preaxial_to y iff x is further along the preaxial-postaxial axis than y, towards the front." [http://medical-dictionary.thefreedictionary.com/preaxial]
+synonym: "lateral (radial) to" RELATED []
+synonym: "medial (tibial) to" RELATED []
+synonym: "anterior_to (developmentally)" RELATED [MA:th]
+is_transitive: true
+xref: BSPO:1000000
+
+[Typedef]
+id: postaxial_to
+name: postaxial_to
+def: "x preaxial_to y iff x is further along the preaxial-postaxial axis than y, towards the postaxial side." [http://medical-dictionary.thefreedictionary.com/postaxial]
+synonym: "posterior_to (developmentally)" RELATED [MA:th]
+is_transitive: true
+xref: BSPO:0001114
+
+[Typedef]
+id: preaxialmost_part_of
+name: preaxialmost_part_of
+is_a: part_of
+xref: BSPO:0001113
+
+[Typedef]
+id: postaxialmost_part_of
+name: postaxialmost_part_of
+is_a: part_of
+xref: BSPO:0001115
+
+[Typedef]
+id: distalmost_part_of
+name: distalmost_part_of
+def: "X distalmost_part_of Y <=> X is in_distal_side_of Y and X is adjacent_to the distal boundary of Y" [https://orcid.org/0000-0002-6601-2165]
+is_a: in_distal_side_of
+xref: BSPO:0001108
+
+[Typedef]
+id: proximalmost_part_of
+name: proximalmost_part_of
+def: "X proximalmost_part_of Y <=> X is in_proximal_side_of Y and X is adjacent_to the proximal boundary of Y" [https://orcid.org/0000-0002-6601-2165]
+is_a: in_proximal_side_of
+xref: BSPO:0001106
+
