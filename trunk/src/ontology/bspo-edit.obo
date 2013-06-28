@@ -6,7 +6,6 @@ synonymtypedef: vertebrate "synonym typically used in the context of vertebrate 
 default-namespace: spatial
 remark: based on FBql
 ontology: bspo
-xref: BSPO:0015000
 
 [Term]
 id: BSPO:0000000
