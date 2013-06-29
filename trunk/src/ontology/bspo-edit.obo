@@ -213,6 +213,7 @@ relationship: follows_axis BSPO:0000012 ! deep-superficial axis
 [Term]
 id: BSPO:0000022
 name: superior side
+def: "The side that is higher relative to the substrate" []
 synonym: "cranial" RELATED []
 synonym: "superior" EXACT []
 is_a: BSPO:0000054 ! anatomical side
@@ -236,7 +237,8 @@ relationship: follows_axis BSPO:0000015 ! proximal-distal axis
 [Term]
 id: BSPO:0000025
 name: inferior side
-synonym: "caudal" EXACT []
+def: "The side that is lower relative to the substrate" []
+synonym: "caudal" RELATED []
 synonym: "inferior" EXACT []
 is_a: BSPO:0000054 ! anatomical side
 
@@ -1624,7 +1626,7 @@ xref: BSPO:0015008
 id: ventral_to
 name: ventral_to
 def: "x ventral_to y iff x is further along the dorso-ventral axis than y, towards the front. A dorso-ventral axis is an axis that extends through an organism from back (e.g. spinal column) to front (e.g. belly)." [BSPO:cjm]
-synonym: "inferior_to" EXACT []
+synonym: "inferior_to" RELATED []
 xref: BSPO:0000102
 property_value: seeAlso FBcv:0000049
 property_value: seeAlso FBql:00005866
