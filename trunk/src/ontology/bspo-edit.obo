@@ -3,6 +3,7 @@ date: 12:06:2013 16:16
 saved-by: haendel
 auto-generated-by: OBO-Edit 2.3-beta5
 synonymtypedef: vertebrate "synonym typically used in the context of vertebrate anatomy" NARROW
+synonymtypedef: human "synonym typically used in the context of human anatomy" NARROW
 default-namespace: spatial
 remark: based on FBql
 ontology: bspo
@@ -10,6 +11,7 @@ ontology: bspo
 [Term]
 id: BSPO:0000000
 name: left side
+def: "The side of an organism that is left of the sagittal plan." [BSPO:cjm]
 synonym: "left" EXACT []
 is_a: BSPO:0000054 ! anatomical side
 relationship: left_of BSPO:0000007 ! right side
@@ -18,6 +20,7 @@ relationship: starts_axis BSPO:0000017 ! left-right axis
 [Term]
 id: BSPO:0000001
 name: upper side
+comment: Consider merging with superior side
 synonym: "upper" EXACT []
 is_a: BSPO:0000054 ! anatomical side
 relationship: starts_axis BSPO:0000011 ! upper-lower axis
@@ -25,6 +28,7 @@ relationship: starts_axis BSPO:0000011 ! upper-lower axis
 [Term]
 id: BSPO:0000002
 name: lower side
+comment: Consider merging with inferior side
 synonym: "lower" EXACT []
 is_a: BSPO:0000054 ! anatomical side
 relationship: finishes_axis BSPO:0000011 ! upper-lower axis
@@ -136,7 +140,7 @@ id: BSPO:0000014
 name: apical-basal axis
 comment: In plants, this is the axis that runs from the shoot to the root.
 synonym: "apical/basal" EXACT []
-synonym: "longitudinal axis" EXACT []
+synonym: "longitudinal axis" RELATED []
 is_a: BSPO:0000010 ! anatomical axis
 
 [Term]
@@ -153,6 +157,7 @@ name: dorsal-ventral axis
 def: "An axis that extends through an organism from back (e.g. spinal column) to front (e.g. belly)." [BSPO:cjm]
 synonym: "D-V axis" EXACT []
 synonym: "dorsoventral axis" EXACT []
+synonym: "anterior-posterior axis" NARROW human []
 synonym: "DV axis" EXACT []
 is_a: BSPO:0000010 ! anatomical axis
 intersection_of: BSPO:0000010 ! anatomical axis
@@ -1498,8 +1503,8 @@ xref: BSPO:0000121
 is_a: in_lateral_side_of ! in_lateral_side_of
 
 [Typedef]
-id: intersects_midsagital_plane_of
-name: intersects_midsagital_plane_of
+id: intersects_midsagittal_plane_of
+name: intersects_midsagittal_plane_of
 def: "X intersects_median_plane of iff X crosses the midine plane of Y." []
 xref: BSPO:0005001
 is_a: part_of ! part_of
