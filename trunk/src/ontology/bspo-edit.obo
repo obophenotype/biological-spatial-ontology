@@ -154,7 +154,7 @@ is_a: BSPO:0000010 ! anatomical axis
 [Term]
 id: BSPO:0000016
 name: dorsal-ventral axis
-def: "An axis that extends through an organism from back (e.g. spinal column) to front (e.g. belly)." [BSPO:cjm]
+def: "An axis that is approximately perpendicular to the anterior-posterior axis and that extends through the horizontal plane of the body." [BSPO:curators]
 synonym: "D-V axis" EXACT []
 synonym: "dorsoventral axis" EXACT []
 synonym: "anterior-posterior axis" NARROW human []
