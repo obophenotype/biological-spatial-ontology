@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 02:07:2013 14:22
+date: 02:07:2013 15:08
 saved-by: wasila.dahdul
 auto-generated-by: OBO-Edit 2.3-beta5
 synonymtypedef: human "synonym typically used in the context of human anatomy" NARROW
@@ -265,6 +265,7 @@ is_a: BSPO:0000054 ! anatomical side
 [Term]
 id: BSPO:0000026
 name: antero-dorsal region
+def: "Anatomical region that overlaps the anterior and dorsal regions of a body or body part." [BSPO:wd]
 synonym: "anterodorsal region " EXACT []
 is_a: BSPO:0000071 ! anterior region
 is_a: BSPO:0000079 ! dorsal region
@@ -279,6 +280,7 @@ creation_date: 2009-06-15T01:01:38Z
 [Term]
 id: BSPO:0000027
 name: antero-ventral region
+def: "Anatomical region that overlaps the anterior and ventral regions of a body or body part." [BSPO:wd]
 synonym: "anteroventral region " EXACT []
 is_a: BSPO:0000071 ! anterior region
 is_a: BSPO:0000084 ! ventral region
@@ -293,6 +295,7 @@ creation_date: 2009-06-15T01:04:59Z
 [Term]
 id: BSPO:0000028
 name: postero-lateral region
+def: "Anatomical region that overlaps the posterior and lateral regions of the body or body part." [BSPO:wd]
 synonym: "posterolateral region" EXACT []
 is_a: BSPO:0000072 ! posterior region
 is_a: BSPO:0000082 ! lateral region
@@ -307,6 +310,7 @@ creation_date: 2009-06-15T01:06:01Z
 [Term]
 id: BSPO:0000029
 name: antero-lateral region
+def: "Anatomical region that overlaps the anterior and lateral regions of a body or body part." [BSPO:wd]
 synonym: "anterolateral region" EXACT []
 is_a: BSPO:0000071 ! anterior region
 is_a: BSPO:0000082 ! lateral region
@@ -321,6 +325,7 @@ creation_date: 2009-06-15T01:07:18Z
 [Term]
 id: BSPO:0000030
 name: postero-dorsal region
+def: "Anatomical region that overlaps the posterior and dorsal regions of the body or body part." [BSPO:wd]
 synonym: "posterodorsal region" EXACT []
 is_a: BSPO:0000072 ! posterior region
 is_a: BSPO:0000079 ! dorsal region
@@ -369,6 +374,7 @@ relationship: overlaps BSPO:0000004 ! superficial side
 [Term]
 id: BSPO:0000035
 name: postero-ventral region
+def: "Anatomical region that overlaps the posterior and ventral regions of a body or body part." [BSPO:wd]
 synonym: "posteroventral region" EXACT []
 is_a: BSPO:0000072 ! posterior region
 is_a: BSPO:0000084 ! ventral region
@@ -435,6 +441,7 @@ relationship: has_axis BSPO:0000012 ! deep-superficial axis
 [Term]
 id: BSPO:0000042
 name: antero-medial margin
+def: "Anatomical margin that is located on the antero-medial region of the body or body part." [BSPO:wd<new dbxref>]
 synonym: "anteromedial margin" EXACT []
 is_a: BSPO:0000050 ! antero-medial region
 is_a: BSPO:0000671 ! anterior margin
@@ -466,6 +473,7 @@ relationship: has_axis BSPO:0000015 ! proximal-distal axis
 [Term]
 id: BSPO:0000045
 name: antero-lateral margin
+def: "Anatomical margin that is located on the antero-lateral region of the body or body part." [BSPO:wd]
 synonym: "anterolateral margin" EXACT []
 is_a: BSPO:0000029 ! antero-lateral region
 is_a: BSPO:0000671 ! anterior margin
@@ -481,6 +489,7 @@ creation_date: 2009-09-10T08:50:37Z
 [Term]
 id: BSPO:0000046
 name: postero-medial margin
+def: "Anatomical margin that is located on the postero-medial region of the body or body part." [BSPO:wd]
 synonym: "posteromedial margin" EXACT []
 is_a: BSPO:0000064 ! postero-medial region
 is_a: BSPO:0000672 ! posterior margin
@@ -496,6 +505,7 @@ creation_date: 2009-09-10T08:51:07Z
 [Term]
 id: BSPO:0000047
 name: postero-lateral margin
+def: "Anatomical margin that is located on the postero-lateral region of the body or body part." [BSPO:wd]
 synonym: "posterolateral margin" EXACT []
 is_a: BSPO:0000028 ! postero-lateral region
 is_a: BSPO:0000672 ! posterior margin
@@ -511,6 +521,7 @@ creation_date: 2009-09-10T08:51:42Z
 [Term]
 id: BSPO:0000048
 name: dorso-medial margin
+def: "Anatomical margin that is located on the dorso-medial region of the body or body part." [BSPO:wd]
 synonym: "dorso-medial margin" EXACT []
 is_a: BSPO:0000069 ! dorso-medial region
 is_a: BSPO:0000679 ! dorsal margin
@@ -526,7 +537,7 @@ creation_date: 2009-09-10T08:52:04Z
 [Term]
 id: BSPO:0000049
 name: ventro-medial margin
-def: "Anatomical margin that is ventro-medially located on an organism or structure." [BSPO:wd]
+def: "Anatomical margin that is located on the ventro-medial region of the body or body part." [BSPO:wd]
 synonym: "ventromedial margin" EXACT []
 is_a: BSPO:0000112 ! ventro-medial region
 is_a: BSPO:0000683 ! medial margin
@@ -542,6 +553,7 @@ creation_date: 2009-09-10T08:52:48Z
 [Term]
 id: BSPO:0000050
 name: antero-medial region
+def: "Anatomical region that overlaps the anterior and medial regions of the body or body part." [BSPO:wd]
 synonym: "anteromedial region" EXACT []
 is_a: BSPO:0000071 ! anterior region
 is_a: BSPO:0000083 ! medial region
@@ -691,6 +703,7 @@ relationship: starts_axis BSPO:0000016 ! dorsal-ventral axis
 [Term]
 id: BSPO:0000064
 name: postero-medial region
+def: "Anatomical region that overlaps the posterior and medial regions of the body or body part." [BSPO:wd]
 synonym: "posteromedial region" EXACT []
 is_a: BSPO:0000072 ! posterior region
 is_a: BSPO:0000083 ! medial region
@@ -742,6 +755,7 @@ relationship: finishes_axis BSPO:0000016 ! dorsal-ventral axis
 [Term]
 id: BSPO:0000069
 name: dorso-medial region
+def: "Anatomical region that overlaps the dorsal and medial regions of the body or body part." [BSPO:wd]
 synonym: "dorsomedial region" EXACT []
 is_a: BSPO:0000079 ! dorsal region
 is_a: BSPO:0000083 ! medial region
@@ -854,6 +868,7 @@ relationship: overlaps BSPO:0000063 ! dorsal side
 [Term]
 id: BSPO:0000080
 name: dorso-lateral region
+def: "Anatomical region that overlaps the dorsal and lateral regions of a body or body part." [BSPO:wd]
 synonym: "dorsolateral region" EXACT []
 xref: FBql:00005845
 is_a: BSPO:0000079 ! dorsal region
@@ -906,6 +921,7 @@ relationship: overlaps BSPO:0000068 ! ventral side
 [Term]
 id: BSPO:0000085
 name: ventro-lateral region
+def: "Anatomical region that overlaps the ventral and lateral regions of a body or body part." [BSPO:wd]
 comment: This is an example of a composition of two axis positions.
 synonym: "ventrolateral region" EXACT []
 xref: FBql:00005846
@@ -1262,7 +1278,7 @@ relationship: overlaps BSPO:0000058 ! basal side
 [Term]
 id: BSPO:0000677
 name: proximal margin
-def: "Anatomical margin that is located on the proximal side of the body or body part.." [BSPO:wd]
+def: "Anatomical margin that is located on the proximal region of the body or body part." [BSPO:wd]
 is_a: BSPO:0000006 ! anatomical margin
 is_a: BSPO:0000077 ! proximal region
 intersection_of: BSPO:0000006 ! anatomical margin
@@ -1292,6 +1308,7 @@ relationship: overlaps BSPO:0000063 ! dorsal side
 [Term]
 id: BSPO:0000680
 name: dorso-lateral margin
+def: "Anatomical margin that is located on the dorso-lateral region of the body or body part." [BSPO:wd]
 synonym: "dorsolateral margin" EXACT []
 is_a: BSPO:0000080 ! dorso-lateral region
 is_a: BSPO:0000679 ! dorsal margin
@@ -1335,7 +1352,7 @@ relationship: overlaps BSPO:0000068 ! ventral side
 [Term]
 id: BSPO:0000685
 name: ventro-lateral margin
-def: "Anatomical margin that is ventro-laterally located on an organism or structure." [BSPO:wd]
+def: "Anatomical margin that is located on the ventro-lateral region of the body or body part." [BSPO:wd]
 comment: This is an example of a composition of two axis positions
 synonym: "ventrolateral margin" EXACT []
 is_a: BSPO:0000085 ! ventro-lateral region
@@ -1350,6 +1367,7 @@ relationship: overlaps BSPO:0000068 ! ventral side
 [Term]
 id: BSPO:0000686
 name: antero-dorsal margin
+def: "Anatomical margin that is located on the antero-dorso region of the body or body part." [BSPO:wd]
 synonym: "anterodorsal margin" EXACT []
 is_a: BSPO:0000026 ! antero-dorsal region
 is_a: BSPO:0000671 ! anterior margin
@@ -1363,6 +1381,7 @@ relationship: overlaps BSPO:0000063 ! dorsal side
 [Term]
 id: BSPO:0000687
 name: postero-dorsal margin
+def: "Anatomical margin that is located on the postero-dorsal region of the body or body part." [BSPO:wd]
 synonym: "posterodorsal margin" EXACT []
 is_a: BSPO:0000030 ! postero-dorsal region
 is_a: BSPO:0000672 ! posterior margin
@@ -1376,7 +1395,7 @@ relationship: overlaps BSPO:0000063 ! dorsal side
 [Term]
 id: BSPO:0000688
 name: antero-ventral margin
-def: "Anatomical margin that is antero-ventrally located on an organism or structure." [BSPO:wd]
+def: "Anatomical margin that is located on the antero-ventral region of the body or body part." [BSPO:wd]
 synonym: "anteroventral margin" EXACT []
 is_a: BSPO:0000027 ! antero-ventral region
 is_a: BSPO:0000671 ! anterior margin
@@ -1390,7 +1409,7 @@ relationship: overlaps BSPO:0000068 ! ventral side
 [Term]
 id: BSPO:0000689
 name: postero-ventral margin
-def: "Anatomical margin that is postero-ventrally located on an organism or structure." [BSPO:wd]
+def: "Anatomical margin that is located on the postero-ventral region of the body or body part." [BSPO:wd]
 synonym: "posteroventral margin" EXACT []
 is_a: BSPO:0000035 ! postero-ventral region
 is_a: BSPO:0000672 ! posterior margin
