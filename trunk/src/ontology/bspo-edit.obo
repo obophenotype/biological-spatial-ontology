@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 02:07:2013 11:02
+date: 02:07:2013 11:11
 saved-by: wasila.dahdul
 auto-generated-by: OBO-Edit 2.3-beta5
 synonymtypedef: human "synonym typically used in the context of human anatomy" NARROW
@@ -350,6 +350,7 @@ relationship: overlaps BSPO:0000002 ! lower side
 [Term]
 id: BSPO:0000033
 name: deep region
+def: "Anatomical region located deep within an organism or structure." [BSPO:wd]
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000003 ! deep side
@@ -358,6 +359,7 @@ relationship: overlaps BSPO:0000003 ! deep side
 [Term]
 id: BSPO:0000034
 name: superficial region
+def: "Anatomical region superficially located on an organism or structure." [BSPO:wd]
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000004 ! superficial side
@@ -760,6 +762,7 @@ is_a: CARO:0000003 ! anatomical structure
 [Term]
 id: BSPO:0000071
 name: anterior region
+def: "Anatomical region anteriorly located on an organism or structure." [BSPO:wd]
 xref: FBql:00005848
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
@@ -769,6 +772,7 @@ relationship: overlaps BSPO:0000055 ! anterior side
 [Term]
 id: BSPO:0000072
 name: posterior region
+def: "Anatomical region posteriorly located on an organism or structure." [BSPO:wd]
 xref: FBql:00005849
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
@@ -778,6 +782,7 @@ relationship: overlaps BSPO:0000056 ! posterior side
 [Term]
 id: BSPO:0000073
 name: apical region
+def: "Anatomical region located on the apical end an organism or structure." [BSPO:wd]
 xref: FBql:00005854
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
@@ -787,6 +792,7 @@ relationship: overlaps BSPO:0000057 ! apical side
 [Term]
 id: BSPO:0000074
 name: basal region
+def: "Anatomical region located basally on an organism or structure." [BSPO:wd]
 xref: FBql:00005855
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
@@ -796,6 +802,7 @@ relationship: overlaps BSPO:0000058 ! basal side
 [Term]
 id: BSPO:0000075
 name: central region
+def: "Anatomical region centrally located on an organism or structure." [BSPO:wd]
 xref: FBql:00015851
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
@@ -815,6 +822,7 @@ relationship: overlaps BSPO:0000060 ! contralateral side
 [Term]
 id: BSPO:0000077
 name: proximal region
+def: "Anatomical region proximally located on an organism or structure." [BSPO:wd]
 xref: FBql:00005852
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
@@ -824,6 +832,7 @@ relationship: overlaps BSPO:0000061 ! proximal side
 [Term]
 id: BSPO:0000078
 name: distal region
+def: "Anatomical region distally located on an organism or structure." [BSPO:wd]
 xref: FBql:00005853
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
@@ -833,6 +842,7 @@ relationship: overlaps BSPO:0000062 ! distal side
 [Term]
 id: BSPO:0000079
 name: dorsal region
+def: "Anatomical region dorsally located on an organism or structure." [BSPO:wd]
 xref: FBql:00005842
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
@@ -864,6 +874,7 @@ relationship: overlaps BSPO:0000065 ! ipsilateral side
 [Term]
 id: BSPO:0000082
 name: lateral region
+def: "Anatomical region laterally located on an organism or structure." [BSPO:wd]
 xref: FBql:00005844
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
@@ -873,6 +884,7 @@ relationship: overlaps BSPO:0000066 ! lateral side
 [Term]
 id: BSPO:0000083
 name: medial region
+def: "Anatomical region medially located on an organism or structure." [BSPO:wd]
 xref: FBql:00005847
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
@@ -882,6 +894,7 @@ relationship: overlaps BSPO:0000067 ! medial side
 [Term]
 id: BSPO:0000084
 name: ventral region
+def: "Anatomical region ventrally located on an organism or structure." [BSPO:wd]
 xref: FBql:00005843
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
@@ -985,6 +998,7 @@ creation_date: 2009-09-10T08:57:54Z
 [Term]
 id: BSPO:0000127
 name: peripheral region
+def: "Anatomical region peripherally located on an organism or structure." [BSPO:wd]
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
 intersection_of: overlaps BSPO:0000129 ! peripheral side
