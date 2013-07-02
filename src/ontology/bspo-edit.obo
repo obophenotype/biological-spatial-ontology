@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 02:07:2013 10:11
+date: 02:07:2013 11:02
 saved-by: wasila.dahdul
-auto-generated-by: OBO-Edit 2.1.1-beta7
+auto-generated-by: OBO-Edit 2.3-beta5
 synonymtypedef: human "synonym typically used in the context of human anatomy" NARROW
 synonymtypedef: vertebrate "synonym typically used in the context of vertebrate anatomy" NARROW
 default-namespace: spatial
@@ -12,7 +12,7 @@ ontology: bspo
 [Term]
 id: BSPO:0000000
 name: left side
-def: "The side of an organism that is left of the sagittal plan." [BSPO:cjm]
+def: "The side of an organism that is left of the sagittal plane." [BSPO:cjm]
 synonym: "left" EXACT []
 is_a: BSPO:0000054 ! anatomical side
 relationship: left_of BSPO:0000007 ! right side
@@ -21,7 +21,7 @@ relationship: starts_axis BSPO:0000017 ! left-right axis
 [Term]
 id: BSPO:0000001
 name: upper side
-comment: Consider merging with superior side
+comment: Consider merging with superior side.
 synonym: "upper" EXACT []
 is_a: BSPO:0000054 ! anatomical side
 relationship: starts_axis BSPO:0000011 ! upper-lower axis
@@ -29,7 +29,7 @@ relationship: starts_axis BSPO:0000011 ! upper-lower axis
 [Term]
 id: BSPO:0000002
 name: lower side
-comment: Consider merging with inferior side
+comment: Consider merging with inferior side.
 synonym: "lower" EXACT []
 is_a: BSPO:0000054 ! anatomical side
 relationship: finishes_axis BSPO:0000011 ! upper-lower axis
@@ -59,11 +59,11 @@ relationship: finishes_axis BSPO:0000012 ! deep-superficial axis
 [Term]
 id: BSPO:0000005
 name: anatomical surface
-def: "A 2D surface of an anatomical continuant" [BSPO:cjm]
+def: "A 2D surface of an anatomical continuant." [BSPO:cjm]
 comment: to be merged into CARO
 synonym: "surface" EXACT []
+xref: FMA:24137
 is_a: CARO:0000010 ! anatomical boundary
-xref: FMA:24137 ! Anatomical surface
 
 [Term]
 id: BSPO:0000006
@@ -76,6 +76,7 @@ is_a: BSPO:0000070 ! anatomical region
 [Term]
 id: BSPO:0000007
 name: right side
+def: "The side of an organism that is right of the sagittal plane." [BSPO:cjm, BSPO:wd]
 synonym: "right" EXACT []
 is_a: BSPO:0000054 ! anatomical side
 relationship: finishes_axis BSPO:0000017 ! left-right axis
@@ -96,7 +97,7 @@ synonym: "median plane" RELATED []
 synonym: "median sagittal plane" EXACT [FMA:74563]
 synonym: "midline plane" EXACT []
 synonym: "midsagittal section" EXACT []
-xref: FMA:74563 ! Median sagittal plane
+xref: FMA:74563
 is_a: BSPO:0000417 ! sagittal plane
 
 [Term]
@@ -201,6 +202,7 @@ id: BSPO:0000019
 name: horizontal plane
 def: "Anatomical plane that divides bilateral body into dorsal and ventral parts." [BSPO:mah]
 synonym: "coronal section" RELATED []
+synonym: "frontal plane" EXACT []
 synonym: "frontal section" RELATED []
 synonym: "horizontal anatomical plane" EXACT [FMA:52810]
 synonym: "horizontal section" EXACT []
@@ -585,7 +587,7 @@ is_a: BSPO:0000070 ! anatomical region
 [Term]
 id: BSPO:0000055
 name: anterior side
-def: "Anatomical side that is anteriorly located on an organism or structure." [BSPO:wd]
+def: "An anatomical region that is the entire part of an anatomical structure anterior to a transverse plane and bounded on one side by the same transverse plane." [BSPO:RW]
 synonym: "anterior" EXACT []
 synonym: "rostral" EXACT []
 xref: FBcv:0000053
@@ -598,6 +600,7 @@ relationship: starts_axis BSPO:0000013 ! anterior-posterior axis
 [Term]
 id: BSPO:0000056
 name: posterior side
+def: "An anatomical region that is the entire part of an anatomical structure posterior to a transverse plane and bounded on one side by the same transverse plane." [BSPO:RW, BSPO:wd]
 synonym: "caudal" NARROW vertebrate []
 synonym: "posterior" EXACT []
 xref: FBcv:0000065
@@ -641,7 +644,7 @@ is_a: BSPO:0000054 ! anatomical side
 [Term]
 id: BSPO:0000060
 name: contralateral side
-def: "On the opposite side" [BSPO:cjm]
+def: "On the opposite side." [BSPO:cjm]
 comment: inherited from flybase cv. not clear how this would be used. Suggest we obsolete, and use the corresponding relation.
 synonym: "contralateral" EXACT []
 xref: FBcv:0000057
@@ -672,7 +675,7 @@ relationship: finishes_axis BSPO:0000015 ! proximal-distal axis
 [Term]
 id: BSPO:0000063
 name: dorsal side
-def: "Anatomical side that is dorsally located on an organism or structure." [BSPO:wd]
+def: "An anatomical region that is the entire part of an anatomical structure dorsal to a horizontal plane and bounded on one side by the same transverse plane." [BSPO:wd]
 synonym: "dorsal" EXACT []
 xref: FBcv:0000059
 xref: FBql:00005842
@@ -725,7 +728,7 @@ is_a: BSPO:0000054 ! anatomical side
 [Term]
 id: BSPO:0000068
 name: ventral side
-def: "Anatomical side that is ventrally located on an organism or structure." [BSPO:wd]
+def: "An anatomical region that is the entire part of an anatomical structure ventral to a horizontal plane and bounded on one side by the same\nhorizontal plane." [BSPO:RW, BSPO:wd]
 synonym: "ventral" EXACT []
 xref: FBcv:0000070
 xref: FBql:00005843
@@ -1028,6 +1031,7 @@ relationship: surface_of BSPO:0000056 ! posterior side
 [Term]
 id: BSPO:0000373
 name: apical surface
+def: "Anatomical surface that is located on the apical end of an organism or structure." [BSPO:wd]
 xref: FBql:00005854
 is_a: BSPO:0000005 ! anatomical surface
 intersection_of: BSPO:0000005 ! anatomical surface
@@ -1037,6 +1041,7 @@ relationship: surface_of BSPO:0000057 ! apical side
 [Term]
 id: BSPO:0000374
 name: basal surface
+def: "Anatomical surface that is located on the basal end of an organism or structure." [BSPO:wd]
 xref: FBql:00005855
 is_a: BSPO:0000005 ! anatomical surface
 intersection_of: BSPO:0000005 ! anatomical surface
@@ -1065,6 +1070,7 @@ relationship: surface_of BSPO:0000061 ! proximal side
 [Term]
 id: BSPO:0000378
 name: distal surface
+def: "Anatomical surface that is located distally on an organism or structure." [BSPO:wd]
 xref: FBql:00005853
 is_a: BSPO:0000005 ! anatomical surface
 intersection_of: BSPO:0000005 ! anatomical surface
