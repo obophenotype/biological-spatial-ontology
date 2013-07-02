@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 02:07:2013 11:11
+date: 02:07:2013 11:31
 saved-by: wasila.dahdul
 auto-generated-by: OBO-Edit 2.3-beta5
 synonymtypedef: human "synonym typically used in the context of human anatomy" NARROW
@@ -172,7 +172,7 @@ relationship: orthogonal_to BSPO:0000019 ! horizontal plane
 [Term]
 id: BSPO:0000017
 name: left-right axis
-def: "An axis that bisects an organism from left to right sides of body, through a sagittal section." [BSPO:cjm]
+def: "An axis that bisects an organism from left to right sides of body, through a sagittal plane." [BSPO:cjm]
 synonym: "dextro-sinister axis" EXACT []
 synonym: "L-R axis" EXACT []
 synonym: "left to right axis" EXACT []
@@ -189,7 +189,7 @@ relationship: orthogonal_to BSPO:0000417 ! sagittal plane
 [Term]
 id: BSPO:0000018
 name: transverse plane
-def: "Anatomical plane that divides body into anterior and posterior sections." [BSPO:mah]
+def: "Anatomical plane that divides body into anterior and posterior parts." [BSPO:mah]
 synonym: "axial plane" EXACT []
 synonym: "axial section" EXACT []
 synonym: "cross-section" RELATED []
@@ -525,6 +525,7 @@ creation_date: 2009-09-10T08:52:04Z
 [Term]
 id: BSPO:0000049
 name: ventro-medial margin
+def: "Anatomical margin that is ventro-medially located on an organism or structure." [BSPO:wd]
 synonym: "ventromedial margin" EXACT []
 is_a: BSPO:0000112 ! ventro-medial region
 is_a: BSPO:0000683 ! medial margin
@@ -980,9 +981,59 @@ xref: FBql:00005879
 is_a: BSPO:0000092 ! anatomical compartment boundary
 
 [Term]
+id: BSPO:0000095
+name: adaxial-abaxial axis
+def: "An anatomical axis that extends from the side of the anatomical entity that is closer from an axis (adaxial) to the side that is further from the same axis (abaxial)." [BSPO:RW]
+synonym: "AA axis" EXACT []
+synonym: "dorsal-ventral axis" RELATED []
+is_a: BSPO:0000010 ! anatomical axis
+created_by: wasila.dahdul
+creation_date: 2013-07-02T11:20:29Z
+
+[Term]
+id: BSPO:0000096
+name: medial-external axis
+def: "An anatomical axis that extends from the center of the body outwards or externally." [BSPO:curators]
+comment: The medial-external axis could apply to a sphere-shaped body.
+synonym: "proximal-distal axis" RELATED []
+is_a: BSPO:0000010 ! anatomical axis
+created_by: wasila.dahdul
+creation_date: 2013-07-02T11:21:42Z
+
+[Term]
+id: BSPO:0000097
+name: medial-radial axis
+def: "An anatomical axis that is perpendicular to an apical/basal axis or proximal/distal axis and extends from the center of an axis (shoot axis or root in the case of plants) to any point on the exterior of the axis." [BSPO:curators]
+comment: In plants, lateral growth (http://purl.obolibrary.org/obo/GO_0080190) run is along the medial/radial axis (from medial to radial) [RW].  Also applies to radially symmetrical animals such as sea urchins, cnidarians [PM] or applies to more-or-less cylindrical body parts in animals, like limbs.
+synonym: "M-R axis" EXACT []
+synonym: "MR axis" EXACT []
+is_a: BSPO:0000096 ! medial-external axis
+created_by: wasila.dahdul
+creation_date: 2013-07-02T11:23:31Z
+
+[Term]
+id: BSPO:0000098
+name: oral-aboral axis
+def: "n axis that extends from the oral opening to the furthest point in an organism that is directly opposite." [BSPO:PM]
+is_a: BSPO:0000010 ! anatomical axis
+created_by: wasila.dahdul
+creation_date: 2013-07-02T11:29:33Z
+
+[Term]
+id: BSPO:0000099
+name: animal-vegetal axis
+def: "An axis that extends from the animal end of an egg or early embryo to the opposite, vegetal end. In animals with yolk-bearing eggs, the vegetal end is the yolk bearing pole. (pertains to animals only - both vertebrate and invertebrate embryos)." [BSPO:PM]
+synonym: "A-V axis" EXACT []
+synonym: "animal/vegetal axis" EXACT []
+synonym: "AV axis" EXACT []
+is_a: BSPO:0000010 ! anatomical axis
+created_by: wasila.dahdul
+creation_date: 2013-07-02T11:30:13Z
+
+[Term]
 id: BSPO:0000112
 name: ventro-medial region
-def: "The region corresponding to the ventral surface of the entity, towards the midline." [BSPO:wd]
+def: "The region corresponding to the ventral region of the entity, towards the midline." [BSPO:wd]
 synonym: "medioventral region" EXACT []
 synonym: "ventromedial region" EXACT []
 is_a: BSPO:0000083 ! medial region
@@ -1283,6 +1334,7 @@ relationship: overlaps BSPO:0000068 ! ventral side
 [Term]
 id: BSPO:0000685
 name: ventro-lateral margin
+def: "Anatomical margin that is ventro-laterally located on an organism or structure." [BSPO:wd]
 comment: This is an example of a composition of two axis positions
 synonym: "ventrolateral margin" EXACT []
 is_a: BSPO:0000085 ! ventro-lateral region
@@ -1323,6 +1375,7 @@ relationship: overlaps BSPO:0000063 ! dorsal side
 [Term]
 id: BSPO:0000688
 name: antero-ventral margin
+def: "Anatomical margin that is antero-ventrally located on an organism or structure." [BSPO:wd]
 synonym: "anteroventral margin" EXACT []
 is_a: BSPO:0000027 ! antero-ventral region
 is_a: BSPO:0000671 ! anterior margin
@@ -1336,6 +1389,7 @@ relationship: overlaps BSPO:0000068 ! ventral side
 [Term]
 id: BSPO:0000689
 name: postero-ventral margin
+def: "Anatomical margin that is postero-ventrally located on an organism or structure." [BSPO:wd]
 synonym: "posteroventral margin" EXACT []
 is_a: BSPO:0000035 ! postero-ventral region
 is_a: BSPO:0000672 ! posterior margin
@@ -1351,11 +1405,13 @@ id: BSPO:0001001
 name: medial-lateral axis
 def: "An axis that extends from the center of organism to one or other side." [BSPO:cjm]
 comment: Properly, the ML axis is a half axis; practically, its usage is less clumsy and less linguistically biased than "left-right". The terms may still be used relatively to describe locations along the LR axis. The gills are medial to the operculum, but lateral to the heart.
+synonym: "M-L axis" EXACT []
 synonym: "medio-lateral axis" EXACT []
 synonym: "mediolateral axis" EXACT []
 synonym: "ML axis" EXACT []
+synonym: "proximal-distal axis " RELATED []
 xref: http://upload.wikimedia.org/wikipedia/commons/3/34/Anatomical_Directions_and_Axes.JPG
-is_a: BSPO:0000010 ! anatomical axis
+is_a: BSPO:0000096 ! medial-external axis
 
 [Term]
 id: CARO:0000000
