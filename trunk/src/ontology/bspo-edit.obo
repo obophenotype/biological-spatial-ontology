@@ -998,7 +998,7 @@ xref: FBql:00005879
 is_a: BSPO:0000092 ! anatomical compartment boundary
 
 [Term]
-id: BSPO:0000095
+id: BSPO:0000195
 name: adaxial-abaxial axis
 def: "An anatomical axis that extends from the side of the anatomical entity that is closer from an axis (adaxial) to the side that is further from the same axis (abaxial)." [BSPO:RW]
 synonym: "AA axis" EXACT []
@@ -1008,7 +1008,7 @@ created_by: wasila.dahdul
 creation_date: 2013-07-02T11:20:29Z
 
 [Term]
-id: BSPO:0000096
+id: BSPO:0000196
 name: medial-external axis
 def: "An anatomical axis that extends from the center of the body outwards or externally." [BSPO:curators]
 comment: The medial-external axis could apply to a sphere-shaped body.
@@ -1018,18 +1018,18 @@ created_by: wasila.dahdul
 creation_date: 2013-07-02T11:21:42Z
 
 [Term]
-id: BSPO:0000097
+id: BSPO:0000197
 name: medial-radial axis
 def: "An anatomical axis that is perpendicular to an apical/basal axis or proximal/distal axis and extends from the center of an axis (shoot axis or root in the case of plants) to any point on the exterior of the axis." [BSPO:curators]
 comment: In plants, lateral growth (http://purl.obolibrary.org/obo/GO_0080190) run is along the medial/radial axis (from medial to radial) [RW].  Also applies to radially symmetrical animals such as sea urchins, cnidarians [PM] or applies to more-or-less cylindrical body parts in animals, like limbs.
 synonym: "M-R axis" EXACT []
 synonym: "MR axis" EXACT []
-is_a: BSPO:0000096 ! medial-external axis
+is_a: BSPO:0000196 ! medial-external axis
 created_by: wasila.dahdul
 creation_date: 2013-07-02T11:23:31Z
 
 [Term]
-id: BSPO:0000098
+id: BSPO:0000198
 name: oral-aboral axis
 def: "An axis that extends from the oral opening to the furthest point in an organism that is directly opposite." [BSPO:PM]
 is_a: BSPO:0000010 ! anatomical axis
@@ -1037,7 +1037,7 @@ created_by: wasila.dahdul
 creation_date: 2013-07-02T11:29:33Z
 
 [Term]
-id: BSPO:0000099
+id: BSPO:0000199
 name: animal-vegetal axis
 def: "An axis that extends from the animal end of an egg or early embryo to the opposite, vegetal end. In animals with yolk-bearing eggs, the vegetal end is the yolk bearing pole. (pertains to animals only - both vertebrate and invertebrate embryos)." [BSPO:PM]
 synonym: "A-V axis" EXACT []
@@ -1048,7 +1048,7 @@ created_by: wasila.dahdul
 creation_date: 2013-07-02T11:30:13Z
 
 [Term]
-id: BSPO:0000100
+id: BSPO:0000200
 name: apical-basal axis (plant structure)
 def: "An axis of a plant structure that is determined by the direction of apical growth, either by an apical meristem or an apical cell. Apical is toward the direction of apical growth: toward the tip of a growing shoot axis, root, thallus, or non-vascular leaf. Basal is away from the direction of apical growth: toward the root-shoot junction in the case of the primary root or stem, toward the primary root or stem for higher order roots or branches, toward the point of attachment for non-vascular leaves, and toward the original point of growth (as determined in the embryo) for thalli." [BSPO:RW]
 comment: Plant structures that do not grow from an apical meristem, such as vascular leaves or petals, should be described using the proximal-distal axis. The proximal-distal axis may also be used for branches or lateral roots, and, in those cases, is concordant with the apical-basal axis.
@@ -1440,7 +1440,7 @@ synonym: "mediolateral axis" EXACT []
 synonym: "ML axis" EXACT []
 synonym: "proximal-distal axis " RELATED []
 xref: http://upload.wikimedia.org/wikipedia/commons/3/34/Anatomical_Directions_and_Axes.JPG
-is_a: BSPO:0000096 ! medial-external axis
+is_a: BSPO:0000196 ! medial-external axis
 
 [Term]
 id: CARO:0000000
@@ -1863,7 +1863,7 @@ id: proximal_to
 name: proximal_to
 def: "x proximal_to y iff x is closer to the point of attachment with the body than y." [BSPO:cjm]
 comment: The elbow is proximal to the hand, but distal to the shoulder.
-xref: BSPO:0016001
+xref: BSPO:0000100
 is_transitive: true
 property_value: seeAlso FBcv:0000047
 property_value: seeAlso FBql:00005868
