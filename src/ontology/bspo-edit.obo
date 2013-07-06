@@ -1863,7 +1863,7 @@ id: proximal_to
 name: proximal_to
 def: "x proximal_to y iff x is closer to the point of attachment with the body than y." [BSPO:cjm]
 comment: The elbow is proximal to the hand, but distal to the shoulder.
-xref: BSPO:0000100
+xref: BSPO:0016001
 is_transitive: true
 property_value: seeAlso FBcv:0000047
 property_value: seeAlso FBql:00005868
