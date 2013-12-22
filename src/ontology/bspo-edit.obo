@@ -143,9 +143,8 @@ relationship: orthogonal_to BSPO:0000018 ! transverse plane
 
 [Term]
 id: BSPO:0000014
-name: apical-basal axis
+name: apical-basal axis (animal body or structure)
 def: "An axis that extends through an organism or organism part from the part of the organism or organism part attached to a substrate (basal) to the furthest from the attachment (apical). Note that the apical-basal axis is often used for organismal parts where there is attachment via a basal lamina or other structure." [BSPO:mah]
-comment: In plants, this is the axis that runs from the shoot to the root.
 synonym: "apical/basal" EXACT []
 synonym: "longitudinal axis" RELATED []
 is_a: BSPO:0000010 ! anatomical axis
@@ -1098,9 +1097,7 @@ id: BSPO:0000200
 name: apical-basal axis (plant structure)
 def: "An axis of a plant structure that is determined by the direction of apical growth, either by an apical meristem or an apical cell. Apical is toward the direction of apical growth: toward the tip of a growing shoot axis, root, thallus, or non-vascular leaf. Basal is away from the direction of apical growth: toward the root-shoot junction in the case of the primary root or stem, toward the primary root or stem for higher order roots or branches, toward the point of attachment for non-vascular leaves, and toward the original point of growth (as determined in the embryo) for thalli." [BSPO:RW]
 comment: Plant structures that do not grow from an apical meristem, such as vascular leaves or petals, should be described using the proximal-distal axis. The proximal-distal axis may also be used for branches or lateral roots, and, in those cases, is concordant with the apical-basal axis.
-is_a: BSPO:0000014 ! apical-basal axis
-created_by: wasila.dahdul
-creation_date: 2013-07-02T21:17:38Z
+is_a: BSPO:0000010 ! anatomical axis
 
 [Term]
 id: BSPO:0000371
