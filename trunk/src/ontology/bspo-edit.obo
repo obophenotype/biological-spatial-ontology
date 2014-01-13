@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 12:01:2014 15:07
+date: 13:01:2014 11:02
 saved-by: wasila.dahdul
 auto-generated-by: OBO-Edit 2.3-beta5
 synonymtypedef: human "synonym typically used in the context of human anatomy" NARROW
@@ -570,9 +570,9 @@ creation_date: 2009-09-10T08:55:32Z
 [Term]
 id: BSPO:0000051
 name: anatomical gradient
-def: "An anatomical structure defined by change in the value of some quantity per unit of distance across some spatial axis." [BSPO:cjm]
+def: "Material anatomical entity defined by change in the value of some quantity per unit of distance across some spatial axis." [BSPO:cjm]
 xref: FBql:00005254
-is_a: CARO:0000003 ! anatomical structure
+is_a: CARO:0000006 ! material anatomical entity
 
 [Term]
 id: BSPO:0000052
