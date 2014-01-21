@@ -1548,7 +1548,6 @@ is_a: in_distal_side_of ! in_distal_side_of
 id: dorsal_to
 name: dorsal_to
 def: "x dorsal_to y iff x is further along the dorso-ventral axis than y, towards the back. A dorso-ventral axis is an axis that extends through an organism from back (e.g. spinal column) to front (e.g. belly)." [BSPO:cjm]
-synonym: "superior_to" RELATED []
 xref: BSPO:0000098
 is_transitive: true
 inverse_of: ventral_to ! ventral_to
@@ -1909,7 +1908,6 @@ domain: BSPO:0000005 ! anatomical surface
 id: ventral_to
 name: ventral_to
 def: "x ventral_to y iff x is further along the dorso-ventral axis than y, towards the front. A dorso-ventral axis is an axis that extends through an organism from back (e.g. spinal column) to front (e.g. belly)." [BSPO:cjm]
-synonym: "inferior_to" RELATED []
 xref: BSPO:0000102
 is_transitive: true
 property_value: seeAlso FBcv:0000049
