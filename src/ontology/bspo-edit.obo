@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 13:01:2014 11:02
+date: 22:01:2014 15:38
 saved-by: wasila.dahdul
 auto-generated-by: OBO-Edit 2.3-beta5
 synonymtypedef: human "synonym typically used in the context of human anatomy" NARROW
@@ -999,6 +999,24 @@ name: dorsal/ventral compartment boundary
 xref: FBcv:0000034
 xref: FBql:00005879
 is_a: BSPO:0000092 ! anatomical compartment boundary
+
+[Term]
+id: BSPO:0000095
+name: radial plane
+def: "Anatomical plane that follows the two dimensions specified by an apical-basal axis relative to direction of growth and a medial-lateral axis." [BSPO:wd]
+comment: Need to add logical definitions.
+is_a: BSPO:0000400 ! anatomical plane
+created_by: wasila.dahdul
+creation_date: 2014-01-22T15:34:02Z
+
+[Term]
+id: BSPO:0000096
+name: tangential plane
+def: "Anatomical plane that is perpendicular to a radial plane." [BSPO:wd]
+comment: Need to add logical definitions.
+is_a: BSPO:0000400 ! anatomical plane
+created_by: wasila.dahdul
+creation_date: 2014-01-22T15:34:31Z
 
 [Term]
 id: BSPO:0000112
