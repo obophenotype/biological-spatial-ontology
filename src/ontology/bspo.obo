@@ -1,10 +1,11 @@
 format-version: 1.2
-date: 21:12:2013 09:04
-saved-by: haendel
+date: 22:01:2014 15:38
+saved-by: wasila.dahdul
 auto-generated-by: OBO-Edit 2.3-beta5
 synonymtypedef: human "synonym typically used in the context of human anatomy" NARROW
 synonymtypedef: vertebrate "synonym typically used in the context of vertebrate anatomy" NARROW
 default-namespace: spatial
+namespace-id-rule: * BSPO:$sequence(7,0,999999999)$
 remark: based on FBql
 ontology: bspo
 
@@ -103,7 +104,7 @@ is_a: BSPO:0000417 ! sagittal plane
 id: BSPO:0000010
 name: anatomical axis
 def: "A straight line through space, intersecting an anatomical entity." [BSPO:cjm]
-comment: axis directions are defined in terms of axes
+comment: Axis directions are defined in terms of axes.
 xref: http://upload.wikimedia.org/wikipedia/commons/3/34/Anatomical_Directions_and_Axes.JPG
 is_a: CARO:0000008 ! anatomical line
 relationship: passes_through CARO:0000000 ! anatomical entity
@@ -143,9 +144,8 @@ relationship: orthogonal_to BSPO:0000018 ! transverse plane
 
 [Term]
 id: BSPO:0000014
-name: apical-basal axis
+name: apical-basal axis relative to substrate
 def: "An axis that extends through an organism or organism part from the part of the organism or organism part attached to a substrate (basal) to the furthest from the attachment (apical). Note that the apical-basal axis is often used for organismal parts where there is attachment via a basal lamina or other structure." [BSPO:mah]
-comment: In plants, this is the axis that runs from the shoot to the root.
 synonym: "apical/basal" EXACT []
 synonym: "longitudinal axis" RELATED []
 is_a: BSPO:0000010 ! anatomical axis
@@ -244,8 +244,8 @@ name: apical-basal gradient
 def: "Anatomical gradient that is distributed along the apical-basal axis." [BSPO:wd]
 is_a: BSPO:0000051 ! anatomical gradient
 intersection_of: BSPO:0000051 ! anatomical gradient
-intersection_of: follows_axis BSPO:0000014 ! apical-basal axis
-relationship: follows_axis BSPO:0000014 ! apical-basal axis
+intersection_of: follows_axis BSPO:0000014 ! apical-basal axis relative to substrate
+relationship: follows_axis BSPO:0000014 ! apical-basal axis relative to substrate
 
 [Term]
 id: BSPO:0000024
@@ -461,8 +461,8 @@ id: BSPO:0000043
 name: apical/basal compartment boundary
 is_a: BSPO:0000092 ! anatomical compartment boundary
 intersection_of: BSPO:0000092 ! anatomical compartment boundary
-intersection_of: has_axis BSPO:0000014 ! apical-basal axis
-relationship: has_axis BSPO:0000014 ! apical-basal axis
+intersection_of: has_axis BSPO:0000014 ! apical-basal axis relative to substrate
+relationship: has_axis BSPO:0000014 ! apical-basal axis relative to substrate
 
 [Term]
 id: BSPO:0000044
@@ -570,9 +570,9 @@ creation_date: 2009-09-10T08:55:32Z
 [Term]
 id: BSPO:0000051
 name: anatomical gradient
-def: "An anatomical structure defined by change in the value of some quantity per unit of distance across some spatial axis." [BSPO:cjm]
+def: "Material anatomical entity defined by change in the value of some quantity per unit of distance across some spatial axis." [BSPO:cjm]
 xref: FBql:00005254
-is_a: CARO:0000003 ! anatomical structure
+is_a: CARO:0000006 ! material anatomical entity
 
 [Term]
 id: BSPO:0000052
@@ -637,7 +637,7 @@ xref: FBcv:0000054
 xref: FBql:00005854
 is_a: BSPO:0000054 ! anatomical side
 relationship: opposite_to BSPO:0000058 ! basal side
-relationship: starts_axis BSPO:0000014 ! apical-basal axis
+relationship: starts_axis BSPO:0000014 ! apical-basal axis relative to substrate
 
 [Term]
 id: BSPO:0000058
@@ -648,7 +648,7 @@ synonym: "basal" EXACT []
 xref: FBcv:0000055
 xref: FBql:00005855
 is_a: BSPO:0000054 ! anatomical side
-relationship: finishes_axis BSPO:0000014 ! apical-basal axis
+relationship: finishes_axis BSPO:0000014 ! apical-basal axis relative to substrate
 
 [Term]
 id: BSPO:0000059
@@ -1001,6 +1001,24 @@ xref: FBql:00005879
 is_a: BSPO:0000092 ! anatomical compartment boundary
 
 [Term]
+id: BSPO:0000095
+name: radial plane
+def: "Anatomical plane that follows the two dimensions specified by an apical-basal axis relative to direction of growth and a medial-lateral axis." [BSPO:wd]
+comment: Need to add logical definitions.
+is_a: BSPO:0000400 ! anatomical plane
+created_by: wasila.dahdul
+creation_date: 2014-01-22T15:34:02Z
+
+[Term]
+id: BSPO:0000096
+name: tangential plane
+def: "Anatomical plane that is perpendicular to a radial plane." [BSPO:wd]
+comment: Need to add logical definitions.
+is_a: BSPO:0000400 ! anatomical plane
+created_by: wasila.dahdul
+creation_date: 2014-01-22T15:34:31Z
+
+[Term]
 id: BSPO:0000112
 name: ventro-medial region
 def: "The region corresponding to the ventral region of the entity, towards the midline." [BSPO:wd]
@@ -1095,12 +1113,10 @@ creation_date: 2013-07-02T11:30:13Z
 
 [Term]
 id: BSPO:0000200
-name: apical-basal axis (plant structure)
+name: apical-basal axis relative to direction of growth
 def: "An axis of a plant structure that is determined by the direction of apical growth, either by an apical meristem or an apical cell. Apical is toward the direction of apical growth: toward the tip of a growing shoot axis, root, thallus, or non-vascular leaf. Basal is away from the direction of apical growth: toward the root-shoot junction in the case of the primary root or stem, toward the primary root or stem for higher order roots or branches, toward the point of attachment for non-vascular leaves, and toward the original point of growth (as determined in the embryo) for thalli." [BSPO:RW]
 comment: Plant structures that do not grow from an apical meristem, such as vascular leaves or petals, should be described using the proximal-distal axis. The proximal-distal axis may also be used for branches or lateral roots, and, in those cases, is concordant with the apical-basal axis.
-is_a: BSPO:0000014 ! apical-basal axis
-created_by: wasila.dahdul
-creation_date: 2013-07-02T21:17:38Z
+is_a: BSPO:0000010 ! anatomical axis
 
 [Term]
 id: BSPO:0000371
@@ -1550,7 +1566,6 @@ is_a: in_distal_side_of ! in_distal_side_of
 id: dorsal_to
 name: dorsal_to
 def: "x dorsal_to y iff x is further along the dorso-ventral axis than y, towards the back. A dorso-ventral axis is an axis that extends through an organism from back (e.g. spinal column) to front (e.g. belly)." [BSPO:cjm]
-synonym: "superior_to" RELATED []
 xref: BSPO:0000098
 is_transitive: true
 inverse_of: ventral_to ! ventral_to
@@ -1911,7 +1926,6 @@ domain: BSPO:0000005 ! anatomical surface
 id: ventral_to
 name: ventral_to
 def: "x ventral_to y iff x is further along the dorso-ventral axis than y, towards the front. A dorso-ventral axis is an axis that extends through an organism from back (e.g. spinal column) to front (e.g. belly)." [BSPO:cjm]
-synonym: "inferior_to" RELATED []
 xref: BSPO:0000102
 is_transitive: true
 property_value: seeAlso FBcv:0000049
