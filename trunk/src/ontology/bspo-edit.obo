@@ -1010,7 +1010,7 @@ created_by: wasila.dahdul
 creation_date: 2014-01-22T15:34:02Z
 
 [Term]
-id: BSPO:0000096
+id: BSPO:0000201
 name: tangential plane
 def: "Anatomical plane that is perpendicular to a radial plane." [BSPO:wd]
 comment: Need to add logical definitions.
