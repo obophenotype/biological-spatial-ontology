@@ -2,7 +2,7 @@ all: bspo.owl
 
 
 bspo-step1.owl: bspo-edit.obo
-	owltools $< -o file://`pwd`/$@
+	owltools $< -o $@
 
 bspo-step2.owl: bspo-step1.owl
 	grep -v '<oboInOwl:shorthand' $< > $@
