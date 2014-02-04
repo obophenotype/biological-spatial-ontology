@@ -1000,23 +1000,6 @@ xref: FBcv:0000034
 xref: FBql:00005879
 is_a: BSPO:0000092 ! anatomical compartment boundary
 
-[Term]
-id: BSPO:0000095
-name: radial plane
-def: "Anatomical plane that follows the two dimensions specified by an apical-basal axis relative to direction of growth and a medial-lateral axis." [BSPO:wd]
-comment: Need to add logical definitions.
-is_a: BSPO:0000400 ! anatomical plane
-created_by: wasila.dahdul
-creation_date: 2014-01-22T15:34:02Z
-
-[Term]
-id: BSPO:0000201
-name: tangential plane
-def: "Anatomical plane that is perpendicular to a radial plane." [BSPO:wd]
-comment: Need to add logical definitions.
-is_a: BSPO:0000400 ! anatomical plane
-created_by: wasila.dahdul
-creation_date: 2014-01-22T15:34:31Z
 
 [Term]
 id: BSPO:0000112
@@ -1117,6 +1100,24 @@ name: apical-basal axis relative to direction of growth
 def: "An axis of a plant structure that is determined by the direction of apical growth, either by an apical meristem or an apical cell. Apical is toward the direction of apical growth: toward the tip of a growing shoot axis, root, thallus, or non-vascular leaf. Basal is away from the direction of apical growth: toward the root-shoot junction in the case of the primary root or stem, toward the primary root or stem for higher order roots or branches, toward the point of attachment for non-vascular leaves, and toward the original point of growth (as determined in the embryo) for thalli." [BSPO:RW]
 comment: Plant structures that do not grow from an apical meristem, such as vascular leaves or petals, should be described using the proximal-distal axis. The proximal-distal axis may also be used for branches or lateral roots, and, in those cases, is concordant with the apical-basal axis.
 is_a: BSPO:0000010 ! anatomical axis
+
+[Term]
+id: BSPO:0000201
+name: tangential plane
+def: "Anatomical plane that is perpendicular to a radial plane." [BSPO:wd]
+comment: Need to add logical definitions.
+is_a: BSPO:0000400 ! anatomical plane
+created_by: wasila.dahdul
+creation_date: 2014-01-22T15:34:31Z
+
+[Term]
+id: BSPO:0000202
+name: radial plane
+def: "Anatomical plane that follows the two dimensions specified by an apical-basal axis relative to direction of growth and a medial-lateral axis." [BSPO:wd]
+comment: Need to add logical definitions.
+is_a: BSPO:0000400 ! anatomical plane
+created_by: wasila.dahdul
+creation_date: 2014-01-22T15:34:02Z
 
 [Term]
 id: BSPO:0000371
