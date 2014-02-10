@@ -1718,6 +1718,7 @@ id: in_lateral_side_of
 name: in_lateral_side_of
 def: "X in_lateral_side_of Y <=> if X is in_left_side_of Y or X is in_right_side_of Y. X is often, but not always a paired structure" [UBERON:cjm]
 xref: BSPO:0000126
+property_value: seeAlso "https://github.com/obophenotype/uberon/wiki/Modeling-paired-structures-Design-Pattern" xsd:anyURI
 is_a: part_of ! part_of
 
 [Typedef]
@@ -1725,6 +1726,7 @@ id: in_left_side_of
 name: in_left_side_of
 def: "X in_left_side_of Y <=> if Y is subdivided into two left and right portions, X is part_of the left portion." [BSPO:PATO_mtg_2009]
 xref: BSPO:0000120
+property_value: seeAlso "https://github.com/obophenotype/uberon/wiki/Modeling-paired-structures-Design-Pattern" xsd:anyURI
 is_a: in_lateral_side_of ! in_lateral_side_of
 inverse_of: in_right_side_of ! in_right_side_of
 
@@ -1746,6 +1748,7 @@ is_a: part_of ! part_of
 id: in_right_side_of
 name: in_right_side_of
 def: "X in_right_side_of Y <=> if Y is subdivided into two left and right portions, X is part_of the right portion." [BSPO:PATO_mtg_2009]
+property_value: seeAlso "https://github.com/obophenotype/uberon/wiki/Modeling-paired-structures-Design-Pattern" xsd:anyURI
 xref: BSPO:0000121
 is_a: in_lateral_side_of ! in_lateral_side_of
 
@@ -1953,3 +1956,8 @@ xref: BSPO:0000103
 property_value: seeAlso FBcv:0000050
 property_value: seeAlso FBql:00005862
 
+[Typedef]
+id: seeAlso
+name: see also
+is_metadata_tag: true
+xref: http://www.w3.org/2000/01/rdf-schema#seeAlso
