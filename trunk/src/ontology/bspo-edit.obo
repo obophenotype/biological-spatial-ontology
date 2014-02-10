@@ -1782,6 +1782,20 @@ is_transitive: true
 inverse_of: right_of ! right_of
 
 [Typedef]
+id: in_dorsal_side_of
+name: in_dorsal_side_of
+def: "X dorsal_side_of Y <=> if Y is subdivided into two dorsal and ventral portions, X is part_of the dorsal portion." [BSPO:cjm]
+xref: BSPO:0015101
+is_a: part_of ! part_of
+
+[Typedef]
+id: in_ventral_side_of
+name: in_ventral_side_of
+def: "X ventral_side_of Y <=> if Y is subdivided into two dorsal and ventral portions, X is part_of the ventral portion." [BSPO:cjm]
+xref: BSPO:0015102
+is_a: part_of ! part_of
+
+[Typedef]
 id: obsolete_surrounded_by
 name: obsolete surrounded_by
 xref: BSPO:0000109
