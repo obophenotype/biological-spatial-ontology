@@ -1957,6 +1957,20 @@ property_value: seeAlso FBcv:0000050
 property_value: seeAlso FBql:00005862
 
 [Typedef]
+id: oral_to
+name: oral_to
+def: "nearer to the oral opening of the organism, on the oral-aboral axis." [BSPO:cjm]
+xref: BSPO:0015201
+is_transitive: true
+
+[Typedef]
+id: aboral_to
+name: aboral_to
+def: "nearer to the aboral opening of the organism, on the oral-aboral axis." [BSPO:cjm]
+xref: BSPO:0015202
+is_transitive: true
+
+[Typedef]
 id: seeAlso
 name: see also
 is_metadata_tag: true
