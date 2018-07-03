@@ -1,11 +1,16 @@
-all: bspo.owl
+ONT=bspo
+OBO=http://purl.obolibrary.org/obo
+DATE=$(shell date +'%Y-%m-%d')
+PREFIX=$(OBO)/$(ONT)
+RELEASEPREFIX=$(PREFIX)/releases/$(DATE)
 
+all: bspo.owl bspo.obo bspo-base.owl
 
-bspo-step1.owl: bspo-edit.obo
-	owltools $< -o $@
+bspo-base.owl: bspo-edit.obo
+	robot annotate -i $< --ontology-iri $(PREFIX)/$(ONT)-base.owl --version-iri $(RELEASEPREFIX)/$(ONT)-base.owl -o $@
 
-bspo-step2.owl: bspo-step1.owl
-	grep -v '<oboInOwl:shorthand' $< > $@
+bspo.owl: bspo-base.owl
+	robot reason -i $< --reasoner hermit annotate --ontology-iri $(PREFIX).owl --version-iri $(RELEASEPREFIX)/$(ONT).owl -o $@
 
-bspo.owl: bspo-step2.owl
-	ontology-release-runner $< --reasoner hermit --outdir . --allow-overwrite --simple --asserted
+bspo.obo: bspo.owl
+	robot convert -i $< -o $@
