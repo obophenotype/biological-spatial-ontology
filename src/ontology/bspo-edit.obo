@@ -443,7 +443,7 @@ relationship: has_axis BSPO:0000012 ! deep-superficial axis
 [Term]
 id: BSPO:0000042
 name: antero-medial margin
-def: "Anatomical margin that is located on the antero-medial region of the body or body part." [BSPO:wd<new dbxref>]
+def: "Anatomical margin that is located on the antero-medial region of the body or body part." [BSPO:wd]
 synonym: "anteromedial margin" EXACT []
 is_a: BSPO:0000050 ! antero-medial region
 is_a: BSPO:0000671 ! anterior margin
