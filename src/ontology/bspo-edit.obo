@@ -1532,7 +1532,6 @@ name: contralateral to
 def: "On the opposite side from. For example, the left arm is contralateral to the right arm (and the right leg)." [BSPO:cjm]
 xref: BSPO:0000106
 is_symmetric: true
-is_a: in_lateral_side_of ! in_lateral_side_of
 property_value: seeAlso FBql:00005851
 
 [Typedef]
@@ -1769,7 +1768,6 @@ name: ipsilateral to
 def: "On the same side as. For example, the left arm is ipsilateral to the left leg." [BSPO:cjm]
 xref: BSPO:0000105
 is_symmetric: true
-is_a: in_lateral_side_of ! in_lateral_side_of
 disjoint_from: contralateral_to ! contralateral_to
 property_value: seeAlso FBql:00005850
 
@@ -1816,7 +1814,6 @@ id: opposite_to
 name: opposite to
 def: "Direcly opposite to. i.e. on the opposite side through the axis." [BSPO:cjm]
 xref: BSPO:0000113
-is_a: ipsilateral_to ! ipsilateral_to
 
 [Typedef]
 id: orthogonal_to
