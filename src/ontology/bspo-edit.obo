@@ -1532,6 +1532,7 @@ name: contralateral to
 def: "On the opposite side from. For example, the left arm is contralateral to the right arm (and the right leg)." [BSPO:cjm]
 xref: BSPO:0000106
 is_symmetric: true
+is_a: opposite_to ! opposite_to
 property_value: seeAlso FBql:00005851
 
 [Typedef]
