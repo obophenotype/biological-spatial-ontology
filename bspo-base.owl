@@ -10,9 +10,9 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/bspo/bspo-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/bspo/releases/2019-07-24/bspo-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/bspo/releases/2020-05-11/bspo-base.owl"/>
         <oboInOwl:NamespaceIdRule rdf:datatype="http://www.w3.org/2001/XMLSchema#string">* BSPO:$sequence(7,0,999999999)$</oboInOwl:NamespaceIdRule>
-        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24:07:2019 14:15</oboInOwl:date>
+        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11:05:2020 13:57</oboInOwl:date>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spatial</oboInOwl:default-namespace>
         <oboInOwl:hasOBOFormatVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2</oboInOwl:hasOBOFormatVersion>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">based on FBql</rdfs:comment>
@@ -466,7 +466,6 @@
     <!-- http://purl.obolibrary.org/obo/BSPO_0000105 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BSPO_0000105">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BSPO_0000126"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <owl:propertyDisjointWith rdf:resource="http://purl.obolibrary.org/obo/BSPO_0000106"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">On the same side as. For example, the left arm is ipsilateral to the left leg.</obo:IAO_0000115>
@@ -489,7 +488,7 @@
     <!-- http://purl.obolibrary.org/obo/BSPO_0000106 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BSPO_0000106">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BSPO_0000126"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BSPO_0000113"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">On the opposite side from. For example, the left arm is contralateral to the right arm (and the right leg).</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BSPO:0000106</oboInOwl:hasDbXref>
@@ -607,7 +606,6 @@
     <!-- http://purl.obolibrary.org/obo/BSPO_0000113 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BSPO_0000113">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BSPO_0000105"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Direcly opposite to. i.e. on the opposite side through the axis.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BSPO:0000113</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spatial</oboInOwl:hasOBONamespace>

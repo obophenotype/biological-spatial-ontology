@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: releases/2019-07-24
-date: 24:07:2019 14:15
+data-version: releases/2020-05-11
+date: 11:05:2020 13:57
 synonymtypedef: human "synonym typically used in the context of human anatomy" NARROW
 synonymtypedef: vertebrate "synonym typically used in the context of vertebrate anatomy" NARROW
 default-namespace: spatial
@@ -1544,7 +1544,7 @@ def: "On the opposite side from. For example, the left arm is contralateral to t
 xref: BSPO:0000106
 property_value: seeAlso FBql:00005851
 is_symmetric: true
-is_a: in_lateral_side_of ! in lateral side of
+is_a: opposite_to ! opposite to
 
 [Typedef]
 id: deep_to
@@ -1794,7 +1794,6 @@ def: "On the same side as. For example, the left arm is ipsilateral to the left 
 xref: BSPO:0000105
 property_value: seeAlso FBql:00005850
 is_symmetric: true
-is_a: in_lateral_side_of ! in lateral side of
 disjoint_from: contralateral_to ! contralateral to
 
 [Typedef]
@@ -1826,7 +1825,6 @@ id: opposite_to
 name: opposite to
 def: "Direcly opposite to. i.e. on the opposite side through the axis." [BSPO:cjm]
 xref: BSPO:0000113
-is_a: ipsilateral_to ! ipsilateral to
 
 [Typedef]
 id: oral_to
