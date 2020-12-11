@@ -997,7 +997,6 @@ xref: FBcv:0000034
 xref: FBql:00005879
 is_a: BSPO:0000092 ! anatomical compartment boundary
 
-
 [Term]
 id: BSPO:0000112
 name: ventro-medial region
@@ -1495,6 +1494,13 @@ def: "A non-material anatomical entity of two dimensions. Anatomical boundaries 
 is_a: CARO:0000007 ! immaterial anatomical entity
 
 [Typedef]
+id: aboral_to
+name: aboral to
+def: "nearer to the aboral opening of the organism, on the oral-aboral axis." [BSPO:cjm]
+xref: BSPO:0015202
+is_transitive: true
+
+[Typedef]
 id: adjacent_to
 name: adjacent to
 xref: RO:0002220
@@ -1504,8 +1510,8 @@ is_symmetric: true
 id: anatomical_relation
 name: anatomical relation
 xref: BSPO:0000095
-is_obsolete: true
 property_value: seeAlso FBql:00005860
+is_obsolete: true
 
 [Typedef]
 id: anterior_to
@@ -1513,10 +1519,10 @@ name: anterior to
 def: "x anterior to y iff x is further along the antero-posterior axis than y, towards the head. An antero-posterior axis is an axis that extends through an organism from head end to opposite end of body or tail." [BSPO:cjm]
 synonym: "rostral_to" EXACT []
 xref: BSPO:0000096
-is_transitive: true
-inverse_of: posterior_to ! posterior_to
 property_value: seeAlso FBcv:0000039
 property_value: seeAlso FBql:00005863
+is_transitive: true
+inverse_of: posterior_to ! posterior to
 
 [Typedef]
 id: approximately_perpendicular_to
@@ -1531,9 +1537,9 @@ id: contralateral_to
 name: contralateral to
 def: "On the opposite side from. For example, the left arm is contralateral to the right arm (and the right leg)." [BSPO:cjm]
 xref: BSPO:0000106
-is_symmetric: true
-is_a: opposite_to ! opposite_to
 property_value: seeAlso FBql:00005851
+is_symmetric: true
+is_a: opposite_to ! opposite to
 
 [Typedef]
 id: deep_to
@@ -1541,34 +1547,34 @@ name: deep to
 def: "Further away from the surface of the organism. Thus, the muscular layer is deep to the skin, but superficial to the intestines." [BSPO:cjm]
 xref: BSPO:0000107
 is_transitive: true
-inverse_of: superficial_to ! superficial_to
+inverse_of: superficial_to ! superficial to
 
 [Typedef]
 id: distal_to
 name: distal to
 def: "x distal to y iff x is further along the proximo-distal axis than y, towards the appendage tip. A proximo-distal axis extends from tip of an appendage (distal) to where it joins the body (proximal)." [BSPO:cjm]
 xref: BSPO:0000097
-is_transitive: true
-inverse_of: proximal_to ! proximal_to
 property_value: seeAlso FBcv:0000040
 property_value: seeAlso FBql:00005867
+is_transitive: true
+inverse_of: proximal_to ! proximal to
 
 [Typedef]
 id: distalmost_part_of
 name: distalmost part of
 def: "X distalmost part of Y <=> X is in distal side of Y and X is adjacent to the distal boundary of Y" [https://orcid.org/0000-0002-6601-2165]
 xref: BSPO:0001108
-is_a: in_distal_side_of ! in_distal_side_of
+is_a: in_distal_side_of ! in distal side of
 
 [Typedef]
 id: dorsal_to
 name: dorsal to
 def: "x dorsal to y iff x is further along the dorso-ventral axis than y, towards the back. A dorso-ventral axis is an axis that extends through an organism from back (e.g. spinal column) to front (e.g. belly)." [BSPO:cjm]
 xref: BSPO:0000098
-is_transitive: true
-inverse_of: ventral_to ! ventral_to
 property_value: seeAlso FBcv:0000041
 property_value: seeAlso FBql:00005865
+is_transitive: true
+inverse_of: ventral_to ! ventral to
 
 [Typedef]
 id: finishes_axis
@@ -1603,14 +1609,13 @@ id: has_part
 name: has part
 xref: BFO:0000051
 is_transitive: true
-inverse_of: part_of ! part_of
 
 [Typedef]
 id: has_start_point
 name: has start point
 def: "A relation between an axis and a part of an organism, in which the part defines the initial point of the axis." [BSPO:cjm]
 comment: Axes can be defined in a given species by subtyping the relevant axis type and stating a start and end point.
-xref: :has_start_point
+xref: \:has_start_point
 domain: BSPO:0000010 ! anatomical axis
 range: CARO:0000000 ! anatomical entity
 
@@ -1619,158 +1624,172 @@ id: immediately_anterior_to
 name: immediately anterior to
 def: "x immediately anterior to y iff x anterior to y and x is contiguous with y." [BSPO:curators]
 xref: BSPO:0015009
-is_a: anterior_to ! anterior_to
-inverse_of: immediately_posterior_to ! immediately_posterior_to
+is_a: anterior_to ! anterior to
+inverse_of: immediately_posterior_to ! immediately posterior to
 
 [Typedef]
 id: immediately_deep_to
 name: immediately deep to
 def: "x immediately deep to y iff x deep_to y and x is contiguous with y." [BSPO:curators]
 xref: BSPO:0001107
-is_a: deep_to ! deep_to
-inverse_of: immediately_superficial_to ! immediately_superficial_to
+is_a: deep_to ! deep to
+inverse_of: immediately_superficial_to ! immediately superficial to
 
 [Typedef]
 id: immediately_distal_to
 name: immediately distal to
 def: "x immediately distal to y iff x distal to y and x is contiguous with y." [BSPO:curators]
 xref: BSPO:0015010
-is_a: distal_to ! distal_to
-inverse_of: immediately_proximal_to ! immediately_proximal_to
+is_a: distal_to ! distal to
+inverse_of: immediately_proximal_to ! immediately proximal to
 
 [Typedef]
 id: immediately_dorsal_to
 name: immediately dorsal to
 def: "x immediately dorsal to y iff x dorsal to y and x is contiguous with y." [BSPO:curators]
 xref: BSPO:0015011
-is_a: dorsal_to ! dorsal_to
-inverse_of: immediately_ventral_to ! immediately_ventral_to
+is_a: dorsal_to ! dorsal to
+inverse_of: immediately_ventral_to ! immediately ventral to
 
 [Typedef]
 id: immediately_left_of
 name: immediately left of
 def: "x immediately left of y iff x left_of y and x is contiguous with y." [BSPO:curators]
 xref: BSPO:0015016
-is_a: left_of ! left_of
-inverse_of: immediately_right_of ! immediately_right_of
+is_a: left_of ! left of
+inverse_of: immediately_right_of ! immediately right of
 
 [Typedef]
 id: immediately_posterior_to
 name: immediately posterior to
 def: "x immediately posterior to y iff x posterior_to y and x is contiguous with y." [BSPO:curators]
 xref: BSPO:0015012
-is_a: posterior_to ! posterior_to
+is_a: posterior_to ! posterior to
 
 [Typedef]
 id: immediately_proximal_to
 name: immediately proximal to
 def: "x immediately proximal to y iff x proximal to y and x is contiguous with y." [BSPO:curators]
 xref: BSPO:0015013
-is_a: proximal_to ! proximal_to
+is_a: proximal_to ! proximal to
 
 [Typedef]
 id: immediately_right_of
 name: immediately right of
 def: "x immediately right of y iff x right of y and x is contiguous with y." [BSPO:curators]
 xref: BSPO:0015017
-is_a: right_of ! right_of
+is_a: right_of ! right of
 
 [Typedef]
 id: immediately_superficial_to
 name: immediately superficial to
 def: "x immediately superficial to y iff x superficial to y and x is contiguous with y." [BSPO:curators]
 xref: BSPO:0015014
-is_a: superficial_to ! superficial_to
+is_a: superficial_to ! superficial to
 
 [Typedef]
 id: immediately_ventral_to
 name: immediately ventral to
 def: "x immediately ventral to y iff x ventral to y and x is contiguous with y." [BSPO:curators]
 xref: BSPO:0015015
-is_a: ventral_to ! ventral_to
+is_a: ventral_to ! ventral to
 
 [Typedef]
 id: in_anterior_side_of
 name: in anterior side of
 def: "X anterior side of Y <=> if Y is subdivided into two anterior and posterior portions, X is part of the anterior portion." [BSPO:PATO_mtg_2009]
 xref: BSPO:0000123
-is_a: part_of ! part_of
+is_a: part_of ! part of
 
 [Typedef]
 id: in_deep_part_of
 name: in deep part of
 def: "X superficial part of Y <=> if Y is subdivided into two superficial and deep portions, X is part of the deep portion." [BSPO:cjm]
 xref: BSPO:0001101
-is_a: part_of ! part_of
+is_a: part_of ! part of
 
 [Typedef]
 id: in_distal_side_of
 name: in distal side of
 def: "x in distal side of y <=> if y is subdivided into two proximal and distal portions, y is part of the distal portion." [BSPO:PATO_mtg_2009]
 xref: BSPO:0000125
-is_a: part_of ! part_of
+is_a: part_of ! part of
+
+[Typedef]
+id: in_dorsal_side_of
+name: in dorsal side of
+def: "X dorsal side of Y <=> if Y is subdivided into two dorsal and ventral portions, X is part of the dorsal portion." [BSPO:cjm]
+xref: BSPO:0015101
+is_a: part_of ! part of
 
 [Typedef]
 id: in_lateral_side_of
 name: in lateral side of
 def: "X in lateral side of Y <=> if X is in left side of Y or X is in right side of Y. X is often, but not always a paired structure" [UBERON:cjm]
 xref: BSPO:0000126
-property_value: seeAlso "https://github.com/obophenotype/uberon/wiki/Modeling-paired-structures-Design-Pattern" xsd:anyURI
-is_a: part_of ! part_of
+property_value: seeAlso https://github.com/obophenotype/uberon/wiki/Modeling-paired-structures-Design-Pattern xsd:anyURI
+is_a: part_of ! part of
 
 [Typedef]
 id: in_left_side_of
 name: in left side of
 def: "X in left side of Y <=> if Y is subdivided into two left and right portions, X is part of the left portion." [BSPO:PATO_mtg_2009]
 xref: BSPO:0000120
-property_value: seeAlso "https://github.com/obophenotype/uberon/wiki/Modeling-paired-structures-Design-Pattern" xsd:anyURI
-is_a: in_lateral_side_of ! in_lateral_side_of
-inverse_of: in_right_side_of ! in_right_side_of
+property_value: seeAlso https://github.com/obophenotype/uberon/wiki/Modeling-paired-structures-Design-Pattern xsd:anyURI
+is_a: in_lateral_side_of ! in lateral side of
+inverse_of: in_right_side_of ! in right side of
 
 [Typedef]
 id: in_posterior_side_of
 name: in posterior side of
 def: "X posterior side of Y <=> if Y is subdivided into two anterior and posterior portions, X is part of the posterior portion." [BSPO:PATO_mtg_2009]
 xref: BSPO:0000122
-is_a: part_of ! part_of
+is_a: part_of ! part of
 
 [Typedef]
 id: in_proximal_side_of
 name: in proximal side of
 def: "x in proximal side of y <=> if y is subdivided into two proximal and distal portions, y is part of the proximal portion." [BSPO:PATO_mtg_2009]
 xref: BSPO:0000124
-is_a: part_of ! part_of
+is_a: part_of ! part of
 
 [Typedef]
 id: in_right_side_of
 name: in right side of
 def: "X in right side of Y <=> if Y is subdivided into two left and right portions, X is part of the right portion." [BSPO:PATO_mtg_2009]
-property_value: seeAlso "https://github.com/obophenotype/uberon/wiki/Modeling-paired-structures-Design-Pattern" xsd:anyURI
 xref: BSPO:0000121
-is_a: in_lateral_side_of ! in_lateral_side_of
+property_value: seeAlso https://github.com/obophenotype/uberon/wiki/Modeling-paired-structures-Design-Pattern xsd:anyURI
+is_a: in_lateral_side_of ! in lateral side of
 
 [Typedef]
 id: in_superficial_part_of
 name: in superficial part of
 def: "X superficial part of Y <=> if Y is subdivided into two superficial and deep portions, X is part of the superficial portion." [BSPO:cjm]
 xref: BSPO:0001100
-is_a: part_of ! part_of
+is_a: part_of ! part of
+
+[Typedef]
+id: in_ventral_side_of
+name: in ventral side of
+def: "X ventral side of Y <=> if Y is subdivided into two dorsal and ventral portions, X is part of the ventral portion." [BSPO:cjm]
+xref: BSPO:0015102
+is_a: part_of ! part of
 
 [Typedef]
 id: intersects_midsagittal_plane_of
 name: intersects midsagittal plane of
 def: "X intersects median plane of iff X crosses the midine plane of Y." []
 xref: BSPO:0005001
-is_a: part_of ! part_of
+is_a: part_of ! part of
 
 [Typedef]
 id: ipsilateral_to
 name: ipsilateral to
 def: "On the same side as. For example, the left arm is ipsilateral to the left leg." [BSPO:cjm]
 xref: BSPO:0000105
-is_symmetric: true
-disjoint_from: contralateral_to ! contralateral_to
 property_value: seeAlso FBql:00005850
+is_symmetric: true
+disjoint_from: contralateral_to ! contralateral to
 
 [Typedef]
 id: left_of
@@ -1778,21 +1797,7 @@ name: left of
 def: "Closer to the left side of the organism. Example: The dorsal fin is right of the left pectoral fin, but is left of the right eye. On the type level: X left of Y <=> every instance x of X is left of some instance y of Y, and there exists some organism o such that x part of o and y part of o." [BSPO:cjm]
 xref: BSPO:0000110
 is_transitive: true
-inverse_of: right_of ! right_of
-
-[Typedef]
-id: in_dorsal_side_of
-name: in dorsal side of
-def: "X dorsal side of Y <=> if Y is subdivided into two dorsal and ventral portions, X is part of the dorsal portion." [BSPO:cjm]
-xref: BSPO:0015101
-is_a: part_of ! part_of
-
-[Typedef]
-id: in_ventral_side_of
-name: in ventral side of
-def: "X ventral side of Y <=> if Y is subdivided into two dorsal and ventral portions, X is part of the ventral portion." [BSPO:cjm]
-xref: BSPO:0015102
-is_a: part_of ! part_of
+inverse_of: right_of ! right of
 
 [Typedef]
 id: obsolete_surrounded_by
@@ -1805,16 +1810,23 @@ replaced_by: RO:0002219
 id: obsolete_surrounds
 name: obsolete surrounds
 xref: BSPO:0000101
-is_obsolete: true
-replaced_by: RO:0002221
 property_value: seeAlso FBcv:0000048
 property_value: seeAlso FBql:00005861
+is_obsolete: true
+replaced_by: RO:0002221
 
 [Typedef]
 id: opposite_to
 name: opposite to
 def: "Direcly opposite to. i.e. on the opposite side through the axis." [BSPO:cjm]
 xref: BSPO:0000113
+
+[Typedef]
+id: oral_to
+name: oral to
+def: "nearer to the oral opening of the organism, on the oral-aboral axis." [BSPO:cjm]
+xref: BSPO:0015201
+is_transitive: true
 
 [Typedef]
 id: orthogonal_to
@@ -1841,6 +1853,7 @@ id: part_of
 name: part of
 xref: BFO:0000050
 is_transitive: true
+inverse_of: has_part ! has part
 
 [Typedef]
 id: passes_through
@@ -1861,7 +1874,7 @@ is_transitive: true
 id: postaxialmost_part_of
 name: postaxialmost part of
 xref: BSPO:0001115
-is_a: part_of ! part_of
+is_a: part_of ! part of
 
 [Typedef]
 id: posterior_to
@@ -1869,9 +1882,9 @@ name: posterior to
 def: "x posterior to y iff x is further along the antero-posterior axis than y, towards the body/tail. An antero-posterior axis is an axis that extends through an organism from head end to opposite end of body or tail." [BSPO:cjm]
 synonym: "caudal to" NARROW vertebrate []
 xref: BSPO:0000099
-is_transitive: true
 property_value: seeAlso FBcv:0000045
 property_value: seeAlso FBql:00005864
+is_transitive: true
 
 [Typedef]
 id: preaxial_to
@@ -1887,7 +1900,7 @@ is_transitive: true
 id: preaxialmost_part_of
 name: preaxialmost part of
 xref: BSPO:0001113
-is_a: part_of ! part_of
+is_a: part_of ! part of
 
 [Typedef]
 id: proximal_to
@@ -1895,16 +1908,16 @@ name: proximal to
 def: "x proximal to y iff x is closer to the point of attachment with the body than y." [BSPO:cjm]
 comment: The elbow is proximal to the hand, but distal to the shoulder.
 xref: BSPO:0000100
-is_transitive: true
 property_value: seeAlso FBcv:0000047
 property_value: seeAlso FBql:00005868
+is_transitive: true
 
 [Typedef]
 id: proximalmost_part_of
 name: proximalmost part of
 def: "X proximalmost part of Y <=> X is in proximal side of Y and X is adjacent to the proximal boundary of Y" [https://orcid.org/0000-0002-6601-2165]
 xref: BSPO:0001106
-is_a: in_proximal_side_of ! in_proximal_side_of
+is_a: in_proximal_side_of ! in proximal side of
 
 [Typedef]
 id: right_of
@@ -1912,6 +1925,12 @@ name: right of
 def: "Closer to the right side of the organism. Example: The dorsal fin is right of the left pectoral fin, but is left of the right eye. On the type level: X left of Y <=> every instance x of X is right of some instance y of Y, and there exists some organism o such that x part of o and y part of o." [BSPO:cjm]
 xref: BSPO:0000111
 is_transitive: true
+
+[Typedef]
+id: seeAlso
+name: see also
+xref: http://www.w3.org/2000/01/rdf-schema#seeAlso
+is_metadata_tag: true
 
 [Typedef]
 id: starts_axis
@@ -1940,9 +1959,9 @@ id: ventral_to
 name: ventral to
 def: "x ventral to y iff x is further along the dorso-ventral axis than y, towards the front. A dorso-ventral axis is an axis that extends through an organism from back (e.g. spinal column) to front (e.g. belly)." [BSPO:cjm]
 xref: BSPO:0000102
-is_transitive: true
 property_value: seeAlso FBcv:0000049
 property_value: seeAlso FBql:00005866
+is_transitive: true
 
 [Typedef]
 id: vicinity_of
@@ -1951,22 +1970,3 @@ xref: BSPO:0000103
 property_value: seeAlso FBcv:0000050
 property_value: seeAlso FBql:00005862
 
-[Typedef]
-id: oral_to
-name: oral to
-def: "nearer to the oral opening of the organism, on the oral-aboral axis." [BSPO:cjm]
-xref: BSPO:0015201
-is_transitive: true
-
-[Typedef]
-id: aboral_to
-name: aboral to
-def: "nearer to the aboral opening of the organism, on the oral-aboral axis." [BSPO:cjm]
-xref: BSPO:0015202
-is_transitive: true
-
-[Typedef]
-id: seeAlso
-name: see also
-is_metadata_tag: true
-xref: http://www.w3.org/2000/01/rdf-schema#seeAlso
