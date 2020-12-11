@@ -1728,6 +1728,7 @@ name: in lateral side of
 def: "X in lateral side of Y <=> if X is in left side of Y or X is in right side of Y. X is often, but not always a paired structure" [UBERON:cjm]
 xref: BSPO:0000126
 property_value: seeAlso https://github.com/obophenotype/uberon/wiki/Modeling-paired-structures-Design-Pattern xsd:anyURI
+holds_over_chain: part_of in_lateral_side_of
 is_a: part_of ! part of
 
 [Typedef]
@@ -1736,6 +1737,7 @@ name: in left side of
 def: "X in left side of Y <=> if Y is subdivided into two left and right portions, X is part of the left portion." [BSPO:PATO_mtg_2009]
 xref: BSPO:0000120
 property_value: seeAlso https://github.com/obophenotype/uberon/wiki/Modeling-paired-structures-Design-Pattern xsd:anyURI
+holds_over_chain: part_of in_left_side_of
 is_a: in_lateral_side_of ! in lateral side of
 disjoint_from: in_right_side_of ! in right side of
 
@@ -1759,6 +1761,7 @@ name: in right side of
 def: "X in right side of Y <=> if Y is subdivided into two left and right portions, X is part of the right portion." [BSPO:PATO_mtg_2009]
 xref: BSPO:0000121
 property_value: seeAlso https://github.com/obophenotype/uberon/wiki/Modeling-paired-structures-Design-Pattern xsd:anyURI
+holds_over_chain: part_of in_right_side_of
 is_a: in_lateral_side_of ! in lateral side of
 
 [Typedef]
