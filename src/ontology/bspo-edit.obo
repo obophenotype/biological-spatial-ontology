@@ -1737,7 +1737,7 @@ def: "X in left side of Y <=> if Y is subdivided into two left and right portion
 xref: BSPO:0000120
 property_value: seeAlso https://github.com/obophenotype/uberon/wiki/Modeling-paired-structures-Design-Pattern xsd:anyURI
 is_a: in_lateral_side_of ! in lateral side of
-inverse_of: in_right_side_of ! in right side of
+disjoint_from: in_right_side_of ! in right side of
 
 [Typedef]
 id: in_posterior_side_of
