@@ -177,6 +177,8 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0000109>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0000110>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0000111>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0000113>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0000114>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0000115>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0000120>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0000121>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0000122>))
@@ -549,6 +551,23 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/BSPO_0000113> "opposite_to"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#shorthand> <http://purl.obolibrary.org/obo/BSPO_0000113> "opposite_to"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0000113> "opposite to"^^xsd:string)
+
+# Object Property: <http://purl.obolibrary.org/obo/BSPO_0000114> (lateral to)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/BSPO_0000114> "X lateral to y if x is further from the midsagittal plane than y."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/BSPO_0000114> "Jennifer Girón"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/BSPO_0000114> "2021-04-21")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0000114> "lateral to"@en)
+InverseObjectProperties(<http://purl.obolibrary.org/obo/BSPO_0000114> <http://purl.obolibrary.org/obo/BSPO_0000115>)
+TransitiveObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0000114>)
+
+# Object Property: <http://purl.obolibrary.org/obo/BSPO_0000115> (medial to)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/BSPO_0000115> "Jennifer Girón")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/BSPO_0000115> "2021-04-21")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0000115> "X medial to y if x is closer to the midsagittal plane than y."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0000115> "medial to"@en)
+TransitiveObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0000115>)
 
 # Object Property: <http://purl.obolibrary.org/obo/BSPO_0000120> (in left side of)
 
@@ -2662,7 +2681,7 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CARO_0000010> "an
 SubClassOf(<http://purl.obolibrary.org/obo/CARO_0000010> <http://purl.obolibrary.org/obo/CARO_0000007>)
 
 
-DLSafeRule(Annotation(rdfs:comment "This can't be added as a property chain because it causes a circularity violation for 'part of'.") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BSPO_0000120> Variable(<urn:swrl:var#y>) Variable(<urn:swrl:var#z>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000050> Variable(<urn:swrl:var#x>) Variable(<urn:swrl:var#y>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BSPO_0000120> Variable(<urn:swrl:var#x>) Variable(<urn:swrl:var#z>))))
-DLSafeRule(Annotation(rdfs:comment "This can't be added as a property chain because it causes a circularity violation for 'part of'.") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BSPO_0000121> Variable(<urn:swrl:var#y>) Variable(<urn:swrl:var#z>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000050> Variable(<urn:swrl:var#x>) Variable(<urn:swrl:var#y>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BSPO_0000121> Variable(<urn:swrl:var#x>) Variable(<urn:swrl:var#z>))))
-DLSafeRule(Annotation(rdfs:comment "This can't be added as a property chain because it causes a circularity violation for 'part of'.") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BSPO_0000126> Variable(<urn:swrl:var#y>) Variable(<urn:swrl:var#z>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000050> Variable(<urn:swrl:var#x>) Variable(<urn:swrl:var#y>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BSPO_0000126> Variable(<urn:swrl:var#x>) Variable(<urn:swrl:var#z>))))
+DLSafeRule(Annotation(rdfs:comment "This can't be added as a property chain because it causes a circularity violation for 'part of'.") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000050> Variable(<urn:swrl:var#x>) Variable(<urn:swrl:var#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BSPO_0000120> Variable(<urn:swrl:var#y>) Variable(<urn:swrl:var#z>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BSPO_0000120> Variable(<urn:swrl:var#x>) Variable(<urn:swrl:var#z>))))
+DLSafeRule(Annotation(rdfs:comment "This can't be added as a property chain because it causes a circularity violation for 'part of'.") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000050> Variable(<urn:swrl:var#x>) Variable(<urn:swrl:var#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BSPO_0000121> Variable(<urn:swrl:var#y>) Variable(<urn:swrl:var#z>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BSPO_0000121> Variable(<urn:swrl:var#x>) Variable(<urn:swrl:var#z>))))
+DLSafeRule(Annotation(rdfs:comment "This can't be added as a property chain because it causes a circularity violation for 'part of'.") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000050> Variable(<urn:swrl:var#x>) Variable(<urn:swrl:var#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BSPO_0000126> Variable(<urn:swrl:var#y>) Variable(<urn:swrl:var#z>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BSPO_0000126> Variable(<urn:swrl:var#x>) Variable(<urn:swrl:var#z>))))
 )
