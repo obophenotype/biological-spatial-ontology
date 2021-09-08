@@ -7,7 +7,6 @@ edit_format: owl
 export_formats:
   - owl
   - obo
-  - json
 release_artefacts: 
   - base
   - full
