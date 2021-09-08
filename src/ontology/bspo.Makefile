@@ -5,7 +5,7 @@
 
 RELEASEPREFIX=$(ONTBASE)/releases/$(TODAY)
 
-bspo-base.owl: bspo-edit.obo
+bspo-base.owl: $(SRC)
 	robot annotate -i $< --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --annotation oboInOwl:date "$(OBODATE)" -o $@
 
 bspo.owl: bspo-base.owl

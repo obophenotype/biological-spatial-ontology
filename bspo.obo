@@ -1,13 +1,58 @@
 format-version: 1.2
-data-version: releases/2020-05-11
-date: 11:05:2020 13:57
+data-version: releases/2021-09-08
+date: 08:09:2021 17:59
 synonymtypedef: human "synonym typically used in the context of human anatomy" NARROW
 synonymtypedef: vertebrate "synonym typically used in the context of vertebrate anatomy" NARROW
 default-namespace: spatial
 namespace-id-rule: * BSPO:$sequence(7,0,999999999)$
 remark: based on FBql
+import: http://purl.obolibrary.org/obo/bspo/imports/omo_import.owl
+import: http://purl.obolibrary.org/obo/bspo/imports/ro_import.owl
 ontology: bspo
-owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/BSPO_00000021>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CARO_0000000>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/BSPO_00000021> (deep-superficial gradient (obsolete))\n\nSubClassOf(<http://purl.obolibrary.org/obo/BSPO_00000021> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/CARO_0000000> (anatomical entity)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CARO_0000000> owl:Thing)\n\n\n)
+property_value: http://purl.org/dc/elements/1.1/description "An ontology for respresenting spatial concepts, anatomical axes, gradients, regions, planes, sides and surfaces. These concepts can be used at multiple biological scales and in a diversity of taxa, including plants, animals and fungi. The BSPO is used to provide a source of anatomical location descriptors for logically defining anatomical entity classes in anatomy ontologies." xsd:string
+property_value: http://purl.org/dc/elements/1.1/title "Biological Spatial Ontology" xsd:string
+property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
+property_value: owl:versionInfo "2021-09-08" xsd:string
+
+[Term]
+id: BFO:0000004
+is_a: BFO:0000002
+
+[Term]
+id: BFO:0000015
+is_a: BFO:0000003
+
+[Term]
+id: BFO:0000016
+is_a: BFO:0000017
+
+[Term]
+id: BFO:0000017
+is_a: BFO:0000020
+
+[Term]
+id: BFO:0000019
+is_a: BFO:0000020
+
+[Term]
+id: BFO:0000020
+is_a: BFO:0000002
+
+[Term]
+id: BFO:0000023
+is_a: BFO:0000017
+
+[Term]
+id: BFO:0000034
+is_a: BFO:0000016
+
+[Term]
+id: BFO:0000040
+is_a: BFO:0000004
+
+[Term]
+id: BFO:0000141
+is_a: BFO:0000004
 
 [Term]
 id: BSPO:0000000
@@ -1467,6 +1512,7 @@ is_a: BSPO:0000196 ! medial-external axis
 id: CARO:0000000
 name: anatomical entity
 def: "Biological entity that is either an individual member of a biological species or constitutes the structural organization of an individual member of a biological species." [CARO:MAH]
+is_a: CARO:0030000
 
 [Term]
 id: CARO:0000003
@@ -1478,12 +1524,14 @@ is_a: CARO:0000006 ! material anatomical entity
 id: CARO:0000006
 name: material anatomical entity
 def: "An anatomical entity that has mass." [CC:DOS]
+is_a: BFO:0000040
 is_a: CARO:0000000 ! anatomical entity
 
 [Term]
 id: CARO:0000007
 name: immaterial anatomical entity
 def: "An anatomical entity that has no mass." [CC:DOS]
+is_a: BFO:0000141
 is_a: CARO:0000000 ! anatomical entity
 
 [Term]
@@ -1497,6 +1545,75 @@ id: CARO:0000010
 name: anatomical boundary
 def: "A non-material anatomical entity of two dimensions. Anatomical boundaries are contiguous structures." [CC:DOS]
 is_a: CARO:0000007 ! immaterial anatomical entity
+
+[Term]
+id: CARO:0030000
+is_a: BFO:0000004
+
+[Term]
+id: GO:0003674
+is_a: BFO:0000015
+
+[Term]
+id: GO:0003824
+is_a: GO:0003674
+
+[Term]
+id: GO:0008150
+is_a: BFO:0000015
+
+[Term]
+id: GO:0016301
+is_a: GO:0016772
+
+[Term]
+id: GO:0016740
+is_a: GO:0003824
+
+[Term]
+id: GO:0016772
+is_a: GO:0016740
+
+[Term]
+id: IAO:0000027
+is_a: IAO:0000030
+
+[Term]
+id: IAO:0000030
+is_a: BFO:0000031
+
+[Term]
+id: IAO:0000078
+is_a: IAO:0000102
+
+[Term]
+id: IAO:0000102
+is_a: IAO:0000027
+
+[Term]
+id: IAO:0000225
+is_a: IAO:0000102
+
+[Term]
+id: IAO:0000409
+is_a: IAO:0000102
+
+[Typedef]
+id: BSPO:0000114
+name: lateral to
+def: "X lateral to y if x is further from the midsagittal plane than y." []
+is_transitive: true
+inverse_of: BSPO:0000115 ! medial to
+created_by: Jennifer Girón
+creation_date: 2021-04-21
+
+[Typedef]
+id: BSPO:0000115
+name: medial to
+name: X medial to y if x is closer to the midsagittal plane than y.
+is_transitive: true
+created_by: Jennifer Girón
+creation_date: 2021-04-21
 
 [Typedef]
 id: aboral_to
@@ -1742,7 +1859,7 @@ def: "X in left side of Y <=> if Y is subdivided into two left and right portion
 xref: BSPO:0000120
 property_value: seeAlso https://github.com/obophenotype/uberon/wiki/Modeling-paired-structures-Design-Pattern xsd:anyURI
 is_a: in_lateral_side_of ! in lateral side of
-inverse_of: in_right_side_of ! in right side of
+disjoint_from: in_right_side_of ! in right side of
 
 [Typedef]
 id: in_posterior_side_of
