@@ -1,27 +1,22 @@
-
 Prefix(:=<http://purl.obolibrary.org/obo/bspo.owl#>)
+Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
-Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
 Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
+
 Ontology(<http://purl.obolibrary.org/obo/bspo.owl>
+Import(<http://purl.obolibrary.org/obo/bspo/imports/omo_import.owl>)
+Import(<http://purl.obolibrary.org/obo/bspo/imports/ro_import.owl>)
+Annotation(dce:description "An ontology for respresenting spatial concepts, anatomical axes, gradients, regions, planes, sides and surfaces. These concepts can be used at multiple biological scales and in a diversity of taxa, including plants, animals and fungi. The BSPO is used to provide a source of anatomical location descriptors for logically defining anatomical entity classes in anatomy ontologies.")
+Annotation(dce:title "Biological Spatial Ontology")
+Annotation(dcterms:license <https://creativecommons.org/licenses/by/3.0/>)
 Annotation(<http://www.geneontology.org/formats/oboInOwl#NamespaceIdRule> "* BSPO:$sequence(7,0,999999999)$"^^xsd:string)
 Annotation(<http://www.geneontology.org/formats/oboInOwl#default-namespace> "spatial"^^xsd:string)
 Annotation(rdfs:comment "based on FBql"^^xsd:string)
-
-Import(<http://purl.obolibrary.org/obo/bspo/imports/ro_import.owl>)
-
-Import(<http://purl.obolibrary.org/obo/bspo/imports/omo_import.owl>)
-
-
-
-Annotation(dce:title "Biological Spatial Ontology")
-Annotation(dcterms:license <https://creativecommons.org/licenses/by/3.0/>)
-Annotation(dce:description "An ontology for respresenting spatial concepts, anatomical axes, gradients, regions, planes, sides, and surfaces. These concepts can be used at multiple biological scales and in a diversity of taxa, including plants, animals and fungi. The BSPO is used to provide a source of anatomical location descriptors for logically defining anatomical entity classes in anatomy ontologies.")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BSPO_0000000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BSPO_0000001>))
@@ -189,6 +184,8 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0000109>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0000110>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0000111>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0000113>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0000114>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0000115>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0000120>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0000121>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0000122>))
@@ -235,6 +232,9 @@ Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0100001>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/bspo#human>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/bspo#vertebrate>))
+Declaration(AnnotationProperty(dce:description))
+Declaration(AnnotationProperty(dce:title))
+Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#NamespaceIdRule>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#created_by>))
@@ -561,6 +561,23 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/BSPO_0000113> "opposite_to"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#shorthand> <http://purl.obolibrary.org/obo/BSPO_0000113> "opposite_to"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0000113> "opposite to"^^xsd:string)
+
+# Object Property: <http://purl.obolibrary.org/obo/BSPO_0000114> (lateral to)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/BSPO_0000114> "X lateral to y if x is further from the midsagittal plane than y."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/BSPO_0000114> "Jennifer Girón"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/BSPO_0000114> "2021-04-21")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0000114> "lateral to"@en)
+InverseObjectProperties(<http://purl.obolibrary.org/obo/BSPO_0000114> <http://purl.obolibrary.org/obo/BSPO_0000115>)
+TransitiveObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0000114>)
+
+# Object Property: <http://purl.obolibrary.org/obo/BSPO_0000115> (medial to)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/BSPO_0000115> "Jennifer Girón")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/BSPO_0000115> "2021-04-21")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0000115> "X medial to y if x is closer to the midsagittal plane than y."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0000115> "medial to"@en)
+TransitiveObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0000115>)
 
 # Object Property: <http://purl.obolibrary.org/obo/BSPO_0000120> (in left side of)
 
@@ -2674,8 +2691,7 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CARO_0000010> "an
 SubClassOf(<http://purl.obolibrary.org/obo/CARO_0000010> <http://purl.obolibrary.org/obo/CARO_0000007>)
 
 
-DLSafeRule(Annotation(rdfs:comment "This can't be added as a property chain because it causes a circularity violation for 'part of'.") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BSPO_0000120> Variable(<urn:swrl:var#y>) Variable(<urn:swrl:var#z>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000050> Variable(<urn:swrl:var#x>) Variable(<urn:swrl:var#y>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BSPO_0000120> Variable(<urn:swrl:var#x>) Variable(<urn:swrl:var#z>))))
-DLSafeRule(Annotation(rdfs:comment "This can't be added as a property chain because it causes a circularity violation for 'part of'.") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BSPO_0000121> Variable(<urn:swrl:var#y>) Variable(<urn:swrl:var#z>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000050> Variable(<urn:swrl:var#x>) Variable(<urn:swrl:var#y>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BSPO_0000121> Variable(<urn:swrl:var#x>) Variable(<urn:swrl:var#z>))))
-DLSafeRule(Annotation(rdfs:comment "This can't be added as a property chain because it causes a circularity violation for 'part of'.") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BSPO_0000126> Variable(<urn:swrl:var#y>) Variable(<urn:swrl:var#z>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000050> Variable(<urn:swrl:var#x>) Variable(<urn:swrl:var#y>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BSPO_0000126> Variable(<urn:swrl:var#x>) Variable(<urn:swrl:var#z>))))
+DLSafeRule(Annotation(rdfs:comment "This can't be added as a property chain because it causes a circularity violation for 'part of'.") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000050> Variable(<urn:swrl:var#x>) Variable(<urn:swrl:var#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BSPO_0000120> Variable(<urn:swrl:var#y>) Variable(<urn:swrl:var#z>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BSPO_0000120> Variable(<urn:swrl:var#x>) Variable(<urn:swrl:var#z>))))
+DLSafeRule(Annotation(rdfs:comment "This can't be added as a property chain because it causes a circularity violation for 'part of'.") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000050> Variable(<urn:swrl:var#x>) Variable(<urn:swrl:var#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BSPO_0000121> Variable(<urn:swrl:var#y>) Variable(<urn:swrl:var#z>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BSPO_0000121> Variable(<urn:swrl:var#x>) Variable(<urn:swrl:var#z>))))
+DLSafeRule(Annotation(rdfs:comment "This can't be added as a property chain because it causes a circularity violation for 'part of'.") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000050> Variable(<urn:swrl:var#x>) Variable(<urn:swrl:var#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BSPO_0000126> Variable(<urn:swrl:var#y>) Variable(<urn:swrl:var#z>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BSPO_0000126> Variable(<urn:swrl:var#x>) Variable(<urn:swrl:var#z>))))
 )
-
