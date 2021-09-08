@@ -1,0 +1,13 @@
+format-version: 1.2
+data-version: bspo/releases/2021-09-08/bspo-base.owl
+ontology: bspo/bspo-base
+property_value: http://purl.org/dc/elements/1.1/description "None" xsd:string
+property_value: http://purl.org/dc/elements/1.1/title "Biological Spatial Ontology" xsd:string
+property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
+property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/unspecified
+property_value: owl:versionInfo "2021-09-08" xsd:string
+
+[Term]
+id: BSPO:00000000
+name: root node
+

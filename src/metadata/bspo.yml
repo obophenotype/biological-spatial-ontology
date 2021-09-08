@@ -1,0 +1,27 @@
+# PURL configuration for http://purl.obolibrary.org/obo/bspo
+
+idspace: BSPO
+base_url: /obo/bspo
+
+products:
+- bspo.owl: https://raw.githubusercontent.com/obophenotype/biological-spatial-ontology/main/bspo.owl
+- bspo.obo: https://raw.githubusercontent.com/obophenotype/biological-spatial-ontology/main/bspo.obo
+
+term_browser: ontobee
+example_terms:
+- BSPO_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/obophenotype/biological-spatial-ontology/v
+
+- prefix: /tracker/
+  replacement: https://github.com/obophenotype/biological-spatial-ontology/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/BSPO?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/obophenotype/biological-spatial-ontology/main/
