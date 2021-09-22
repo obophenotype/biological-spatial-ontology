@@ -17,14 +17,14 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/bspo.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/bspo/releases/2021-09-20/bspo.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/bspo/releases/2021-09-22/bspo.owl"/>
         <dc:description>An ontology for respresenting spatial concepts, anatomical axes, gradients, regions, planes, sides and surfaces. These concepts can be used at multiple biological scales and in a diversity of taxa, including plants, animals and fungi. The BSPO is used to provide a source of anatomical location descriptors for logically defining anatomical entity classes in anatomy ontologies.</dc:description>
         <dc:title>Biological Spatial Ontology</dc:title>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/3.0/"/>
         <oboInOwl:NamespaceIdRule rdf:datatype="http://www.w3.org/2001/XMLSchema#string">* BSPO:$sequence(7,0,999999999)$</oboInOwl:NamespaceIdRule>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spatial</oboInOwl:default-namespace>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">based on FBql</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-09-20</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-09-22</owl:versionInfo>
     </owl:Ontology>
     
 
