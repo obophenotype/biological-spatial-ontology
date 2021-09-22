@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.obolibrary.org/obo/bspo.owl#"
-     xml:base="http://purl.obolibrary.org/obo/bspo.owl"
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/bspo/bspo-full.owl#"
+     xml:base="http://purl.obolibrary.org/obo/bspo/bspo-full.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -16,8 +16,8 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
-    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/bspo.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/bspo/releases/2021-09-20/bspo.owl"/>
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/bspo/bspo-full.owl">
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/bspo/releases/2021-09-20/bspo-full.owl"/>
         <dc:description>An ontology for respresenting spatial concepts, anatomical axes, gradients, regions, planes, sides and surfaces. These concepts can be used at multiple biological scales and in a diversity of taxa, including plants, animals and fungi. The BSPO is used to provide a source of anatomical location descriptors for logically defining anatomical entity classes in anatomy ontologies.</dc:description>
         <dc:title>Biological Spatial Ontology</dc:title>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/3.0/"/>
