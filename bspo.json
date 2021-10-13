@@ -3818,11 +3818,11 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2021-09-22"
+            "val": "2021-10-13"
           }
         ],
         "subsets": [],
-        "version": "http://purl.obolibrary.org/obo/bspo/releases/2021-09-22/bspo.json",
+        "version": "http://purl.obolibrary.org/obo/bspo/releases/2021-10-13/bspo.json",
         "xrefs": []
       },
       "nodes": [
@@ -7562,7 +7562,7 @@
               },
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#creation_date",
-                "val": "2021-04-21"
+                "val": "2021-04-21T01:01:01Z"
               }
             ],
             "definition": {
@@ -7583,7 +7583,7 @@
               },
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#creation_date",
-                "val": "2021-04-21"
+                "val": "2021-04-21T01:01:01Z"
               }
             ]
           },

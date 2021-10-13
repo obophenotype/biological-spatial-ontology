@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: bspo/releases/2021-09-22/bspo-full.owl
+data-version: bspo/releases/2021-10-13/bspo-full.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -15,7 +15,7 @@ ontology: bspo/bspo-full
 property_value: http://purl.org/dc/elements/1.1/description "An ontology for respresenting spatial concepts, anatomical axes, gradients, regions, planes, sides and surfaces. These concepts can be used at multiple biological scales and in a diversity of taxa, including plants, animals and fungi. The BSPO is used to provide a source of anatomical location descriptors for logically defining anatomical entity classes in anatomy ontologies." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Biological Spatial Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
-property_value: owl:versionInfo "2021-09-22" xsd:string
+property_value: owl:versionInfo "2021-10-13" xsd:string
 
 [Term]
 id: BFO:0000002
@@ -1660,7 +1660,7 @@ def: "X lateral to y if x is further from the midsagittal plane than y." []
 is_transitive: true
 inverse_of: BSPO:0000115 ! medial to
 created_by: Jennifer Girón
-creation_date: 2021-04-21
+creation_date: 2021-04-21T01:01:01Z
 
 [Typedef]
 id: BSPO:0000115
@@ -1668,7 +1668,7 @@ name: medial to
 name: X medial to y if x is closer to the midsagittal plane than y.
 is_transitive: true
 created_by: Jennifer Girón
-creation_date: 2021-04-21
+creation_date: 2021-04-21T01:01:01Z
 
 [Typedef]
 id: RO:0000052
