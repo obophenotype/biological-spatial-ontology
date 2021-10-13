@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: bspo/releases/2021-09-22/bspo-base.owl
+data-version: bspo/releases/2021-10-13/bspo-base.owl
 synonymtypedef: human "synonym typically used in the context of human anatomy" NARROW
 synonymtypedef: vertebrate "synonym typically used in the context of vertebrate anatomy" NARROW
 default-namespace: spatial
@@ -10,7 +10,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology for res
 property_value: http://purl.org/dc/elements/1.1/title "Biological Spatial Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
-property_value: owl:versionInfo "2021-09-22" xsd:string
+property_value: owl:versionInfo "2021-10-13" xsd:string
 
 [Term]
 id: BSPO:0000000
@@ -1506,7 +1506,7 @@ def: "X lateral to y if x is further from the midsagittal plane than y." []
 is_transitive: true
 inverse_of: BSPO:0000115 ! medial to
 created_by: Jennifer Girón
-creation_date: 2021-04-21
+creation_date: 2021-04-21T01:01:01Z
 
 [Typedef]
 id: BSPO:0000115
@@ -1514,7 +1514,7 @@ name: medial to
 name: X medial to y if x is closer to the midsagittal plane than y.
 is_transitive: true
 created_by: Jennifer Girón
-creation_date: 2021-04-21
+creation_date: 2021-04-21T01:01:01Z
 
 [Typedef]
 id: aboral_to
