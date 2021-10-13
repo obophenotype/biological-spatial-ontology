@@ -566,7 +566,7 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0000113> "op
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/BSPO_0000114> "X lateral to y if x is further from the midsagittal plane than y."@en)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/BSPO_0000114> "Jennifer Girón"@en)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/BSPO_0000114> "2021-04-21")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/BSPO_0000114> "2021-04-21T01:01:01Z"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0000114> "lateral to"@en)
 InverseObjectProperties(<http://purl.obolibrary.org/obo/BSPO_0000114> <http://purl.obolibrary.org/obo/BSPO_0000115>)
 TransitiveObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0000114>)
@@ -574,7 +574,7 @@ TransitiveObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0000114>)
 # Object Property: <http://purl.obolibrary.org/obo/BSPO_0000115> (medial to)
 
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/BSPO_0000115> "Jennifer Girón")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/BSPO_0000115> "2021-04-21")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/BSPO_0000115> "2021-04-21T01:01:01Z"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0000115> "X medial to y if x is closer to the midsagittal plane than y."@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0000115> "medial to"@en)
 TransitiveObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0000115>)
