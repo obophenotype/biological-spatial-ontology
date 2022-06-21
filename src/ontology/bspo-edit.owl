@@ -223,10 +223,11 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0015101>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0015102>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0015201>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0015202>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0020001>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0020002>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_1000000>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002131>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002220>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/#_has_start_point>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/bspo#parallel_to>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0100001>))
@@ -652,6 +653,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#shorthand> <ht
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0000126> "in lateral side of"^^xsd:string)
 AnnotationAssertion(rdfs:seeAlso <http://purl.obolibrary.org/obo/BSPO_0000126> "https://github.com/obophenotype/uberon/wiki/Modeling-paired-structures-Design-Pattern"^^xsd:anyURI)
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/BSPO_0000126> <http://purl.obolibrary.org/obo/BFO_0000050>)
+DisjointObjectProperties(<http://purl.obolibrary.org/obo/BSPO_0000126> <http://purl.obolibrary.org/obo/BSPO_0020001>)
 
 # Object Property: <http://purl.obolibrary.org/obo/BSPO_0001100> (in superficial part of)
 
@@ -867,6 +869,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#shorthand> <http://purl.obolibrary.org/obo/BSPO_0015012> "immediately_posterior_to"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0015012> "immediately posterior to"^^xsd:string)
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/BSPO_0015012> <http://purl.obolibrary.org/obo/BSPO_0000099>)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/BSPO_0015012> <http://purl.obolibrary.org/obo/RO_0002220>)
 
 # Object Property: <http://purl.obolibrary.org/obo/BSPO_0015013> (immediately proximal to)
 
@@ -887,6 +890,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#shorthand> <http://purl.obolibrary.org/obo/BSPO_0015014> "immediately_superficial_to"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0015014> "immediately superficial to"^^xsd:string)
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/BSPO_0015014> <http://purl.obolibrary.org/obo/BSPO_0000108>)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/BSPO_0015014> <http://purl.obolibrary.org/obo/RO_0002220>)
 
 # Object Property: <http://purl.obolibrary.org/obo/BSPO_0015015> (immediately ventral to)
 
@@ -959,6 +963,23 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#shorthand> <ht
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0015202> "aboral to"^^xsd:string)
 TransitiveObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0015202>)
 
+# Object Property: <http://purl.obolibrary.org/obo/BSPO_0020001> (in central side of)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/BSPO_0020001> "BSPO:0020001")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0020001> "in central side of")
+
+# Object Property: <http://purl.obolibrary.org/obo/BSPO_0020002> (has start point)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "BSPO:cjm"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/BSPO_0020002> "A relation between an axis and a part of an organism, in which the part defines the initial point of the axis."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/BSPO_0020002> ":has_start_point"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/BSPO_0020002> "spatial"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/BSPO_0020002> "has_start_point"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#shorthand> <http://purl.obolibrary.org/obo/BSPO_0020002> "has_start_point"^^xsd:string)
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/BSPO_0020002> "Axes can be defined in a given species by subtyping the relevant axis type and stating a start and end point."^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0020002> "has start point"^^xsd:string)
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/BSPO_0020002> <http://purl.obolibrary.org/obo/BSPO_0000010>)
+ObjectPropertyRange(<http://purl.obolibrary.org/obo/BSPO_0020002> <http://purl.obolibrary.org/obo/CARO_0000000>)
+
 # Object Property: <http://purl.obolibrary.org/obo/BSPO_1000000> (preaxial to)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://medical-dictionary.thefreedictionary.com/preaxial"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/BSPO_1000000> "x preaxial to y iff x is further along the preaxial-postaxial axis than y, towards the front."^^xsd:string)
@@ -990,18 +1011,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#shorthand> <http://purl.obolibrary.org/obo/RO_0002220> "adjacent_to"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002220> "adjacent to"^^xsd:string)
 SymmetricObjectProperty(<http://purl.obolibrary.org/obo/RO_0002220>)
-
-# Object Property: <http://purl.obolibrary.org/obo/#_has_start_point> (has start point)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "BSPO:cjm"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/#_has_start_point> "A relation between an axis and a part of an organism, in which the part defines the initial point of the axis."^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/#_has_start_point> ":has_start_point"^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/#_has_start_point> "spatial"^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/#_has_start_point> "has_start_point"^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#shorthand> <http://purl.obolibrary.org/obo/#_has_start_point> "has_start_point"^^xsd:string)
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/#_has_start_point> "Axes can be defined in a given species by subtyping the relevant axis type and stating a start and end point."^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/#_has_start_point> "has start point"^^xsd:string)
-ObjectPropertyDomain(<http://purl.obolibrary.org/obo/#_has_start_point> <http://purl.obolibrary.org/obo/BSPO_0000010>)
-ObjectPropertyRange(<http://purl.obolibrary.org/obo/#_has_start_point> <http://purl.obolibrary.org/obo/CARO_0000000>)
 
 # Object Property: <http://purl.obolibrary.org/obo/bspo#parallel_to> (parallel to)
 
