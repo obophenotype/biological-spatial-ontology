@@ -28,3 +28,6 @@ Datatype: idrange:4
 Annotations: allocatedto: "Chris Mungall"
 EquivalentTo: xsd:integer[> 15001 , <= 20000]
 
+Datatype: idrange:5
+Annotations: allocatedto: "Anita Caron"
+EquivalentTo: xsd:integer[> 20001 , <= 20999]
