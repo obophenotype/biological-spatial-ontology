@@ -653,7 +653,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/BSPO_0000126> "in_lateral_side_of"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#shorthand> <http://purl.obolibrary.org/obo/BSPO_0000126> "in_lateral_side_of"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0000126> "in lateral side of"^^xsd:string)
-AnnotationAssertion(rdfs:seeAlso <http://purl.obolibrary.org/obo/BSPO_0000126> "https://github.com/obophenotype/uberon/issues/2453"^^xsd:anyURI)
+AnnotationAssertion(rdfs:seeAlso <http://purl.obolibrary.org/obo/BSPO_0000126> <https://github.com/obophenotype/uberon/issues/2453>)
 AnnotationAssertion(rdfs:seeAlso <http://purl.obolibrary.org/obo/BSPO_0000126> "https://github.com/obophenotype/uberon/wiki/Modeling-paired-structures-Design-Pattern"^^xsd:anyURI)
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/BSPO_0000126> <http://purl.obolibrary.org/obo/BFO_0000050>)
 DisjointObjectProperties(<http://purl.obolibrary.org/obo/BSPO_0000126> <http://purl.obolibrary.org/obo/BSPO_0020001>)
@@ -871,6 +871,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/BSPO_0015012> "immediately_posterior_to"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#shorthand> <http://purl.obolibrary.org/obo/BSPO_0015012> "immediately_posterior_to"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0015012> "immediately posterior to"^^xsd:string)
+AnnotationAssertion(rdfs:seeAlso <http://purl.obolibrary.org/obo/BSPO_0015012> <https://github.com/obophenotype/uberon/issues/2453>)
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/BSPO_0015012> <http://purl.obolibrary.org/obo/BSPO_0000099>)
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/BSPO_0015012> <http://purl.obolibrary.org/obo/RO_0002220>)
 
@@ -892,6 +893,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/BSPO_0015014> "immediately_superficial_to"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#shorthand> <http://purl.obolibrary.org/obo/BSPO_0015014> "immediately_superficial_to"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0015014> "immediately superficial to"^^xsd:string)
+AnnotationAssertion(rdfs:seeAlso <http://purl.obolibrary.org/obo/BSPO_0015014> <https://github.com/obophenotype/uberon/issues/2453>)
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/BSPO_0015014> <http://purl.obolibrary.org/obo/BSPO_0000108>)
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/BSPO_0015014> <http://purl.obolibrary.org/obo/RO_0002220>)
 
@@ -968,9 +970,13 @@ TransitiveObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0015202>)
 
 # Object Property: <http://purl.obolibrary.org/obo/BSPO_0020001> (in central side of)
 
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "BSPO:cjm"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/BSPO_0020001> "X in_central_side Y <=> if Y is subdivided into left and right portions around some median divisor, all parts of X are closer to the median divisor than the outermost lateral sides."^^xsd:string)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/BSPO_0020001> "This was migrated from http://purl.obolibrary.org/obo/uberon/core#in_central_side_of in Uberon."^^xsd:string)
 AnnotationAssertion(dcterms:contributor <http://purl.obolibrary.org/obo/BSPO_0020001> <https://orcid.org/0000-0002-6523-4866>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0020001> "in central side of")
+AnnotationAssertion(rdfs:seeAlso <http://purl.obolibrary.org/obo/BSPO_0020001> <http://purl.obolibrary.org/obo/BSPO_0000059>)
+AnnotationAssertion(rdfs:seeAlso <http://purl.obolibrary.org/obo/BSPO_0020001> <https://github.com/obophenotype/uberon/wiki/Modeling-paired-structures-Design-Pattern>)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/BSPO_0020001> <http://purl.obolibrary.org/obo/BFO_0000050>)
 
 # Object Property: <http://purl.obolibrary.org/obo/BSPO_0020002> (has start point)
 
