@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: bspo/releases/2021-10-13/bspo-base.owl
+data-version: bspo/releases/2022-06-28/bspo-base.owl
 synonymtypedef: human "synonym typically used in the context of human anatomy" NARROW
 synonymtypedef: vertebrate "synonym typically used in the context of vertebrate anatomy" NARROW
 default-namespace: spatial
@@ -10,7 +10,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology for res
 property_value: http://purl.org/dc/elements/1.1/title "Biological Spatial Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
-property_value: owl:versionInfo "2021-10-13" xsd:string
+property_value: owl:versionInfo "2022-06-28" xsd:string
 
 [Term]
 id: BSPO:0000000
@@ -1517,6 +1517,16 @@ created_by: Jennifer Girón
 creation_date: 2021-04-21T01:01:01Z
 
 [Typedef]
+id: BSPO:0020001
+name: in central side of
+def: "X in_central_side Y <=> if Y is subdivided into left and right portions around some median divisor, all parts of X are closer to the median divisor than the outermost lateral sides." [BSPO:cjm]
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-6523-4866
+property_value: IAO:0000116 "This was migrated from http://purl.obolibrary.org/obo/uberon/core#in_central_side_of in Uberon." xsd:string
+property_value: seeAlso BSPO:0000059
+property_value: seeAlso https://github.com/obophenotype/uberon/wiki/Modeling-paired-structures-Design-Pattern
+is_a: part_of ! part of
+
+[Typedef]
 id: aboral_to
 name: aboral to
 def: "nearer to the aboral opening of the organism, on the oral-aboral axis." [BSPO:cjm]
@@ -1639,6 +1649,7 @@ name: has start point
 def: "A relation between an axis and a part of an organism, in which the part defines the initial point of the axis." [BSPO:cjm]
 comment: Axes can be defined in a given species by subtyping the relevant axis type and stating a start and end point.
 xref: \:has_start_point
+property_value: IAO:0000116 "This relationship was originally called http://purl.obolibrary.org/obo/#_has_start_point, but was renamed because of the non-standard IRI syntax." xsd:string
 domain: BSPO:0000010 ! anatomical axis
 range: CARO:0000000 ! anatomical entity
 
@@ -1687,6 +1698,8 @@ id: immediately_posterior_to
 name: immediately posterior to
 def: "x immediately posterior to y iff x posterior_to y and x is contiguous with y." [BSPO:curators]
 xref: BSPO:0015012
+property_value: seeAlso https://github.com/obophenotype/uberon/issues/2453
+is_a: adjacent_to ! adjacent to
 is_a: posterior_to ! posterior to
 
 [Typedef]
@@ -1708,6 +1721,8 @@ id: immediately_superficial_to
 name: immediately superficial to
 def: "x immediately superficial to y iff x superficial to y and x is contiguous with y." [BSPO:curators]
 xref: BSPO:0015014
+property_value: seeAlso https://github.com/obophenotype/uberon/issues/2453
+is_a: adjacent_to ! adjacent to
 is_a: superficial_to ! superficial to
 
 [Typedef]
@@ -1750,8 +1765,10 @@ id: in_lateral_side_of
 name: in lateral side of
 def: "X in lateral side of Y <=> if X is in left side of Y or X is in right side of Y. X is often, but not always a paired structure" [UBERON:cjm]
 xref: BSPO:0000126
+property_value: seeAlso https://github.com/obophenotype/uberon/issues/2453
 property_value: seeAlso https://github.com/obophenotype/uberon/wiki/Modeling-paired-structures-Design-Pattern xsd:anyURI
 is_a: part_of ! part of
+disjoint_from: BSPO:0020001 ! in central side of
 
 [Typedef]
 id: in_left_side_of

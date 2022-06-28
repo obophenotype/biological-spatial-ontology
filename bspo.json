@@ -207,6 +207,15 @@
         },
         {
           "domainClassIds": [
+            "http://purl.obolibrary.org/obo/BFO_0000015"
+          ],
+          "predicateId": "http://purl.obolibrary.org/obo/RO_0019000",
+          "rangeClassIds": [
+            "http://purl.obolibrary.org/obo/PATO_0000001"
+          ]
+        },
+        {
+          "domainClassIds": [
             "http://purl.obolibrary.org/obo/BFO_0000040"
           ],
           "predicateId": "http://purl.obolibrary.org/obo/RO_0002434",
@@ -263,15 +272,6 @@
           "domainClassIds": [
             "http://purl.obolibrary.org/obo/BSPO_0000010"
           ],
-          "predicateId": "http://purl.obolibrary.org/obo/#_has_start_point",
-          "rangeClassIds": [
-            "http://purl.obolibrary.org/obo/CARO_0000000"
-          ]
-        },
-        {
-          "domainClassIds": [
-            "http://purl.obolibrary.org/obo/BSPO_0000010"
-          ],
           "predicateId": "http://purl.obolibrary.org/obo/BSPO_0000104",
           "rangeClassIds": [
             "http://purl.obolibrary.org/obo/BSPO_0000010"
@@ -293,6 +293,15 @@
           "predicateId": "http://purl.obolibrary.org/obo/BSPO_0015005",
           "rangeClassIds": [
             "http://purl.obolibrary.org/obo/BSPO_0000400"
+          ]
+        },
+        {
+          "domainClassIds": [
+            "http://purl.obolibrary.org/obo/BSPO_0000010"
+          ],
+          "predicateId": "http://purl.obolibrary.org/obo/BSPO_0020002",
+          "rangeClassIds": [
+            "http://purl.obolibrary.org/obo/CARO_0000000"
           ]
         },
         {
@@ -399,6 +408,11 @@
           "sub": "http://purl.obolibrary.org/obo/BFO_0000019"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/BFO_0000020",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0000001"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/BFO_0000031",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/IAO_0000030"
@@ -467,6 +481,11 @@
           "obj": "http://purl.obolibrary.org/obo/BFO_0000050",
           "pred": "subPropertyOf",
           "sub": "http://purl.obolibrary.org/obo/BSPO_0015102"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/BFO_0000050",
+          "pred": "subPropertyOf",
+          "sub": "http://purl.obolibrary.org/obo/BSPO_0020001"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/BFO_0000051",
@@ -2294,6 +2313,16 @@
           "sub": "http://purl.obolibrary.org/obo/RO_0002215"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/RO_0002220",
+          "pred": "subPropertyOf",
+          "sub": "http://purl.obolibrary.org/obo/BSPO_0015012"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/RO_0002220",
+          "pred": "subPropertyOf",
+          "sub": "http://purl.obolibrary.org/obo/BSPO_0015014"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/RO_0002222",
           "pred": "subPropertyOf",
           "sub": "http://purl.obolibrary.org/obo/BFO_0000063"
@@ -2477,6 +2506,11 @@
           "obj": "http://purl.obolibrary.org/obo/RO_0002410",
           "pred": "subPropertyOf",
           "sub": "http://purl.obolibrary.org/obo/RO_0002608"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/RO_0002410",
+          "pred": "subPropertyOf",
+          "sub": "http://purl.obolibrary.org/obo/RO_0019000"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/RO_0002411",
@@ -2732,9 +2766,18 @@
           "obj": "http://purl.obolibrary.org/obo/RO_0011002",
           "pred": "subPropertyOf",
           "sub": "http://purl.obolibrary.org/obo/RO_0002448"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/RO_0019000",
+          "pred": "subPropertyOf",
+          "sub": "http://purl.obolibrary.org/obo/RO_0019001"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/RO_0019000",
+          "pred": "subPropertyOf",
+          "sub": "http://purl.obolibrary.org/obo/RO_0019002"
         }
       ],
-      "equivalentNodesSets": [],
       "id": "http://purl.obolibrary.org/obo/bspo.json",
       "logicalDefinitionAxioms": [
         {
@@ -3818,52 +3861,18 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2021-10-13"
+            "val": "2022-06-28"
           }
         ],
-        "subsets": [],
-        "version": "http://purl.obolibrary.org/obo/bspo/releases/2021-10-13/bspo.json",
-        "xrefs": []
+        "version": "http://purl.obolibrary.org/obo/bspo/releases/2022-06-28/bspo.json"
       },
       "nodes": [
-        {
-          "id": "http://purl.obolibrary.org/obo/#_has_start_point",
-          "lbl": "has start point",
-          "meta": {
-            "basicPropertyValues": [
-              {
-                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-                "val": "spatial"
-              },
-              {
-                "pred": "http://www.geneontology.org/formats/oboInOwl#shorthand",
-                "val": "has_start_point"
-              }
-            ],
-            "comments": [
-              "Axes can be defined in a given species by subtyping the relevant axis type and stating a start and end point."
-            ],
-            "definition": {
-              "val": "A relation between an axis and a part of an organism, in which the part defines the initial point of the axis.",
-              "xrefs": [
-                "BSPO:cjm"
-              ]
-            },
-            "xrefs": [
-              {
-                "val": ":has_start_point"
-              }
-            ]
-          },
-          "type": "PROPERTY"
-        },
         {
           "id": "http://purl.obolibrary.org/obo/BFO_0000002",
           "lbl": "continuant",
           "meta": {
             "definition": {
-              "val": "An entity that exists in full at any time in which it exists at all, persists through time while maintaining its identity and has no temporal parts.",
-              "xrefs": []
+              "val": "An entity that exists in full at any time in which it exists at all, persists through time while maintaining its identity and has no temporal parts."
             }
           },
           "type": "CLASS"
@@ -3873,8 +3882,7 @@
           "lbl": "occurrent",
           "meta": {
             "definition": {
-              "val": "An entity that has temporal parts and that happens, unfolds or develops through time.",
-              "xrefs": []
+              "val": "An entity that has temporal parts and that happens, unfolds or develops through time."
             }
           },
           "type": "CLASS"
@@ -3884,8 +3892,7 @@
           "lbl": "independent continuant",
           "meta": {
             "definition": {
-              "val": "A continuant that is a bearer of quality and realizable entity entities, in which other entities inhere and which itself cannot inhere in anything.",
-              "xrefs": []
+              "val": "A continuant that is a bearer of quality and realizable entity entities, in which other entities inhere and which itself cannot inhere in anything."
             }
           },
           "type": "CLASS"
@@ -3895,8 +3902,7 @@
           "lbl": "process",
           "meta": {
             "definition": {
-              "val": "An occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t.",
-              "xrefs": []
+              "val": "An occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t."
             }
           },
           "type": "CLASS"
@@ -3906,8 +3912,7 @@
           "lbl": "realizable entity",
           "meta": {
             "definition": {
-              "val": "A specifically dependent continuant  that inheres in continuant  entities and are not exhibited in full at every time in which it inheres in an entity or group of entities. The exhibition or actualization of a realizable entity is a particular manifestation, functioning or process that occurs under certain circumstances.",
-              "xrefs": []
+              "val": "A specifically dependent continuant  that inheres in continuant  entities and are not exhibited in full at every time in which it inheres in an entity or group of entities. The exhibition or actualization of a realizable entity is a particular manifestation, functioning or process that occurs under certain circumstances."
             }
           },
           "type": "CLASS"
@@ -3917,8 +3922,7 @@
           "lbl": "specifically dependent continuant",
           "meta": {
             "definition": {
-              "val": "A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same.",
-              "xrefs": []
+              "val": "A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same."
             }
           },
           "type": "CLASS"
@@ -3928,8 +3932,7 @@
           "lbl": "role",
           "meta": {
             "definition": {
-              "val": "A realizable entity  the manifestation of which brings about some result or end that is not essential to a continuant  in virtue of the kind of thing that it is but that can be served or participated in by that kind of continuant  in some kinds of natural, social or institutional contexts.",
-              "xrefs": []
+              "val": "A realizable entity  the manifestation of which brings about some result or end that is not essential to a continuant  in virtue of the kind of thing that it is but that can be served or participated in by that kind of continuant  in some kinds of natural, social or institutional contexts."
             }
           },
           "type": "CLASS"
@@ -3939,8 +3942,7 @@
           "lbl": "material entity",
           "meta": {
             "definition": {
-              "val": "An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time.",
-              "xrefs": []
+              "val": "An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time."
             }
           },
           "type": "CLASS"
@@ -4036,8 +4038,7 @@
               }
             ],
             "definition": {
-              "val": "a core relation that holds between a part and its whole",
-              "xrefs": []
+              "val": "a core relation that holds between a part and its whole"
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension",
@@ -4104,8 +4105,7 @@
               }
             ],
             "definition": {
-              "val": "a core relation that holds between a whole and its part",
-              "xrefs": []
+              "val": "a core relation that holds between a whole and its part"
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension",
@@ -4147,8 +4147,7 @@
               }
             ],
             "definition": {
-              "val": "x is preceded by y if and only if the time point at which y ends is before or equivalent to the time point at which x starts. Formally: x preceded by y iff ω(y) <= α(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point.",
-              "xrefs": []
+              "val": "x is preceded by y if and only if the time point at which y ends is before or equivalent to the time point at which x starts. Formally: x preceded by y iff ω(y) <= α(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point."
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/ro/subsets#ro-eco"
@@ -4167,8 +4166,7 @@
               }
             ],
             "definition": {
-              "val": "x precedes y if and only if the time point at which x ends is before or equivalent to the time point at which y starts. Formally: x precedes y iff ω(x) <= α(y), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point.",
-              "xrefs": []
+              "val": "x precedes y if and only if the time point at which x ends is before or equivalent to the time point at which y starts. Formally: x precedes y iff ω(x) <= α(y), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point."
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/ro/subsets#ro-eco"
@@ -4195,8 +4193,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "left",
-                "xrefs": []
+                "val": "left"
               }
             ]
           },
@@ -4218,8 +4215,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "upper",
-                "xrefs": []
+                "val": "upper"
               }
             ]
           },
@@ -4241,8 +4237,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "lower",
-                "xrefs": []
+                "val": "lower"
               }
             ]
           },
@@ -4282,8 +4277,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "deep",
-                "xrefs": []
+                "val": "deep"
               }
             ]
           },
@@ -4302,8 +4296,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "superficial",
-                "xrefs": []
+                "val": "superficial"
               }
             ]
           },
@@ -4331,8 +4324,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "surface",
-                "xrefs": []
+                "val": "surface"
               }
             ],
             "xrefs": [
@@ -4362,13 +4354,11 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "edge",
-                "xrefs": []
+                "val": "edge"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "margin",
-                "xrefs": []
+                "val": "margin"
               }
             ]
           },
@@ -4394,8 +4384,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "right",
-                "xrefs": []
+                "val": "right"
               }
             ]
           },
@@ -4420,8 +4409,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "parasagittal section",
-                "xrefs": []
+                "val": "parasagittal section"
               }
             ]
           },
@@ -4449,25 +4437,22 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
+                "val": "midline plane"
+              },
+              {
+                "pred": "hasExactSynonym",
+                "val": "midsagittal section"
+              },
+              {
+                "pred": "hasRelatedSynonym",
+                "val": "median plane"
+              },
+              {
+                "pred": "hasExactSynonym",
                 "val": "median sagittal plane",
                 "xrefs": [
                   "FMA:74563"
                 ]
-              },
-              {
-                "pred": "hasExactSynonym",
-                "val": "midline plane",
-                "xrefs": []
-              },
-              {
-                "pred": "hasExactSynonym",
-                "val": "midsagittal section",
-                "xrefs": []
-              },
-              {
-                "pred": "hasRelatedSynonym",
-                "val": "median plane",
-                "xrefs": []
               }
             ],
             "xrefs": [
@@ -4524,8 +4509,7 @@
             "synonyms": [
               {
                 "pred": "hasRelatedSynonym",
-                "val": "superior-inferior axis",
-                "xrefs": []
+                "val": "superior-inferior axis"
               }
             ]
           },
@@ -4576,35 +4560,33 @@
               {
                 "pred": "hasNarrowSynonym",
                 "synonymType": "http://purl.obolibrary.org/obo/bspo#vertebrate",
-                "val": "craniocaudal axis",
-                "xrefs": []
+                "val": "craniocaudal axis"
               },
               {
                 "pred": "hasNarrowSynonym",
                 "synonymType": "http://purl.obolibrary.org/obo/bspo#vertebrate",
-                "val": "rostral/caudal",
-                "xrefs": []
+                "val": "rostral/caudal"
               },
               {
                 "pred": "hasNarrowSynonym",
                 "synonymType": "http://purl.obolibrary.org/obo/bspo#vertebrate",
-                "val": "rostrocaudal axis",
-                "xrefs": []
+                "val": "rostrocaudal axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "A-P axis",
-                "xrefs": []
+                "val": "A-P axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "AP axis",
-                "xrefs": []
+                "val": "AP axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "anteroposterior axis",
-                "xrefs": []
+                "val": "anteroposterior axis"
+              },
+              {
+                "pred": "hasRelatedSynonym",
+                "val": "longitudinal axis"
               },
               {
                 "pred": "hasNarrowSynonym",
@@ -4612,11 +4594,6 @@
                 "xrefs": [
                   "http://en.wikipedia.org/wiki/Anatomical_terms_of_location"
                 ]
-              },
-              {
-                "pred": "hasRelatedSynonym",
-                "val": "longitudinal axis",
-                "xrefs": []
               }
             ]
           },
@@ -4641,13 +4618,11 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "apical/basal",
-                "xrefs": []
+                "val": "apical/basal"
               },
               {
                 "pred": "hasRelatedSynonym",
-                "val": "longitudinal axis",
-                "xrefs": []
+                "val": "longitudinal axis"
               }
             ]
           },
@@ -4676,13 +4651,11 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "proximal/distal",
-                "xrefs": []
+                "val": "proximal/distal"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "proximodistal",
-                "xrefs": []
+                "val": "proximodistal"
               }
             ]
           },
@@ -4708,23 +4681,19 @@
               {
                 "pred": "hasNarrowSynonym",
                 "synonymType": "http://purl.obolibrary.org/obo/bspo#human",
-                "val": "anterior-posterior axis",
-                "xrefs": []
+                "val": "anterior-posterior axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "D-V axis",
-                "xrefs": []
+                "val": "D-V axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "DV axis",
-                "xrefs": []
+                "val": "DV axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "dorsoventral axis",
-                "xrefs": []
+                "val": "dorsoventral axis"
               }
             ]
           },
@@ -4749,43 +4718,35 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "L-R axis",
-                "xrefs": []
+                "val": "L-R axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "LR axis",
-                "xrefs": []
+                "val": "LR axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "R-L axis",
-                "xrefs": []
+                "val": "R-L axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "RL axis",
-                "xrefs": []
+                "val": "RL axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "dextro-sinister axis",
-                "xrefs": []
+                "val": "dextro-sinister axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "left to right axis",
-                "xrefs": []
+                "val": "left to right axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "right to left axis",
-                "xrefs": []
+                "val": "right to left axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "right-left axis",
-                "xrefs": []
+                "val": "right-left axis"
               }
             ]
           },
@@ -4810,23 +4771,19 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "axial plane",
-                "xrefs": []
+                "val": "axial plane"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "axial section",
-                "xrefs": []
+                "val": "axial section"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "transverse section",
-                "xrefs": []
+                "val": "transverse section"
               },
               {
                 "pred": "hasRelatedSynonym",
-                "val": "cross-section",
-                "xrefs": []
+                "val": "cross-section"
               }
             ],
             "xrefs": [
@@ -4856,8 +4813,19 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "frontal plane",
-                "xrefs": []
+                "val": "frontal plane"
+              },
+              {
+                "pred": "hasExactSynonym",
+                "val": "horizontal section"
+              },
+              {
+                "pred": "hasRelatedSynonym",
+                "val": "coronal section"
+              },
+              {
+                "pred": "hasRelatedSynonym",
+                "val": "frontal section"
               },
               {
                 "pred": "hasExactSynonym",
@@ -4865,21 +4833,6 @@
                 "xrefs": [
                   "FMA:52810"
                 ]
-              },
-              {
-                "pred": "hasExactSynonym",
-                "val": "horizontal section",
-                "xrefs": []
-              },
-              {
-                "pred": "hasRelatedSynonym",
-                "val": "coronal section",
-                "xrefs": []
-              },
-              {
-                "pred": "hasRelatedSynonym",
-                "val": "frontal section",
-                "xrefs": []
               }
             ],
             "xrefs": [
@@ -4947,13 +4900,11 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "superior",
-                "xrefs": []
+                "val": "superior"
               },
               {
                 "pred": "hasRelatedSynonym",
-                "val": "cranial",
-                "xrefs": []
+                "val": "cranial"
               }
             ]
           },
@@ -5016,13 +4967,11 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "inferior",
-                "xrefs": []
+                "val": "inferior"
               },
               {
                 "pred": "hasRelatedSynonym",
-                "val": "caudal",
-                "xrefs": []
+                "val": "caudal"
               }
             ]
           },
@@ -5055,8 +5004,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "anterodorsal region ",
-                "xrefs": []
+                "val": "anterodorsal region "
               }
             ]
           },
@@ -5089,8 +5037,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "anteroventral region ",
-                "xrefs": []
+                "val": "anteroventral region "
               }
             ]
           },
@@ -5123,8 +5070,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "posterolateral region",
-                "xrefs": []
+                "val": "posterolateral region"
               }
             ]
           },
@@ -5157,8 +5103,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "anterolateral region",
-                "xrefs": []
+                "val": "anterolateral region"
               }
             ]
           },
@@ -5191,8 +5136,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "posterodorsal region",
-                "xrefs": []
+                "val": "posterodorsal region"
               }
             ]
           },
@@ -5289,8 +5233,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "posteroventral region",
-                "xrefs": []
+                "val": "posteroventral region"
               }
             ]
           },
@@ -5317,13 +5260,11 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "anterior-most",
-                "xrefs": []
+                "val": "anterior-most"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "anteriormost",
-                "xrefs": []
+                "val": "anteriormost"
               }
             ]
           },
@@ -5350,13 +5291,11 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "posterior-most",
-                "xrefs": []
+                "val": "posterior-most"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "posteriormost",
-                "xrefs": []
+                "val": "posteriormost"
               }
             ]
           },
@@ -5383,13 +5322,11 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "dorsal-most",
-                "xrefs": []
+                "val": "dorsal-most"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "dorsalmost",
-                "xrefs": []
+                "val": "dorsalmost"
               }
             ]
           },
@@ -5416,13 +5353,11 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "ventral-most",
-                "xrefs": []
+                "val": "ventral-most"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "ventralmost",
-                "xrefs": []
+                "val": "ventralmost"
               }
             ]
           },
@@ -5481,8 +5416,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "anteromedial margin",
-                "xrefs": []
+                "val": "anteromedial margin"
               }
             ]
           },
@@ -5541,8 +5475,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "anterolateral margin",
-                "xrefs": []
+                "val": "anterolateral margin"
               }
             ]
           },
@@ -5575,8 +5508,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "posteromedial margin",
-                "xrefs": []
+                "val": "posteromedial margin"
               }
             ]
           },
@@ -5609,8 +5541,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "posterolateral margin",
-                "xrefs": []
+                "val": "posterolateral margin"
               }
             ]
           },
@@ -5643,8 +5574,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "dorso-medial margin",
-                "xrefs": []
+                "val": "dorso-medial margin"
               }
             ]
           },
@@ -5677,8 +5607,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "ventromedial margin",
-                "xrefs": []
+                "val": "ventromedial margin"
               }
             ]
           },
@@ -5711,8 +5640,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "anteromedial region",
-                "xrefs": []
+                "val": "anteromedial region"
               }
             ]
           },
@@ -5839,13 +5767,11 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "anterior",
-                "xrefs": []
+                "val": "anterior"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "rostral",
-                "xrefs": []
+                "val": "rostral"
               }
             ],
             "xrefs": [
@@ -5880,13 +5806,11 @@
               {
                 "pred": "hasNarrowSynonym",
                 "synonymType": "http://purl.obolibrary.org/obo/bspo#vertebrate",
-                "val": "caudal",
-                "xrefs": []
+                "val": "caudal"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "posterior",
-                "xrefs": []
+                "val": "posterior"
               }
             ],
             "xrefs": [
@@ -5919,8 +5843,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "apical",
-                "xrefs": []
+                "val": "apical"
               }
             ],
             "xrefs": [
@@ -5956,8 +5879,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "basal",
-                "xrefs": []
+                "val": "basal"
               }
             ],
             "xrefs": [
@@ -5993,8 +5915,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "central",
-                "xrefs": []
+                "val": "central"
               }
             ],
             "xrefs": [
@@ -6030,8 +5951,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "contralateral",
-                "xrefs": []
+                "val": "contralateral"
               }
             ],
             "xrefs": [
@@ -6058,8 +5978,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "proximal",
-                "xrefs": []
+                "val": "proximal"
               }
             ],
             "xrefs": [
@@ -6092,8 +6011,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "distal",
-                "xrefs": []
+                "val": "distal"
               }
             ],
             "xrefs": [
@@ -6126,8 +6044,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "dorsal",
-                "xrefs": []
+                "val": "dorsal"
               }
             ],
             "xrefs": [
@@ -6168,8 +6085,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "posteromedial region",
-                "xrefs": []
+                "val": "posteromedial region"
               }
             ]
           },
@@ -6197,8 +6113,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "ipsilateral",
-                "xrefs": []
+                "val": "ipsilateral"
               }
             ],
             "xrefs": [
@@ -6225,8 +6140,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "lateral",
-                "xrefs": []
+                "val": "lateral"
               }
             ],
             "xrefs": [
@@ -6256,8 +6170,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "medial",
-                "xrefs": []
+                "val": "medial"
               }
             ],
             "xrefs": [
@@ -6291,8 +6204,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "ventral",
-                "xrefs": []
+                "val": "ventral"
               }
             ],
             "xrefs": [
@@ -6333,8 +6245,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "dorsomedial region",
-                "xrefs": []
+                "val": "dorsomedial region"
               }
             ]
           },
@@ -6599,8 +6510,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "dorsolateral region",
-                "xrefs": []
+                "val": "dorsolateral region"
               }
             ],
             "xrefs": [
@@ -6723,8 +6633,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "ventrolateral region",
-                "xrefs": []
+                "val": "ventrolateral region"
               }
             ],
             "xrefs": [
@@ -6985,8 +6894,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "rostral_to",
-                "xrefs": []
+                "val": "rostral_to"
               }
             ],
             "xrefs": [
@@ -7101,8 +7009,7 @@
               {
                 "pred": "hasNarrowSynonym",
                 "synonymType": "http://purl.obolibrary.org/obo/bspo#vertebrate",
-                "val": "caudal to",
-                "xrefs": []
+                "val": "caudal to"
               }
             ],
             "xrefs": [
@@ -7511,13 +7418,11 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "medioventral region",
-                "xrefs": []
+                "val": "medioventral region"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "ventromedial region",
-                "xrefs": []
+                "val": "ventromedial region"
               }
             ]
           },
@@ -7566,15 +7471,14 @@
               }
             ],
             "definition": {
-              "val": "X lateral to y if x is further from the midsagittal plane than y.",
-              "xrefs": []
+              "val": "X lateral to y if x is further from the midsagittal plane than y."
             }
           },
           "type": "PROPERTY"
         },
         {
           "id": "http://purl.obolibrary.org/obo/BSPO_0000115",
-          "lbl": "X medial to y if x is closer to the midsagittal plane than y.",
+          "lbl": "medial to",
           "meta": {
             "basicPropertyValues": [
               {
@@ -7780,6 +7684,10 @@
               },
               {
                 "pred": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+                "val": "https://github.com/obophenotype/uberon/issues/2453"
+              },
+              {
+                "pred": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
                 "val": "https://github.com/obophenotype/uberon/wiki/Modeling-paired-structures-Design-Pattern"
               }
             ],
@@ -7882,13 +7790,11 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "AA axis",
-                "xrefs": []
+                "val": "AA axis"
               },
               {
                 "pred": "hasRelatedSynonym",
-                "val": "dorsal-ventral axis",
-                "xrefs": []
+                "val": "dorsal-ventral axis"
               }
             ]
           },
@@ -7924,8 +7830,7 @@
             "synonyms": [
               {
                 "pred": "hasRelatedSynonym",
-                "val": "proximal-distal axis",
-                "xrefs": []
+                "val": "proximal-distal axis"
               }
             ]
           },
@@ -7961,13 +7866,11 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "M-R axis",
-                "xrefs": []
+                "val": "M-R axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "MR axis",
-                "xrefs": []
+                "val": "MR axis"
               }
             ]
           },
@@ -8027,18 +7930,15 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "A-V axis",
-                "xrefs": []
+                "val": "A-V axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "AV axis",
-                "xrefs": []
+                "val": "AV axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "animal/vegetal axis",
-                "xrefs": []
+                "val": "animal/vegetal axis"
               }
             ]
           },
@@ -8430,28 +8330,23 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "anatomical cross-section",
-                "xrefs": []
+                "val": "anatomical cross-section"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "anatomical section",
-                "xrefs": []
+                "val": "anatomical section"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "plane",
-                "xrefs": []
+                "val": "plane"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "section",
-                "xrefs": []
+                "val": "section"
               },
               {
                 "pred": "hasRelatedSynonym",
-                "val": "cross-section",
-                "xrefs": []
+                "val": "cross-section"
               }
             ],
             "xrefs": [
@@ -8483,18 +8378,15 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "left/right plane",
-                "xrefs": []
+                "val": "left/right plane"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "median plane",
-                "xrefs": []
+                "val": "median plane"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "sagittal section",
-                "xrefs": []
+                "val": "sagittal section"
               }
             ],
             "xrefs": [
@@ -8657,8 +8549,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "dorsolateral margin",
-                "xrefs": []
+                "val": "dorsolateral margin"
               }
             ]
           },
@@ -8743,8 +8634,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "ventrolateral margin",
-                "xrefs": []
+                "val": "ventrolateral margin"
               }
             ]
           },
@@ -8769,8 +8659,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "anterodorsal margin",
-                "xrefs": []
+                "val": "anterodorsal margin"
               }
             ]
           },
@@ -8795,8 +8684,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "posterodorsal margin",
-                "xrefs": []
+                "val": "posterodorsal margin"
               }
             ]
           },
@@ -8821,8 +8709,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "anteroventral margin",
-                "xrefs": []
+                "val": "anteroventral margin"
               }
             ]
           },
@@ -8847,8 +8734,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "posteroventral margin",
-                "xrefs": []
+                "val": "posteroventral margin"
               }
             ]
           },
@@ -8876,28 +8762,23 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "M-L axis",
-                "xrefs": []
+                "val": "M-L axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "ML axis",
-                "xrefs": []
+                "val": "ML axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "medio-lateral axis",
-                "xrefs": []
+                "val": "medio-lateral axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "mediolateral axis",
-                "xrefs": []
+                "val": "mediolateral axis"
               },
               {
                 "pred": "hasRelatedSynonym",
-                "val": "proximal-distal axis ",
-                "xrefs": []
+                "val": "proximal-distal axis "
               }
             ],
             "xrefs": [
@@ -9144,8 +9025,7 @@
               }
             ],
             "definition": {
-              "val": "X intersects median plane of iff X crosses the midine plane of Y.",
-              "xrefs": []
+              "val": "X intersects median plane of iff X crosses the midine plane of Y."
             },
             "xrefs": [
               {
@@ -9457,6 +9337,10 @@
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#shorthand",
                 "val": "immediately_posterior_to"
+              },
+              {
+                "pred": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+                "val": "https://github.com/obophenotype/uberon/issues/2453"
               }
             ],
             "definition": {
@@ -9513,6 +9397,10 @@
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#shorthand",
                 "val": "immediately_superficial_to"
+              },
+              {
+                "pred": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+                "val": "https://github.com/obophenotype/uberon/issues/2453"
               }
             ],
             "definition": {
@@ -9726,6 +9614,72 @@
           "type": "PROPERTY"
         },
         {
+          "id": "http://purl.obolibrary.org/obo/BSPO_0020001",
+          "lbl": "in central side of",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000116",
+                "val": "This was migrated from http://purl.obolibrary.org/obo/uberon/core#in_central_side_of in Uberon."
+              },
+              {
+                "pred": "http://purl.org/dc/terms/contributor",
+                "val": "https://orcid.org/0000-0002-6523-4866"
+              },
+              {
+                "pred": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+                "val": "http://purl.obolibrary.org/obo/BSPO_0000059"
+              },
+              {
+                "pred": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+                "val": "https://github.com/obophenotype/uberon/wiki/Modeling-paired-structures-Design-Pattern"
+              }
+            ],
+            "definition": {
+              "val": "X in_central_side Y <=> if Y is subdivided into left and right portions around some median divisor, all parts of X are closer to the median divisor than the outermost lateral sides.",
+              "xrefs": [
+                "BSPO:cjm"
+              ]
+            }
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/BSPO_0020002",
+          "lbl": "has start point",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000116",
+                "val": "This relationship was originally called http://purl.obolibrary.org/obo/#_has_start_point, but was renamed because of the non-standard IRI syntax."
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "spatial"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#shorthand",
+                "val": "has_start_point"
+              }
+            ],
+            "comments": [
+              "Axes can be defined in a given species by subtyping the relevant axis type and stating a start and end point."
+            ],
+            "definition": {
+              "val": "A relation between an axis and a part of an organism, in which the part defines the initial point of the axis.",
+              "xrefs": [
+                "BSPO:cjm"
+              ]
+            },
+            "xrefs": [
+              {
+                "val": ":has_start_point"
+              }
+            ]
+          },
+          "type": "PROPERTY"
+        },
+        {
           "id": "http://purl.obolibrary.org/obo/BSPO_1000000",
           "lbl": "preaxial to",
           "meta": {
@@ -9748,20 +9702,18 @@
             "synonyms": [
               {
                 "pred": "hasRelatedSynonym",
+                "val": "lateral (radial) to"
+              },
+              {
+                "pred": "hasRelatedSynonym",
+                "val": "medial (tibial) to"
+              },
+              {
+                "pred": "hasRelatedSynonym",
                 "val": "anterior to (developmentally)",
                 "xrefs": [
                   "MA:th"
                 ]
-              },
-              {
-                "pred": "hasRelatedSynonym",
-                "val": "lateral (radial) to",
-                "xrefs": []
-              },
-              {
-                "pred": "hasRelatedSynonym",
-                "val": "medial (tibial) to",
-                "xrefs": []
               }
             ],
             "xrefs": [
@@ -9797,7 +9749,7 @@
         },
         {
           "id": "http://purl.obolibrary.org/obo/CARO_0000003",
-          "lbl": "anatomical structure",
+          "lbl": "connected anatomical structure",
           "meta": {
             "basicPropertyValues": [
               {
@@ -9981,8 +9933,7 @@
               }
             ],
             "definition": {
-              "val": "The curation status of the term. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value.",
-              "xrefs": []
+              "val": "The curation status of the term. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value."
             }
           },
           "type": "CLASS"
@@ -10002,8 +9953,7 @@
               }
             ],
             "definition": {
-              "val": "Data about an ontology part is a data item about a part of an ontology, for example a term",
-              "xrefs": []
+              "val": "Data about an ontology part is a data item about a part of an ontology, for example a term"
             }
           },
           "type": "CLASS"
@@ -10023,8 +9973,7 @@
               }
             ],
             "definition": {
-              "val": "The term was used in an attempt to structure part of the ontology but in retrospect failed to do a good job",
-              "xrefs": []
+              "val": "The term was used in an attempt to structure part of the ontology but in retrospect failed to do a good job"
             }
           },
           "type": "INDIVIDUAL"
@@ -10056,9 +10005,21 @@
               }
             ],
             "definition": {
-              "val": "The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions.",
-              "xrefs": []
+              "val": "The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions."
             }
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/IAO_0000116",
+          "lbl": "editor note",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000114",
+                "val": "http://purl.obolibrary.org/obo/IAO_0000122"
+              }
+            ]
           },
           "type": "PROPERTY"
         },
@@ -10073,8 +10034,7 @@
               }
             ],
             "definition": {
-              "val": "Class has all its metadata, but is either not guaranteed to be in its final location in the asserted IS_A hierarchy or refers to another class that is not complete.",
-              "xrefs": []
+              "val": "Class has all its metadata, but is either not guaranteed to be in its final location in the asserted IS_A hierarchy or refers to another class that is not complete."
             }
           },
           "type": "INDIVIDUAL"
@@ -10090,8 +10050,7 @@
               }
             ],
             "definition": {
-              "val": "Term created to ease viewing/sort terms for development purpose, and will not be included in a release",
-              "xrefs": []
+              "val": "Term created to ease viewing/sort terms for development purpose, and will not be included in a release"
             }
           },
           "type": "INDIVIDUAL"
@@ -10107,8 +10066,7 @@
               }
             ],
             "definition": {
-              "val": "Class has undergone final review, is ready for use, and will be included in the next release. Any class lacking \"ready_for_release\" should be considered likely to change place in hierarchy, have its definition refined, or be obsoleted in the next release.  Those classes deemed \"ready_for_release\" will also derived from a chain of ancestor classes that are also \"ready_for_release.\"",
-              "xrefs": []
+              "val": "Class has undergone final review, is ready for use, and will be included in the next release. Any class lacking \"ready_for_release\" should be considered likely to change place in hierarchy, have its definition refined, or be obsoleted in the next release.  Those classes deemed \"ready_for_release\" will also derived from a chain of ancestor classes that are also \"ready_for_release.\""
             }
           },
           "type": "INDIVIDUAL"
@@ -10124,8 +10082,7 @@
               }
             ],
             "definition": {
-              "val": "Class is being worked on; however, the metadata (including definition) are not complete or sufficiently clear to the branch editors.",
-              "xrefs": []
+              "val": "Class is being worked on; however, the metadata (including definition) are not complete or sufficiently clear to the branch editors."
             }
           },
           "type": "INDIVIDUAL"
@@ -10141,8 +10098,7 @@
               }
             ],
             "definition": {
-              "val": "Nothing done yet beyond assigning a unique class ID and proposing a preferred term.",
-              "xrefs": []
+              "val": "Nothing done yet beyond assigning a unique class ID and proposing a preferred term."
             }
           },
           "type": "INDIVIDUAL"
@@ -10158,8 +10114,7 @@
               }
             ],
             "definition": {
-              "val": "All definitions, placement in the asserted IS_A hierarchy and required minimal metadata are complete. The class is awaiting a final review by someone other than the term editor.",
-              "xrefs": []
+              "val": "All definitions, placement in the asserted IS_A hierarchy and required minimal metadata are complete. The class is awaiting a final review by someone other than the term editor."
             }
           },
           "type": "INDIVIDUAL"
@@ -10191,8 +10146,7 @@
               }
             ],
             "definition": {
-              "val": "The reason for which a term has been deprecated. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value.",
-              "xrefs": []
+              "val": "The reason for which a term has been deprecated. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value."
             }
           },
           "type": "CLASS"
@@ -10284,8 +10238,7 @@
               }
             ],
             "definition": {
-              "val": "A denotator type indicates how a term should be interpreted from an ontological perspective.",
-              "xrefs": []
+              "val": "A denotator type indicates how a term should be interpreted from an ontological perspective."
             }
           },
           "type": "CLASS"
@@ -10334,8 +10287,7 @@
               }
             ],
             "definition": {
-              "val": "A defined class is a class that is defined by a set of logically necessary and sufficient conditions but is not a universal",
-              "xrefs": []
+              "val": "A defined class is a class that is defined by a set of logically necessary and sufficient conditions but is not a universal"
             }
           },
           "type": "INDIVIDUAL"
@@ -10359,8 +10311,7 @@
               }
             ],
             "definition": {
-              "val": "A named class expression is a logical expression that is given a name. The name can be used in place of the expression.",
-              "xrefs": []
+              "val": "A named class expression is a logical expression that is given a name. The name can be used in place of the expression."
             }
           },
           "type": "INDIVIDUAL"
@@ -10384,8 +10335,7 @@
               }
             ],
             "definition": {
-              "val": "Terms with this status should eventually replaced with a term from another ontology.",
-              "xrefs": []
+              "val": "Terms with this status should eventually replaced with a term from another ontology."
             }
           },
           "type": "INDIVIDUAL"
@@ -10409,8 +10359,7 @@
               }
             ],
             "definition": {
-              "val": "A term that is metadata complete, has been reviewed, and problems have been identified that require discussion before release. Such a term requires editor note(s) to identify the outstanding issues.",
-              "xrefs": []
+              "val": "A term that is metadata complete, has been reviewed, and problems have been identified that require discussion before release. Such a term requires editor note(s) to identify the outstanding issues."
             }
           },
           "type": "INDIVIDUAL"
@@ -10441,11 +10390,23 @@
               "Add as annotation triples in the granting ontology"
             ],
             "definition": {
-              "val": "Use on obsolete terms, relating the term to another term that can be used as a substitute",
-              "xrefs": []
+              "val": "Use on obsolete terms, relating the term to another term that can be used as a substitute"
             }
           },
           "type": "PROPERTY"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0000001",
+          "lbl": "quality",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000589",
+                "val": "quality (PATO)"
+              }
+            ]
+          },
+          "type": "CLASS"
         },
         {
           "id": "http://purl.obolibrary.org/obo/RO_0000052",
@@ -10477,8 +10438,7 @@
               "Note that this relation was previously called \"inheres in\", but was changed to be called \"characteristic of\" because BFO2 uses \"inheres in\" in a more restricted fashion. This relation differs from BFO2:inheres_in in two respects: (1) it does not impose a range constraint, and thus it allows qualities of processes, as well as of information entities, whereas BFO2 restricts inheres_in to only apply to independent continuants (2) it is declared functional, i.e. something can only be a characteristic of one thing."
             ],
             "definition": {
-              "val": "a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence.",
-              "xrefs": []
+              "val": "a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence."
             }
           },
           "type": "PROPERTY"
@@ -10518,8 +10478,7 @@
               }
             ],
             "definition": {
-              "val": "Inverse of characteristic_of",
-              "xrefs": []
+              "val": "Inverse of characteristic_of"
             }
           },
           "type": "PROPERTY"
@@ -10551,8 +10510,7 @@
               }
             ],
             "definition": {
-              "val": "a relation between a continuant and a process, in which the continuant is somehow involved in the process",
-              "xrefs": []
+              "val": "a relation between a continuant and a process, in which the continuant is somehow involved in the process"
             }
           },
           "type": "PROPERTY"
@@ -10592,8 +10550,7 @@
               }
             ],
             "definition": {
-              "val": "a relation between a process and a continuant, in which the continuant is somehow involved in the process",
-              "xrefs": []
+              "val": "a relation between a process and a continuant, in which the continuant is somehow involved in the process"
             }
           },
           "type": "PROPERTY"
@@ -10624,8 +10581,7 @@
               "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020."
             ],
             "definition": {
-              "val": "a relation between a function and an independent continuant (the bearer), in which the function specifically depends on the bearer for its existence",
-              "xrefs": []
+              "val": "a relation between a function and an independent continuant (the bearer), in which the function specifically depends on the bearer for its existence"
             }
           },
           "type": "PROPERTY"
@@ -10656,8 +10612,7 @@
               "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020."
             ],
             "definition": {
-              "val": "a relation between a quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence",
-              "xrefs": []
+              "val": "a relation between a quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence"
             }
           },
           "type": "PROPERTY"
@@ -10688,8 +10643,7 @@
               "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020."
             ],
             "definition": {
-              "val": "a relation between a role and an independent continuant (the bearer), in which the role specifically depends on the bearer for its existence",
-              "xrefs": []
+              "val": "a relation between a role and an independent continuant (the bearer), in which the role specifically depends on the bearer for its existence"
             }
           },
           "type": "PROPERTY"
@@ -10713,8 +10667,7 @@
               }
             ],
             "definition": {
-              "val": "a relation between an independent continuant (the bearer) and a function, in which the function specifically depends on the bearer for its existence",
-              "xrefs": []
+              "val": "a relation between an independent continuant (the bearer) and a function, in which the function specifically depends on the bearer for its existence"
             }
           },
           "type": "PROPERTY"
@@ -10738,8 +10691,7 @@
               }
             ],
             "definition": {
-              "val": "a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence",
-              "xrefs": []
+              "val": "a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence"
             }
           },
           "type": "PROPERTY"
@@ -10763,8 +10715,7 @@
               }
             ],
             "definition": {
-              "val": "a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence",
-              "xrefs": []
+              "val": "a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence"
             }
           },
           "type": "PROPERTY"
@@ -10774,8 +10725,7 @@
           "lbl": "has disposition",
           "meta": {
             "definition": {
-              "val": "a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence",
-              "xrefs": []
+              "val": "a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence"
             }
           },
           "type": "PROPERTY"
@@ -10788,8 +10738,7 @@
               "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020."
             ],
             "definition": {
-              "val": "inverse of has disposition",
-              "xrefs": []
+              "val": "inverse of has disposition"
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/RO_0002259"
@@ -10812,8 +10761,7 @@
               }
             ],
             "definition": {
-              "val": "A 'has regulatory component activity' B if A and B are GO molecular functions (GO_0003674), A has_component B and A is regulated by B.",
-              "xrefs": []
+              "val": "A 'has regulatory component activity' B if A and B are GO molecular functions (GO_0003674), A has_component B and A is regulated by B."
             }
           },
           "type": "PROPERTY"
@@ -10836,8 +10784,7 @@
               "By convention GO molecular functions are classified by their effector function.  Internal regulatory functions are treated as components.  For example, NMDA glutmate receptor activity is a cation channel activity with positive regulatory component 'glutamate binding' and negative regulatory components including 'zinc binding' and 'magnesium binding'."
             ],
             "definition": {
-              "val": "A relationship that holds between a GO molecular function and a component of that molecular function that negatively regulates the activity of the whole.  More formally, A 'has regulatory component activity' B iff :A and B are GO molecular functions (GO_0003674), A has_component B and A is negatively regulated by B.",
-              "xrefs": []
+              "val": "A relationship that holds between a GO molecular function and a component of that molecular function that negatively regulates the activity of the whole.  More formally, A 'has regulatory component activity' B iff :A and B are GO molecular functions (GO_0003674), A has_component B and A is negatively regulated by B."
             }
           },
           "type": "PROPERTY"
@@ -10860,8 +10807,7 @@
               "By convention GO molecular functions are classified by their effector function and internal regulatory functions are treated as components.  So, for example calmodulin has a protein binding activity that has positive regulatory component activity calcium binding activity. Receptor tyrosine kinase activity is a tyrosine kinase activity that has positive regulatory component 'ligand binding'."
             ],
             "definition": {
-              "val": "A relationship that holds between a GO molecular function and a component of that molecular function that positively regulates the activity of the whole.  More formally, A 'has regulatory component activity' B iff :A and B are GO molecular functions (GO_0003674), A has_component B and A is positively regulated by B.",
-              "xrefs": []
+              "val": "A relationship that holds between a GO molecular function and a component of that molecular function that positively regulates the activity of the whole.  More formally, A 'has regulatory component activity' B iff :A and B are GO molecular functions (GO_0003674), A has_component B and A is positively regulated by B."
             }
           },
           "type": "PROPERTY"
@@ -10901,8 +10847,7 @@
               }
             ],
             "definition": {
-              "val": "w 'has process component' p if p and w are processes,  w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type.",
-              "xrefs": []
+              "val": "w 'has process component' p if p and w are processes,  w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type."
             }
           },
           "type": "PROPERTY"
@@ -11156,8 +11101,7 @@
               }
             ],
             "definition": {
-              "val": "A is spatially_disjoint_from B if and only if they have no parts in common",
-              "xrefs": []
+              "val": "A is spatially_disjoint_from B if and only if they have no parts in common"
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/ro/subsets#ro-eco"
@@ -11192,8 +11136,7 @@
               }
             ],
             "definition": {
-              "val": "w 'has component' p if w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type.",
-              "xrefs": []
+              "val": "w 'has component' p if w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type."
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/ro/subsets#ro-eco"
@@ -11248,8 +11191,7 @@
               }
             ],
             "definition": {
-              "val": "process(P1) regulates process(P2) iff: P1 results in the initiation or termination of P2 OR affects the frequency of its initiation or termination OR affects the magnitude or rate of output of P2.",
-              "xrefs": []
+              "val": "process(P1) regulates process(P2) iff: P1 results in the initiation or termination of P2 OR affects the frequency of its initiation or termination OR affects the magnitude or rate of output of P2."
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension",
@@ -11282,8 +11224,7 @@
               }
             ],
             "definition": {
-              "val": "Process(P1) negatively regulates process(P2) iff: P1 terminates P2, or P1 descreases the the frequency of initiation of P2 or the magnitude or rate of output of P2.",
-              "xrefs": []
+              "val": "Process(P1) negatively regulates process(P2) iff: P1 terminates P2, or P1 descreases the the frequency of initiation of P2 or the magnitude or rate of output of P2."
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension",
@@ -11316,8 +11257,7 @@
               }
             ],
             "definition": {
-              "val": "Process(P1) postively regulates process(P2) iff: P1 initiates P2, or P1 increases the the frequency of initiation of P2 or the magnitude or rate of output of P2.",
-              "xrefs": []
+              "val": "Process(P1) postively regulates process(P2) iff: P1 initiates P2, or P1 increases the the frequency of initiation of P2 or the magnitude or rate of output of P2."
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension",
@@ -11362,8 +11302,7 @@
               }
             ],
             "definition": {
-              "val": "A relation between a material entity (such as a cell) and a process, in which the material entity has the ability to carry out the process. ",
-              "xrefs": []
+              "val": "A relation between a material entity (such as a cell) and a process, in which the material entity has the ability to carry out the process. "
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/ro/subsets#ro-eco"
@@ -11390,8 +11329,7 @@
               }
             ],
             "definition": {
-              "val": "c stands in this relationship to p if and only if there exists some p' such that c is capable_of p', and p' is part_of p.",
-              "xrefs": []
+              "val": "c stands in this relationship to p if and only if there exists some p' such that c is capable_of p', and p' is part_of p."
             }
           },
           "type": "PROPERTY"
@@ -11443,8 +11381,7 @@
               }
             ],
             "definition": {
-              "val": "x adjacent to y if and only if x and y share a boundary.",
-              "xrefs": []
+              "val": "x adjacent to y if and only if x and y share a boundary."
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension",
@@ -11513,8 +11450,7 @@
               }
             ],
             "definition": {
-              "val": "p has input c iff: p is a process, c is a material entity, c is a participant in p, c is present at the start of p, and the state of c is modified during p.",
-              "xrefs": []
+              "val": "p has input c iff: p is a process, c is a material entity, c is a participant in p, c is present at the start of p, and the state of c is modified during p."
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/ro/subsets#ro-eco",
@@ -11540,8 +11476,7 @@
               }
             ],
             "definition": {
-              "val": "c acts upstream of p if and only if c enables some f that is involved in p' and p' occurs chronologically before p, is not part of p, and affects the execution of p. c is a material entity and f, p, p' are processes.",
-              "xrefs": []
+              "val": "c acts upstream of p if and only if c enables some f that is involved in p' and p' occurs chronologically before p, is not part of p, and affects the execution of p. c is a material entity and f, p, p' are processes."
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/valid_for_go_gp2term"
@@ -11564,8 +11499,7 @@
               }
             ],
             "definition": {
-              "val": "c acts upstream of or within p if c is enables f, and f is causally upstream of or within p. c is a material entity and p is an process.",
-              "xrefs": []
+              "val": "c acts upstream of or within p if c is enables f, and f is causally upstream of or within p. c is a material entity and p is an process."
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/valid_for_go_gp2term"
@@ -11573,8 +11507,7 @@
             "synonyms": [
               {
                 "pred": "hasRelatedSynonym",
-                "val": "affects",
-                "xrefs": []
+                "val": "affects"
               }
             ]
           },
@@ -11655,8 +11588,7 @@
               }
             ],
             "definition": {
-              "val": "q characteristic of part of w if and only if there exists some p such that q inheres in p and p part of w.",
-              "xrefs": []
+              "val": "q characteristic of part of w if and only if there exists some p such that q inheres in p and p part of w."
             }
           },
           "type": "PROPERTY"
@@ -11680,8 +11612,7 @@
               }
             ],
             "definition": {
-              "val": "A mereological relationship or a topological relationship",
-              "xrefs": []
+              "val": "A mereological relationship or a topological relationship"
             }
           },
           "type": "PROPERTY"
@@ -11722,10 +11653,6 @@
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000232",
                 "val": "This relation differs from the parent relation 'capable of' in that the parent is weaker and only expresses a capability that may not be actually realized, whereas this relation is always realized."
-              },
-              {
-                "pred": "http://purl.obolibrary.org/obo/IAO_0000232",
-                "val": "This relation is currently used experimentally by the Gene Ontology Consortium. It may not be stable and may be obsoleted at some future time."
               }
             ],
             "subsets": [
@@ -11749,8 +11676,7 @@
               }
             ],
             "definition": {
-              "val": "A grouping relationship for any relationship directly involving a function, or that holds because of a function of one of the related entities.",
-              "xrefs": []
+              "val": "A grouping relationship for any relationship directly involving a function, or that holds because of a function of one of the related entities."
             }
           },
           "type": "PROPERTY"
@@ -11770,8 +11696,7 @@
               }
             ],
             "definition": {
-              "val": "this relation holds between c and p when c is part of some c', and c' is capable of p.",
-              "xrefs": []
+              "val": "this relation holds between c and p when c is part of some c', and c' is capable of p."
             }
           },
           "type": "PROPERTY"
@@ -11799,8 +11724,7 @@
               }
             ],
             "definition": {
-              "val": "c involved_in p if and only if c enables some process p', and p' is part of p",
-              "xrefs": []
+              "val": "c involved_in p if and only if c enables some process p', and p' is part of p"
             }
           },
           "type": "PROPERTY"
@@ -11816,8 +11740,7 @@
               }
             ],
             "definition": {
-              "val": "inverse of enables",
-              "xrefs": []
+              "val": "inverse of enables"
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/valid_for_gocam"
@@ -11840,8 +11763,7 @@
               }
             ],
             "definition": {
-              "val": "inverse of regulates",
-              "xrefs": []
+              "val": "inverse of regulates"
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/RO_0002259"
@@ -11860,8 +11782,7 @@
               }
             ],
             "definition": {
-              "val": "inverse of negatively regulates",
-              "xrefs": []
+              "val": "inverse of negatively regulates"
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/RO_0002259"
@@ -11880,8 +11801,7 @@
               }
             ],
             "definition": {
-              "val": "inverse of positively regulates",
-              "xrefs": []
+              "val": "inverse of positively regulates"
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/RO_0002259"
@@ -11900,8 +11820,7 @@
               }
             ],
             "definition": {
-              "val": "inverse of has input",
-              "xrefs": []
+              "val": "inverse of has input"
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/RO_0002259",
@@ -11925,8 +11844,7 @@
               }
             ],
             "definition": {
-              "val": "inverse of upstream of",
-              "xrefs": []
+              "val": "inverse of upstream of"
             }
           },
           "type": "PROPERTY"
@@ -11971,8 +11889,7 @@
               }
             ],
             "definition": {
-              "val": "This relation groups causal relations between material entities and causal relations between processes",
-              "xrefs": []
+              "val": "This relation groups causal relations between material entities and causal relations between processes"
             }
           },
           "type": "PROPERTY"
@@ -11992,8 +11909,7 @@
               }
             ],
             "definition": {
-              "val": "p is causally upstream of q if and only if p precedes q and p and q are linked in a causal chain",
-              "xrefs": []
+              "val": "p is causally upstream of q if and only if p precedes q and p and q are linked in a causal chain"
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension",
@@ -12021,8 +11937,7 @@
               }
             ],
             "definition": {
-              "val": "p is immediately causally upstream of q iff both (a) p immediately precedes q and (b) p is causally upstream of q. In addition, the output of p  must be an input of q.",
-              "xrefs": []
+              "val": "p is immediately causally upstream of q iff both (a) p immediately precedes q and (b) p is causally upstream of q. In addition, the output of p  must be an input of q."
             }
           },
           "type": "PROPERTY"
@@ -12046,14 +11961,12 @@
               }
             ],
             "definition": {
-              "val": "p 'causally upstream or within' q iff (1) the end of p is before the end of q and (2) the execution of p exerts some causal influence over the outputs of q; i.e. if p was abolished or the outputs of p were to be modified, this would necessarily affect q.",
-              "xrefs": []
+              "val": "p 'causally upstream or within' q iff (1) the end of p is before the end of q and (2) the execution of p exerts some causal influence over the outputs of q; i.e. if p was abolished or the outputs of p were to be modified, this would necessarily affect q."
             },
             "synonyms": [
               {
                 "pred": "hasRelatedSynonym",
-                "val": "affects",
-                "xrefs": []
+                "val": "affects"
               }
             ]
           },
@@ -12074,8 +11987,7 @@
               }
             ],
             "definition": {
-              "val": "inverse of causally upstream of or within",
-              "xrefs": []
+              "val": "inverse of causally upstream of or within"
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/RO_0002259"
@@ -12094,8 +12006,7 @@
               }
             ],
             "definition": {
-              "val": "c involved in regulation of p if c is involved in some p' and p' regulates some p",
-              "xrefs": []
+              "val": "c involved in regulation of p if c is involved in some p' and p' regulates some p"
             }
           },
           "type": "PROPERTY"
@@ -12115,8 +12026,7 @@
               }
             ],
             "definition": {
-              "val": "c involved in regulation of p if c is involved in some p' and p' positively regulates some p",
-              "xrefs": []
+              "val": "c involved in regulation of p if c is involved in some p' and p' positively regulates some p"
             }
           },
           "type": "PROPERTY"
@@ -12136,8 +12046,7 @@
               }
             ],
             "definition": {
-              "val": "c involved in regulation of p if c is involved in some p' and p' negatively regulates some p",
-              "xrefs": []
+              "val": "c involved in regulation of p if c is involved in some p' and p' negatively regulates some p"
             }
           },
           "type": "PROPERTY"
@@ -12161,8 +12070,7 @@
               }
             ],
             "definition": {
-              "val": "c involved in or regulates p if and only if either (i) c is involved in p or (ii) c is involved in regulation of p",
-              "xrefs": []
+              "val": "c involved in or regulates p if and only if either (i) c is involved in p or (ii) c is involved in regulation of p"
             }
           },
           "type": "PROPERTY"
@@ -12198,8 +12106,7 @@
               }
             ],
             "definition": {
-              "val": "A relationship that holds between two entities in which the processes executed by the two entities are causally connected.",
-              "xrefs": []
+              "val": "A relationship that holds between two entities in which the processes executed by the two entities are causally connected."
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/ro/subsets#ro-eco"
@@ -12207,8 +12114,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "in pairwise interaction with",
-                "xrefs": []
+                "val": "in pairwise interaction with"
               }
             ]
           },
@@ -12241,8 +12147,7 @@
               }
             ],
             "definition": {
-              "val": "An interaction relationship in which the two partners are molecular entities that directly physically interact with each other for example via a stable binding interaction or a brief interaction during which one modifies the other.",
-              "xrefs": []
+              "val": "An interaction relationship in which the two partners are molecular entities that directly physically interact with each other for example via a stable binding interaction or a brief interaction during which one modifies the other."
             }
           },
           "type": "PROPERTY"
@@ -12283,14 +12188,12 @@
               }
             ],
             "definition": {
-              "val": "The entity A, immediately upstream of the entity B, has an activity that regulates an activity performed by B. For example, A and B may be gene products and binding of B by A regulates the kinase activity of B.\n\nA and B can be physically interacting but not necessarily. Immediately upstream means there are no intermediate entity between A and B.",
-              "xrefs": []
+              "val": "The entity A, immediately upstream of the entity B, has an activity that regulates an activity performed by B. For example, A and B may be gene products and binding of B by A regulates the kinase activity of B.\n\nA and B can be physically interacting but not necessarily. Immediately upstream means there are no intermediate entity between A and B."
             },
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "molecularly controls",
-                "xrefs": []
+                "val": "molecularly controls"
               }
             ]
           },
@@ -12315,14 +12218,12 @@
               }
             ],
             "definition": {
-              "val": "The entity A, immediately upstream of the entity B, has an activity that negatively regulates an activity performed by B. \nFor example, A and B may be gene products and binding of B by A negatively regulates the kinase activity of B.",
-              "xrefs": []
+              "val": "The entity A, immediately upstream of the entity B, has an activity that negatively regulates an activity performed by B. \nFor example, A and B may be gene products and binding of B by A negatively regulates the kinase activity of B."
             },
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "molecularly decreases activity of",
-                "xrefs": []
+                "val": "molecularly decreases activity of"
               }
             ]
           },
@@ -12347,14 +12248,12 @@
               }
             ],
             "definition": {
-              "val": "The entity A, immediately upstream of the entity B, has an activity that positively regulates an activity performed by B. \nFor example, A and B may be gene products and binding of B by A positively regulates the kinase activity of B.",
-              "xrefs": []
+              "val": "The entity A, immediately upstream of the entity B, has an activity that positively regulates an activity performed by B. \nFor example, A and B may be gene products and binding of B by A positively regulates the kinase activity of B."
             },
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "molecularly increases activity of",
-                "xrefs": []
+                "val": "molecularly increases activity of"
               }
             ]
           },
@@ -12401,8 +12300,7 @@
               }
             ],
             "definition": {
-              "val": "A relationship between a material entity and a process where the material entity has some causal role that influences the process",
-              "xrefs": []
+              "val": "A relationship between a material entity and a process where the material entity has some causal role that influences the process"
             }
           },
           "type": "PROPERTY"
@@ -12426,8 +12324,7 @@
               }
             ],
             "definition": {
-              "val": "p is causally related to q if and only if p or any part of p and q or any part of q are linked by a chain of events where each event pair is one of direct activation or direct inhibition. p may be upstream, downstream, part of or a container of q.",
-              "xrefs": []
+              "val": "p is causally related to q if and only if p or any part of p and q or any part of q are linked by a chain of events where each event pair is one of direct activation or direct inhibition. p may be upstream, downstream, part of or a container of q."
             }
           },
           "type": "PROPERTY"
@@ -12552,8 +12449,7 @@
               }
             ],
             "definition": {
-              "val": "The entity or characteristic A is causally upstream of the entity or characteristic B, A having an effect on B. An entity corresponds to any biological type of entity as long as a mass is measurable. A characteristic corresponds to a particular specificity of an entity (e.g., phenotype, shape, size).",
-              "xrefs": []
+              "val": "The entity or characteristic A is causally upstream of the entity or characteristic B, A having an effect on B. An entity corresponds to any biological type of entity as long as a mass is measurable. A characteristic corresponds to a particular specificity of an entity (e.g., phenotype, shape, size)."
             }
           },
           "type": "PROPERTY"
@@ -12581,8 +12477,7 @@
               }
             ],
             "definition": {
-              "val": "Process(P1) directly regulates process(P2) iff: P1 regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  regulates the kinase activity (P2) of protein B then P1 directly regulates P2.",
-              "xrefs": []
+              "val": "Process(P1) directly regulates process(P2) iff: P1 regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  regulates the kinase activity (P2) of protein B then P1 directly regulates P2."
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension",
@@ -12597,8 +12492,7 @@
           "lbl": "is a defining property chain axiom",
           "meta": {
             "definition": {
-              "val": "If R <- P o Q is a defining property chain axiom, then it also holds that R -> P o Q. Note that this cannot be expressed directly in OWL",
-              "xrefs": []
+              "val": "If R <- P o Q is a defining property chain axiom, then it also holds that R -> P o Q. Note that this cannot be expressed directly in OWL"
             }
           },
           "type": "PROPERTY"
@@ -12608,8 +12502,7 @@
           "lbl": "is a defining property chain axiom where second argument is reflexive",
           "meta": {
             "definition": {
-              "val": "If R <- P o Q is a defining property chain axiom, then (1) R -> P o Q holds and (2) Q is either reflexive or locally reflexive. A corollary of this is that P SubPropertyOf R.",
-              "xrefs": []
+              "val": "If R <- P o Q is a defining property chain axiom, then (1) R -> P o Q holds and (2) Q is either reflexive or locally reflexive. A corollary of this is that P SubPropertyOf R."
             }
           },
           "type": "PROPERTY"
@@ -12629,8 +12522,7 @@
               }
             ],
             "definition": {
-              "val": "s 'has part structure that is capable of' p if and only if there exists some part x such that s 'has part' x and x 'capable of' p",
-              "xrefs": []
+              "val": "s 'has part structure that is capable of' p if and only if there exists some part x such that s 'has part' x and x 'capable of' p"
             }
           },
           "type": "PROPERTY"
@@ -12654,8 +12546,7 @@
               }
             ],
             "definition": {
-              "val": "A relationship that holds between a material entity and a process in which causality is involved, with either the material entity or some part of the material entity exerting some influence over the process, or the process influencing some aspect of the material entity.",
-              "xrefs": []
+              "val": "A relationship that holds between a material entity and a process in which causality is involved, with either the material entity or some part of the material entity exerting some influence over the process, or the process influencing some aspect of the material entity."
             }
           },
           "type": "PROPERTY"
@@ -12675,8 +12566,7 @@
               }
             ],
             "definition": {
-              "val": "Holds between c and p if and only if c is capable of some activity a, and a regulates p.",
-              "xrefs": []
+              "val": "Holds between c and p if and only if c is capable of some activity a, and a regulates p."
             }
           },
           "type": "PROPERTY"
@@ -12692,8 +12582,7 @@
               }
             ],
             "definition": {
-              "val": "Holds between c and p if and only if c is capable of some activity a, and a negatively regulates p.",
-              "xrefs": []
+              "val": "Holds between c and p if and only if c is capable of some activity a, and a negatively regulates p."
             }
           },
           "type": "PROPERTY"
@@ -12713,8 +12602,7 @@
               }
             ],
             "definition": {
-              "val": "Holds between c and p if and only if c is capable of some activity a, and a positively regulates p.",
-              "xrefs": []
+              "val": "Holds between c and p if and only if c is capable of some activity a, and a positively regulates p."
             }
           },
           "type": "PROPERTY"
@@ -12730,8 +12618,7 @@
               }
             ],
             "definition": {
-              "val": "Inverse of 'causal agent in process'",
-              "xrefs": []
+              "val": "Inverse of 'causal agent in process'"
             }
           },
           "type": "PROPERTY"
@@ -12755,8 +12642,7 @@
               }
             ],
             "definition": {
-              "val": "Process(P1) directly postively regulates process(P2) iff: P1 positively regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding positively regulates the kinase activity (P2) of protein B then P1 directly positively regulates P2.",
-              "xrefs": []
+              "val": "Process(P1) directly postively regulates process(P2) iff: P1 positively regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding positively regulates the kinase activity (P2) of protein B then P1 directly positively regulates P2."
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension",
@@ -12785,8 +12671,7 @@
               }
             ],
             "definition": {
-              "val": "Process(P1) directly negatively regulates process(P2) iff: P1 negatively regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  negatively regulates the kinase activity (P2) of protein B then P1 directly negatively regulates P2.",
-              "xrefs": []
+              "val": "Process(P1) directly negatively regulates process(P2) iff: P1 negatively regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  negatively regulates the kinase activity (P2) of protein B then P1 directly negatively regulates P2."
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension",
@@ -12811,8 +12696,7 @@
               }
             ],
             "definition": {
-              "val": "Holds between an entity and an process P where the entity enables some larger compound process, and that larger process has-part P.",
-              "xrefs": []
+              "val": "Holds between an entity and an process P where the entity enables some larger compound process, and that larger process has-part P."
             }
           },
           "type": "PROPERTY"
@@ -12892,8 +12776,7 @@
               }
             ],
             "definition": {
-              "val": "c 'acts upstream of, positive effect' p if c is enables f, and f is causally upstream of p, and the direction of f is positive",
-              "xrefs": []
+              "val": "c 'acts upstream of, positive effect' p if c is enables f, and f is causally upstream of p, and the direction of f is positive"
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/valid_for_go_gp2term"
@@ -12924,8 +12807,7 @@
               }
             ],
             "definition": {
-              "val": "c 'acts upstream of, negative effect' p if c is enables f, and f is causally upstream of p, and the direction of f is negative",
-              "xrefs": []
+              "val": "c 'acts upstream of, negative effect' p if c is enables f, and f is causally upstream of p, and the direction of f is negative"
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/valid_for_go_gp2term"
@@ -12986,8 +12868,97 @@
               }
             ],
             "definition": {
-              "val": "The entity A has an activity that regulates an activity of the entity B. For example, A and B are gene products where the catalytic activity of A regulates the kinase activity of B.",
-              "xrefs": []
+              "val": "The entity A has an activity that regulates an activity of the entity B. For example, A and B are gene products where the catalytic activity of A regulates the kinase activity of B."
+            }
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/RO_0017001",
+          "lbl": "device utilizes material",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000112",
+                "val": "A diagnostic testing device utilizes a specimen."
+              },
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
+                "val": "https://orcid.org/0000-0001-9625-1899"
+              },
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
+                "val": "https://orcid.org/0000-0003-2620-0345"
+              },
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000232",
+                "val": "A diagnostic testing device utilizes a specimen means that the diagnostic testing device is capable of an assay, and this assay a specimen as its input."
+              },
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000232",
+                "val": "See github ticket https://github.com/oborel/obo-relations/issues/497"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#creation_date",
+                "val": "2021-11-08T12:00:00Z"
+              }
+            ],
+            "definition": {
+              "val": "X device utilizes material Y means X and Y are material entities, and X is capable of some process P that has input Y."
+            },
+            "synonyms": [
+              {
+                "pred": "hasBroadSynonym",
+                "val": "utilizes"
+              }
+            ]
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/RO_0019000",
+          "lbl": "regulates characteristic",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.org/dc/terms/contributor",
+                "val": "https://orcid.org/0000-0002-8688-6599"
+              }
+            ],
+            "definition": {
+              "val": "A relationship that holds between a process and a characteristic in which process (P) regulates characteristic (C) iff: P results in the existence of C OR affects the intensity or magnitude of C."
+            }
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/RO_0019001",
+          "lbl": "positively regulates characteristic",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.org/dc/terms/contributor",
+                "val": "https://orcid.org/0000-0002-8688-6599"
+              }
+            ],
+            "definition": {
+              "val": "A relationship that holds between a process and a characteristic in which process (P) positively regulates characteristic (C) iff: P results in an increase in the intensity or magnitude of C."
+            }
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/RO_0019002",
+          "lbl": "negatively regulates characteristic",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.org/dc/terms/contributor",
+                "val": "https://orcid.org/0000-0002-8688-6599"
+              }
+            ],
+            "definition": {
+              "val": "A relationship that holds between a process and a characteristic in which process (P) negatively regulates characteristic (C) iff: P results in a decrease in the intensity or magnitude of C."
             }
           },
           "type": "PROPERTY"
@@ -13327,6 +13298,13 @@
         },
         {
           "chainPredicateIds": [
+            "http://purl.obolibrary.org/obo/RO_0002211",
+            "http://purl.obolibrary.org/obo/RO_0019000"
+          ],
+          "predicateId": "http://purl.obolibrary.org/obo/RO_0019000"
+        },
+        {
+          "chainPredicateIds": [
             "http://purl.obolibrary.org/obo/RO_0002212",
             "http://purl.obolibrary.org/obo/RO_0002212"
           ],
@@ -13355,6 +13333,13 @@
         },
         {
           "chainPredicateIds": [
+            "http://purl.obolibrary.org/obo/RO_0002212",
+            "http://purl.obolibrary.org/obo/RO_0019001"
+          ],
+          "predicateId": "http://purl.obolibrary.org/obo/RO_0019002"
+        },
+        {
+          "chainPredicateIds": [
             "http://purl.obolibrary.org/obo/RO_0002213",
             "http://purl.obolibrary.org/obo/RO_0002215"
           ],
@@ -13373,6 +13358,27 @@
             "http://purl.obolibrary.org/obo/RO_0002331"
           ],
           "predicateId": "http://purl.obolibrary.org/obo/RO_0002429"
+        },
+        {
+          "chainPredicateIds": [
+            "http://purl.obolibrary.org/obo/RO_0002213",
+            "http://purl.obolibrary.org/obo/RO_0019001"
+          ],
+          "predicateId": "http://purl.obolibrary.org/obo/RO_0019001"
+        },
+        {
+          "chainPredicateIds": [
+            "http://purl.obolibrary.org/obo/RO_0002213",
+            "http://purl.obolibrary.org/obo/RO_0019002"
+          ],
+          "predicateId": "http://purl.obolibrary.org/obo/RO_0019002"
+        },
+        {
+          "chainPredicateIds": [
+            "http://purl.obolibrary.org/obo/RO_0002215",
+            "http://purl.obolibrary.org/obo/RO_0002233"
+          ],
+          "predicateId": "http://purl.obolibrary.org/obo/RO_0017001"
         },
         {
           "chainPredicateIds": [

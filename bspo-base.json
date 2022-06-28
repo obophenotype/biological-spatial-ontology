@@ -18,15 +18,6 @@
           "domainClassIds": [
             "http://purl.obolibrary.org/obo/BSPO_0000010"
           ],
-          "predicateId": "http://purl.obolibrary.org/obo/#_has_start_point",
-          "rangeClassIds": [
-            "http://purl.obolibrary.org/obo/CARO_0000000"
-          ]
-        },
-        {
-          "domainClassIds": [
-            "http://purl.obolibrary.org/obo/BSPO_0000010"
-          ],
           "predicateId": "http://purl.obolibrary.org/obo/BSPO_0000104",
           "rangeClassIds": [
             "http://purl.obolibrary.org/obo/BSPO_0000010"
@@ -48,6 +39,15 @@
           "predicateId": "http://purl.obolibrary.org/obo/BSPO_0015005",
           "rangeClassIds": [
             "http://purl.obolibrary.org/obo/BSPO_0000400"
+          ]
+        },
+        {
+          "domainClassIds": [
+            "http://purl.obolibrary.org/obo/BSPO_0000010"
+          ],
+          "predicateId": "http://purl.obolibrary.org/obo/BSPO_0020002",
+          "rangeClassIds": [
+            "http://purl.obolibrary.org/obo/CARO_0000000"
           ]
         },
         {
@@ -135,6 +135,11 @@
           "obj": "http://purl.obolibrary.org/obo/BFO_0000050",
           "pred": "subPropertyOf",
           "sub": "http://purl.obolibrary.org/obo/BSPO_0015102"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/BFO_0000050",
+          "pred": "subPropertyOf",
+          "sub": "http://purl.obolibrary.org/obo/BSPO_0020001"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/BFO_0000051",
@@ -1855,9 +1860,18 @@
           "obj": "http://purl.obolibrary.org/obo/CARO_0000010",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/BSPO_0000400"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/RO_0002220",
+          "pred": "subPropertyOf",
+          "sub": "http://purl.obolibrary.org/obo/BSPO_0015012"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/RO_0002220",
+          "pred": "subPropertyOf",
+          "sub": "http://purl.obolibrary.org/obo/BSPO_0015014"
         }
       ],
-      "equivalentNodesSets": [],
       "id": "http://purl.obolibrary.org/obo/bspo/bspo-base.json",
       "logicalDefinitionAxioms": [
         {
@@ -2945,45 +2959,12 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2021-10-13"
+            "val": "2022-06-28"
           }
         ],
-        "subsets": [],
-        "version": "http://purl.obolibrary.org/obo/bspo/releases/2021-10-13/bspo-base.json",
-        "xrefs": []
+        "version": "http://purl.obolibrary.org/obo/bspo/releases/2022-06-28/bspo-base.json"
       },
       "nodes": [
-        {
-          "id": "http://purl.obolibrary.org/obo/#_has_start_point",
-          "lbl": "has start point",
-          "meta": {
-            "basicPropertyValues": [
-              {
-                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-                "val": "spatial"
-              },
-              {
-                "pred": "http://www.geneontology.org/formats/oboInOwl#shorthand",
-                "val": "has_start_point"
-              }
-            ],
-            "comments": [
-              "Axes can be defined in a given species by subtyping the relevant axis type and stating a start and end point."
-            ],
-            "definition": {
-              "val": "A relation between an axis and a part of an organism, in which the part defines the initial point of the axis.",
-              "xrefs": [
-                "BSPO:cjm"
-              ]
-            },
-            "xrefs": [
-              {
-                "val": ":has_start_point"
-              }
-            ]
-          },
-          "type": "PROPERTY"
-        },
         {
           "id": "http://purl.obolibrary.org/obo/BFO_0000050",
           "lbl": "part of",
@@ -3047,8 +3028,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "left",
-                "xrefs": []
+                "val": "left"
               }
             ]
           },
@@ -3070,8 +3050,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "upper",
-                "xrefs": []
+                "val": "upper"
               }
             ]
           },
@@ -3093,8 +3072,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "lower",
-                "xrefs": []
+                "val": "lower"
               }
             ]
           },
@@ -3134,8 +3112,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "deep",
-                "xrefs": []
+                "val": "deep"
               }
             ]
           },
@@ -3154,8 +3131,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "superficial",
-                "xrefs": []
+                "val": "superficial"
               }
             ]
           },
@@ -3183,8 +3159,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "surface",
-                "xrefs": []
+                "val": "surface"
               }
             ],
             "xrefs": [
@@ -3214,13 +3189,11 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "edge",
-                "xrefs": []
+                "val": "edge"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "margin",
-                "xrefs": []
+                "val": "margin"
               }
             ]
           },
@@ -3246,8 +3219,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "right",
-                "xrefs": []
+                "val": "right"
               }
             ]
           },
@@ -3272,8 +3244,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "parasagittal section",
-                "xrefs": []
+                "val": "parasagittal section"
               }
             ]
           },
@@ -3301,25 +3272,22 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
+                "val": "midline plane"
+              },
+              {
+                "pred": "hasExactSynonym",
+                "val": "midsagittal section"
+              },
+              {
+                "pred": "hasRelatedSynonym",
+                "val": "median plane"
+              },
+              {
+                "pred": "hasExactSynonym",
                 "val": "median sagittal plane",
                 "xrefs": [
                   "FMA:74563"
                 ]
-              },
-              {
-                "pred": "hasExactSynonym",
-                "val": "midline plane",
-                "xrefs": []
-              },
-              {
-                "pred": "hasExactSynonym",
-                "val": "midsagittal section",
-                "xrefs": []
-              },
-              {
-                "pred": "hasRelatedSynonym",
-                "val": "median plane",
-                "xrefs": []
               }
             ],
             "xrefs": [
@@ -3376,8 +3344,7 @@
             "synonyms": [
               {
                 "pred": "hasRelatedSynonym",
-                "val": "superior-inferior axis",
-                "xrefs": []
+                "val": "superior-inferior axis"
               }
             ]
           },
@@ -3428,35 +3395,33 @@
               {
                 "pred": "hasNarrowSynonym",
                 "synonymType": "http://purl.obolibrary.org/obo/bspo#vertebrate",
-                "val": "craniocaudal axis",
-                "xrefs": []
+                "val": "craniocaudal axis"
               },
               {
                 "pred": "hasNarrowSynonym",
                 "synonymType": "http://purl.obolibrary.org/obo/bspo#vertebrate",
-                "val": "rostral/caudal",
-                "xrefs": []
+                "val": "rostral/caudal"
               },
               {
                 "pred": "hasNarrowSynonym",
                 "synonymType": "http://purl.obolibrary.org/obo/bspo#vertebrate",
-                "val": "rostrocaudal axis",
-                "xrefs": []
+                "val": "rostrocaudal axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "A-P axis",
-                "xrefs": []
+                "val": "A-P axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "AP axis",
-                "xrefs": []
+                "val": "AP axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "anteroposterior axis",
-                "xrefs": []
+                "val": "anteroposterior axis"
+              },
+              {
+                "pred": "hasRelatedSynonym",
+                "val": "longitudinal axis"
               },
               {
                 "pred": "hasNarrowSynonym",
@@ -3464,11 +3429,6 @@
                 "xrefs": [
                   "http://en.wikipedia.org/wiki/Anatomical_terms_of_location"
                 ]
-              },
-              {
-                "pred": "hasRelatedSynonym",
-                "val": "longitudinal axis",
-                "xrefs": []
               }
             ]
           },
@@ -3493,13 +3453,11 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "apical/basal",
-                "xrefs": []
+                "val": "apical/basal"
               },
               {
                 "pred": "hasRelatedSynonym",
-                "val": "longitudinal axis",
-                "xrefs": []
+                "val": "longitudinal axis"
               }
             ]
           },
@@ -3528,13 +3486,11 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "proximal/distal",
-                "xrefs": []
+                "val": "proximal/distal"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "proximodistal",
-                "xrefs": []
+                "val": "proximodistal"
               }
             ]
           },
@@ -3560,23 +3516,19 @@
               {
                 "pred": "hasNarrowSynonym",
                 "synonymType": "http://purl.obolibrary.org/obo/bspo#human",
-                "val": "anterior-posterior axis",
-                "xrefs": []
+                "val": "anterior-posterior axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "D-V axis",
-                "xrefs": []
+                "val": "D-V axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "DV axis",
-                "xrefs": []
+                "val": "DV axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "dorsoventral axis",
-                "xrefs": []
+                "val": "dorsoventral axis"
               }
             ]
           },
@@ -3601,43 +3553,35 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "L-R axis",
-                "xrefs": []
+                "val": "L-R axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "LR axis",
-                "xrefs": []
+                "val": "LR axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "R-L axis",
-                "xrefs": []
+                "val": "R-L axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "RL axis",
-                "xrefs": []
+                "val": "RL axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "dextro-sinister axis",
-                "xrefs": []
+                "val": "dextro-sinister axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "left to right axis",
-                "xrefs": []
+                "val": "left to right axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "right to left axis",
-                "xrefs": []
+                "val": "right to left axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "right-left axis",
-                "xrefs": []
+                "val": "right-left axis"
               }
             ]
           },
@@ -3662,23 +3606,19 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "axial plane",
-                "xrefs": []
+                "val": "axial plane"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "axial section",
-                "xrefs": []
+                "val": "axial section"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "transverse section",
-                "xrefs": []
+                "val": "transverse section"
               },
               {
                 "pred": "hasRelatedSynonym",
-                "val": "cross-section",
-                "xrefs": []
+                "val": "cross-section"
               }
             ],
             "xrefs": [
@@ -3708,8 +3648,19 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "frontal plane",
-                "xrefs": []
+                "val": "frontal plane"
+              },
+              {
+                "pred": "hasExactSynonym",
+                "val": "horizontal section"
+              },
+              {
+                "pred": "hasRelatedSynonym",
+                "val": "coronal section"
+              },
+              {
+                "pred": "hasRelatedSynonym",
+                "val": "frontal section"
               },
               {
                 "pred": "hasExactSynonym",
@@ -3717,21 +3668,6 @@
                 "xrefs": [
                   "FMA:52810"
                 ]
-              },
-              {
-                "pred": "hasExactSynonym",
-                "val": "horizontal section",
-                "xrefs": []
-              },
-              {
-                "pred": "hasRelatedSynonym",
-                "val": "coronal section",
-                "xrefs": []
-              },
-              {
-                "pred": "hasRelatedSynonym",
-                "val": "frontal section",
-                "xrefs": []
               }
             ],
             "xrefs": [
@@ -3799,13 +3735,11 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "superior",
-                "xrefs": []
+                "val": "superior"
               },
               {
                 "pred": "hasRelatedSynonym",
-                "val": "cranial",
-                "xrefs": []
+                "val": "cranial"
               }
             ]
           },
@@ -3868,13 +3802,11 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "inferior",
-                "xrefs": []
+                "val": "inferior"
               },
               {
                 "pred": "hasRelatedSynonym",
-                "val": "caudal",
-                "xrefs": []
+                "val": "caudal"
               }
             ]
           },
@@ -3907,8 +3839,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "anterodorsal region ",
-                "xrefs": []
+                "val": "anterodorsal region "
               }
             ]
           },
@@ -3941,8 +3872,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "anteroventral region ",
-                "xrefs": []
+                "val": "anteroventral region "
               }
             ]
           },
@@ -3975,8 +3905,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "posterolateral region",
-                "xrefs": []
+                "val": "posterolateral region"
               }
             ]
           },
@@ -4009,8 +3938,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "anterolateral region",
-                "xrefs": []
+                "val": "anterolateral region"
               }
             ]
           },
@@ -4043,8 +3971,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "posterodorsal region",
-                "xrefs": []
+                "val": "posterodorsal region"
               }
             ]
           },
@@ -4141,8 +4068,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "posteroventral region",
-                "xrefs": []
+                "val": "posteroventral region"
               }
             ]
           },
@@ -4169,13 +4095,11 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "anterior-most",
-                "xrefs": []
+                "val": "anterior-most"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "anteriormost",
-                "xrefs": []
+                "val": "anteriormost"
               }
             ]
           },
@@ -4202,13 +4126,11 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "posterior-most",
-                "xrefs": []
+                "val": "posterior-most"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "posteriormost",
-                "xrefs": []
+                "val": "posteriormost"
               }
             ]
           },
@@ -4235,13 +4157,11 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "dorsal-most",
-                "xrefs": []
+                "val": "dorsal-most"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "dorsalmost",
-                "xrefs": []
+                "val": "dorsalmost"
               }
             ]
           },
@@ -4268,13 +4188,11 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "ventral-most",
-                "xrefs": []
+                "val": "ventral-most"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "ventralmost",
-                "xrefs": []
+                "val": "ventralmost"
               }
             ]
           },
@@ -4333,8 +4251,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "anteromedial margin",
-                "xrefs": []
+                "val": "anteromedial margin"
               }
             ]
           },
@@ -4393,8 +4310,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "anterolateral margin",
-                "xrefs": []
+                "val": "anterolateral margin"
               }
             ]
           },
@@ -4427,8 +4343,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "posteromedial margin",
-                "xrefs": []
+                "val": "posteromedial margin"
               }
             ]
           },
@@ -4461,8 +4376,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "posterolateral margin",
-                "xrefs": []
+                "val": "posterolateral margin"
               }
             ]
           },
@@ -4495,8 +4409,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "dorso-medial margin",
-                "xrefs": []
+                "val": "dorso-medial margin"
               }
             ]
           },
@@ -4529,8 +4442,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "ventromedial margin",
-                "xrefs": []
+                "val": "ventromedial margin"
               }
             ]
           },
@@ -4563,8 +4475,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "anteromedial region",
-                "xrefs": []
+                "val": "anteromedial region"
               }
             ]
           },
@@ -4691,13 +4602,11 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "anterior",
-                "xrefs": []
+                "val": "anterior"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "rostral",
-                "xrefs": []
+                "val": "rostral"
               }
             ],
             "xrefs": [
@@ -4732,13 +4641,11 @@
               {
                 "pred": "hasNarrowSynonym",
                 "synonymType": "http://purl.obolibrary.org/obo/bspo#vertebrate",
-                "val": "caudal",
-                "xrefs": []
+                "val": "caudal"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "posterior",
-                "xrefs": []
+                "val": "posterior"
               }
             ],
             "xrefs": [
@@ -4771,8 +4678,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "apical",
-                "xrefs": []
+                "val": "apical"
               }
             ],
             "xrefs": [
@@ -4808,8 +4714,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "basal",
-                "xrefs": []
+                "val": "basal"
               }
             ],
             "xrefs": [
@@ -4845,8 +4750,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "central",
-                "xrefs": []
+                "val": "central"
               }
             ],
             "xrefs": [
@@ -4882,8 +4786,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "contralateral",
-                "xrefs": []
+                "val": "contralateral"
               }
             ],
             "xrefs": [
@@ -4910,8 +4813,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "proximal",
-                "xrefs": []
+                "val": "proximal"
               }
             ],
             "xrefs": [
@@ -4944,8 +4846,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "distal",
-                "xrefs": []
+                "val": "distal"
               }
             ],
             "xrefs": [
@@ -4978,8 +4879,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "dorsal",
-                "xrefs": []
+                "val": "dorsal"
               }
             ],
             "xrefs": [
@@ -5020,8 +4920,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "posteromedial region",
-                "xrefs": []
+                "val": "posteromedial region"
               }
             ]
           },
@@ -5049,8 +4948,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "ipsilateral",
-                "xrefs": []
+                "val": "ipsilateral"
               }
             ],
             "xrefs": [
@@ -5077,8 +4975,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "lateral",
-                "xrefs": []
+                "val": "lateral"
               }
             ],
             "xrefs": [
@@ -5108,8 +5005,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "medial",
-                "xrefs": []
+                "val": "medial"
               }
             ],
             "xrefs": [
@@ -5143,8 +5039,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "ventral",
-                "xrefs": []
+                "val": "ventral"
               }
             ],
             "xrefs": [
@@ -5185,8 +5080,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "dorsomedial region",
-                "xrefs": []
+                "val": "dorsomedial region"
               }
             ]
           },
@@ -5451,8 +5345,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "dorsolateral region",
-                "xrefs": []
+                "val": "dorsolateral region"
               }
             ],
             "xrefs": [
@@ -5575,8 +5468,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "ventrolateral region",
-                "xrefs": []
+                "val": "ventrolateral region"
               }
             ],
             "xrefs": [
@@ -5837,8 +5729,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "rostral_to",
-                "xrefs": []
+                "val": "rostral_to"
               }
             ],
             "xrefs": [
@@ -5953,8 +5844,7 @@
               {
                 "pred": "hasNarrowSynonym",
                 "synonymType": "http://purl.obolibrary.org/obo/bspo#vertebrate",
-                "val": "caudal to",
-                "xrefs": []
+                "val": "caudal to"
               }
             ],
             "xrefs": [
@@ -6363,13 +6253,11 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "medioventral region",
-                "xrefs": []
+                "val": "medioventral region"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "ventromedial region",
-                "xrefs": []
+                "val": "ventromedial region"
               }
             ]
           },
@@ -6418,15 +6306,14 @@
               }
             ],
             "definition": {
-              "val": "X lateral to y if x is further from the midsagittal plane than y.",
-              "xrefs": []
+              "val": "X lateral to y if x is further from the midsagittal plane than y."
             }
           },
           "type": "PROPERTY"
         },
         {
           "id": "http://purl.obolibrary.org/obo/BSPO_0000115",
-          "lbl": "X medial to y if x is closer to the midsagittal plane than y.",
+          "lbl": "medial to",
           "meta": {
             "basicPropertyValues": [
               {
@@ -6632,6 +6519,10 @@
               },
               {
                 "pred": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+                "val": "https://github.com/obophenotype/uberon/issues/2453"
+              },
+              {
+                "pred": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
                 "val": "https://github.com/obophenotype/uberon/wiki/Modeling-paired-structures-Design-Pattern"
               }
             ],
@@ -6734,13 +6625,11 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "AA axis",
-                "xrefs": []
+                "val": "AA axis"
               },
               {
                 "pred": "hasRelatedSynonym",
-                "val": "dorsal-ventral axis",
-                "xrefs": []
+                "val": "dorsal-ventral axis"
               }
             ]
           },
@@ -6776,8 +6665,7 @@
             "synonyms": [
               {
                 "pred": "hasRelatedSynonym",
-                "val": "proximal-distal axis",
-                "xrefs": []
+                "val": "proximal-distal axis"
               }
             ]
           },
@@ -6813,13 +6701,11 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "M-R axis",
-                "xrefs": []
+                "val": "M-R axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "MR axis",
-                "xrefs": []
+                "val": "MR axis"
               }
             ]
           },
@@ -6879,18 +6765,15 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "A-V axis",
-                "xrefs": []
+                "val": "A-V axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "AV axis",
-                "xrefs": []
+                "val": "AV axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "animal/vegetal axis",
-                "xrefs": []
+                "val": "animal/vegetal axis"
               }
             ]
           },
@@ -7282,28 +7165,23 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "anatomical cross-section",
-                "xrefs": []
+                "val": "anatomical cross-section"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "anatomical section",
-                "xrefs": []
+                "val": "anatomical section"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "plane",
-                "xrefs": []
+                "val": "plane"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "section",
-                "xrefs": []
+                "val": "section"
               },
               {
                 "pred": "hasRelatedSynonym",
-                "val": "cross-section",
-                "xrefs": []
+                "val": "cross-section"
               }
             ],
             "xrefs": [
@@ -7335,18 +7213,15 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "left/right plane",
-                "xrefs": []
+                "val": "left/right plane"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "median plane",
-                "xrefs": []
+                "val": "median plane"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "sagittal section",
-                "xrefs": []
+                "val": "sagittal section"
               }
             ],
             "xrefs": [
@@ -7509,8 +7384,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "dorsolateral margin",
-                "xrefs": []
+                "val": "dorsolateral margin"
               }
             ]
           },
@@ -7595,8 +7469,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "ventrolateral margin",
-                "xrefs": []
+                "val": "ventrolateral margin"
               }
             ]
           },
@@ -7621,8 +7494,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "anterodorsal margin",
-                "xrefs": []
+                "val": "anterodorsal margin"
               }
             ]
           },
@@ -7647,8 +7519,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "posterodorsal margin",
-                "xrefs": []
+                "val": "posterodorsal margin"
               }
             ]
           },
@@ -7673,8 +7544,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "anteroventral margin",
-                "xrefs": []
+                "val": "anteroventral margin"
               }
             ]
           },
@@ -7699,8 +7569,7 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "posteroventral margin",
-                "xrefs": []
+                "val": "posteroventral margin"
               }
             ]
           },
@@ -7728,28 +7597,23 @@
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
-                "val": "M-L axis",
-                "xrefs": []
+                "val": "M-L axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "ML axis",
-                "xrefs": []
+                "val": "ML axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "medio-lateral axis",
-                "xrefs": []
+                "val": "medio-lateral axis"
               },
               {
                 "pred": "hasExactSynonym",
-                "val": "mediolateral axis",
-                "xrefs": []
+                "val": "mediolateral axis"
               },
               {
                 "pred": "hasRelatedSynonym",
-                "val": "proximal-distal axis ",
-                "xrefs": []
+                "val": "proximal-distal axis "
               }
             ],
             "xrefs": [
@@ -7996,8 +7860,7 @@
               }
             ],
             "definition": {
-              "val": "X intersects median plane of iff X crosses the midine plane of Y.",
-              "xrefs": []
+              "val": "X intersects median plane of iff X crosses the midine plane of Y."
             },
             "xrefs": [
               {
@@ -8309,6 +8172,10 @@
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#shorthand",
                 "val": "immediately_posterior_to"
+              },
+              {
+                "pred": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+                "val": "https://github.com/obophenotype/uberon/issues/2453"
               }
             ],
             "definition": {
@@ -8365,6 +8232,10 @@
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#shorthand",
                 "val": "immediately_superficial_to"
+              },
+              {
+                "pred": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+                "val": "https://github.com/obophenotype/uberon/issues/2453"
               }
             ],
             "definition": {
@@ -8578,6 +8449,72 @@
           "type": "PROPERTY"
         },
         {
+          "id": "http://purl.obolibrary.org/obo/BSPO_0020001",
+          "lbl": "in central side of",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000116",
+                "val": "This was migrated from http://purl.obolibrary.org/obo/uberon/core#in_central_side_of in Uberon."
+              },
+              {
+                "pred": "http://purl.org/dc/terms/contributor",
+                "val": "https://orcid.org/0000-0002-6523-4866"
+              },
+              {
+                "pred": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+                "val": "http://purl.obolibrary.org/obo/BSPO_0000059"
+              },
+              {
+                "pred": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+                "val": "https://github.com/obophenotype/uberon/wiki/Modeling-paired-structures-Design-Pattern"
+              }
+            ],
+            "definition": {
+              "val": "X in_central_side Y <=> if Y is subdivided into left and right portions around some median divisor, all parts of X are closer to the median divisor than the outermost lateral sides.",
+              "xrefs": [
+                "BSPO:cjm"
+              ]
+            }
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/BSPO_0020002",
+          "lbl": "has start point",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000116",
+                "val": "This relationship was originally called http://purl.obolibrary.org/obo/#_has_start_point, but was renamed because of the non-standard IRI syntax."
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "spatial"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#shorthand",
+                "val": "has_start_point"
+              }
+            ],
+            "comments": [
+              "Axes can be defined in a given species by subtyping the relevant axis type and stating a start and end point."
+            ],
+            "definition": {
+              "val": "A relation between an axis and a part of an organism, in which the part defines the initial point of the axis.",
+              "xrefs": [
+                "BSPO:cjm"
+              ]
+            },
+            "xrefs": [
+              {
+                "val": ":has_start_point"
+              }
+            ]
+          },
+          "type": "PROPERTY"
+        },
+        {
           "id": "http://purl.obolibrary.org/obo/BSPO_1000000",
           "lbl": "preaxial to",
           "meta": {
@@ -8600,20 +8537,18 @@
             "synonyms": [
               {
                 "pred": "hasRelatedSynonym",
+                "val": "lateral (radial) to"
+              },
+              {
+                "pred": "hasRelatedSynonym",
+                "val": "medial (tibial) to"
+              },
+              {
+                "pred": "hasRelatedSynonym",
                 "val": "anterior to (developmentally)",
                 "xrefs": [
                   "MA:th"
                 ]
-              },
-              {
-                "pred": "hasRelatedSynonym",
-                "val": "lateral (radial) to",
-                "xrefs": []
-              },
-              {
-                "pred": "hasRelatedSynonym",
-                "val": "medial (tibial) to",
-                "xrefs": []
               }
             ],
             "xrefs": [
@@ -8927,8 +8862,7 @@
           "lbl": "shorthand",
           "type": "PROPERTY"
         }
-      ],
-      "propertyChainAxioms": []
+      ]
     }
   ]
 }
