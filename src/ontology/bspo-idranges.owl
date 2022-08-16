@@ -9,8 +9,8 @@ Ontology: <http://purl.obolibrary.org/obo/bspo/bspo-idranges.owl>
 
 annotationproperty: allocatedto:
 AnnotationProperty: idprefix:
-AnnotationProperty: iddigits: 
-AnnotationProperty: idsfor: 
+AnnotationProperty: iddigits:
+AnnotationProperty: idsfor:
 
 Datatype: idrange:1
 Annotations: allocatedto: "Wasila Dahdul"
@@ -31,3 +31,7 @@ EquivalentTo: xsd:integer[> 15001 , <= 20000]
 Datatype: idrange:5
 Annotations: allocatedto: "Anita Caron"
 EquivalentTo: xsd:integer[> 20001 , <= 20999]
+
+Datatype: idrange:6
+Annotations: allocatedto: "Meghan Balk"
+EquivalentTo: xsd:integer[> 30001 , <= 30999]
