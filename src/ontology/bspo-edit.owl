@@ -225,6 +225,11 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0015201>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0015202>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0020001>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0020002>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0030003>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0030004>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0030005>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0030006>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_0030007>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BSPO_1000000>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002131>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002220>))
@@ -990,6 +995,61 @@ AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/BSPO_0020002> "
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0020002> "has start point"^^xsd:string)
 ObjectPropertyDomain(<http://purl.obolibrary.org/obo/BSPO_0020002> <http://purl.obolibrary.org/obo/BSPO_0000010>)
 ObjectPropertyRange(<http://purl.obolibrary.org/obo/BSPO_0020002> <http://purl.obolibrary.org/obo/CARO_0000000>)
+
+# Object Property: <http://purl.obolibrary.org/obo/BSPO_0030003> (dorsalmost part of)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0003-2699-3066") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/BSPO_0030003> "X dorsalmost part of Y <=> X is in dorsal side of Y and X is adjacent to the dorsal boundary of Y")
+AnnotationAssertion(dcterms:contributor <http://purl.obolibrary.org/obo/BSPO_0030003> <https://orcid.org/0000-0003-2699-3066>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/BSPO_0030003> "BSPO:0030003")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/BSPO_0030003> "spatial")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/BSPO_0030003> "dorsalmost_part_of")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#shorthand> <http://purl.obolibrary.org/obo/BSPO_0030003> "dorsalmost_part_of")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0030003> "dorsalmost part of"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/BSPO_0030003> <http://purl.obolibrary.org/obo/BSPO_0015101>)
+
+# Object Property: <http://purl.obolibrary.org/obo/BSPO_0030004> (anteriormost part of)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0003-2699-3066") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/BSPO_0030004> "X anteriormost part of Y <=> X is in anterior side of Y and X is adjacent to the anterior boundary of Y")
+AnnotationAssertion(dcterms:contributor <http://purl.obolibrary.org/obo/BSPO_0030004> <https://orcid.org/0000-0003-2699-3066>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/BSPO_0030004> "BSPO:0030004")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/BSPO_0030004> "spatial")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/BSPO_0030004> "anteriormost_part_of")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#shorthand> <http://purl.obolibrary.org/obo/BSPO_0030004> "anteriormost_part_of")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0030004> "anteriormost part of"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/BSPO_0030004> <http://purl.obolibrary.org/obo/BSPO_0000123>)
+
+# Object Property: <http://purl.obolibrary.org/obo/BSPO_0030005> (lateralmost part of)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0003-2699-3066") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/BSPO_0030005> "X lateralmost part of Y <=> X is in lateral side of Y and X is adjacent to the lateral boundary of Y")
+AnnotationAssertion(dcterms:contributor <http://purl.obolibrary.org/obo/BSPO_0030005> <https://orcid.org/0000-0003-2699-3066>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/BSPO_0030005> "BSPO:0030005")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/BSPO_0030005> "spatial")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/BSPO_0030005> "lateralmost_part_of")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#shorthand> <http://purl.obolibrary.org/obo/BSPO_0030005> "lateralmost_part_of")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0030005> "lateralmost part of"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/BSPO_0030005> <http://purl.obolibrary.org/obo/BSPO_0000126>)
+
+# Object Property: <http://purl.obolibrary.org/obo/BSPO_0030006> (in medial side of)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0003-2699-3066") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/BSPO_0030006> "X medial side of Y <=> if Y is subdivided into two medial and lateral portions, X is part of the medial portion.")
+AnnotationAssertion(dcterms:contributor <http://purl.obolibrary.org/obo/BSPO_0030006> <https://orcid.org/0000-0003-2699-3066>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/BSPO_0030006> "BSPO:0030006")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/BSPO_0030006> "spatial")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/BSPO_0030006> "in_medial_side_of")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#shorthand> <http://purl.obolibrary.org/obo/BSPO_0030006> "in_medial_side_of")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0030006> "in medial side of"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/BSPO_0030006> <http://purl.obolibrary.org/obo/BFO_0000050>)
+
+# Object Property: <http://purl.obolibrary.org/obo/BSPO_0030007> (medialmost part of)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0003-2699-3066") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/BSPO_0030007> "X medialmost part of Y <=> X is in medial side of Y and X is adjacent to the medial boundary of Y")
+AnnotationAssertion(dcterms:contributor <http://purl.obolibrary.org/obo/BSPO_0030007> <https://orcid.org/0000-0003-2699-3066>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/BSPO_0030007> "BSPO:0030007")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/BSPO_0030007> "spatial")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/BSPO_0030007> "medialmost_part_of")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#shorthand> <http://purl.obolibrary.org/obo/BSPO_0030007> "medialmost_part_of")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BSPO_0030007> "medialmost part of"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/BSPO_0030007> <http://purl.obolibrary.org/obo/BSPO_0030006>)
 
 # Object Property: <http://purl.obolibrary.org/obo/BSPO_1000000> (preaxial to)
 
@@ -2670,7 +2730,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CARO_0000000> "CARO:0000000"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CARO_0000000> "anatomical entity"^^xsd:string)
 
-# Class: <http://purl.obolibrary.org/obo/CARO_0000003> (anatomical structure)
+# Class: <http://purl.obolibrary.org/obo/CARO_0000003> (connected anatomical structure)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "CC:DOS"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CARO_0000003> "Material anatomical entity that is a single connected structure with inherent 3D shape generated by coordinated expression of the organism's own genome."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CARO_0000003> "spatial"^^xsd:string)
