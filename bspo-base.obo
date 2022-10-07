@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: bspo/releases/2022-06-28/bspo-base.owl
+data-version: bspo/releases/2022-10-07/bspo-base.owl
 synonymtypedef: human "synonym typically used in the context of human anatomy" NARROW
 synonymtypedef: vertebrate "synonym typically used in the context of vertebrate anatomy" NARROW
 default-namespace: spatial
@@ -10,7 +10,8 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology for res
 property_value: http://purl.org/dc/elements/1.1/title "Biological Spatial Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
-property_value: owl:versionInfo "2022-06-28" xsd:string
+property_value: IAO:0000700 CARO:0000000
+property_value: owl:versionInfo "2022-10-07" xsd:string
 
 [Term]
 id: BSPO:0000000

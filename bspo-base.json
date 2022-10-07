@@ -2930,6 +2930,10 @@
       "meta": {
         "basicPropertyValues": [
           {
+            "pred": "http://purl.obolibrary.org/obo/IAO_0000700",
+            "val": "http://purl.obolibrary.org/obo/CARO_0000000"
+          },
+          {
             "pred": "http://purl.org/dc/elements/1.1/description",
             "val": "An ontology for respresenting spatial concepts, anatomical axes, gradients, regions, planes, sides and surfaces. These concepts can be used at multiple biological scales and in a diversity of taxa, including plants, animals and fungi. The BSPO is used to provide a source of anatomical location descriptors for logically defining anatomical entity classes in anatomy ontologies."
           },
@@ -2959,10 +2963,10 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2022-06-28"
+            "val": "2022-10-07"
           }
         ],
-        "version": "http://purl.obolibrary.org/obo/bspo/releases/2022-06-28/bspo-base.json"
+        "version": "http://purl.obolibrary.org/obo/bspo/releases/2022-10-07/bspo-base.json"
       },
       "nodes": [
         {

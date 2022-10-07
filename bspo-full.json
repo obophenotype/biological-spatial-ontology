@@ -2098,6 +2098,11 @@
           "sub": "http://purl.obolibrary.org/obo/IAO_0000229"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/IAO_0000225",
+          "pred": "type",
+          "sub": "http://purl.obolibrary.org/obo/OMO_0001000"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/IAO_0000409",
           "pred": "type",
           "sub": "http://purl.obolibrary.org/obo/IAO_0000410"
@@ -3836,6 +3841,10 @@
       "meta": {
         "basicPropertyValues": [
           {
+            "pred": "http://purl.obolibrary.org/obo/IAO_0000700",
+            "val": "http://purl.obolibrary.org/obo/CARO_0000000"
+          },
+          {
             "pred": "http://purl.org/dc/elements/1.1/description",
             "val": "An ontology for respresenting spatial concepts, anatomical axes, gradients, regions, planes, sides and surfaces. These concepts can be used at multiple biological scales and in a diversity of taxa, including plants, animals and fungi. The BSPO is used to provide a source of anatomical location descriptors for logically defining anatomical entity classes in anatomy ontologies."
           },
@@ -3861,10 +3870,10 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2022-06-28"
+            "val": "2022-10-07"
           }
         ],
-        "version": "http://purl.obolibrary.org/obo/bspo/releases/2022-06-28/bspo-full.json"
+        "version": "http://purl.obolibrary.org/obo/bspo/releases/2022-10-07/bspo-full.json"
       },
       "nodes": [
         {
@@ -10016,10 +10025,25 @@
           "meta": {
             "basicPropertyValues": [
               {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000111",
+                "val": "editor note"
+              },
+              {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000114",
                 "val": "http://purl.obolibrary.org/obo/IAO_0000122"
+              },
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
+                "val": "PERSON:Daniel Schober"
+              },
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000119",
+                "val": "GROUP:OBI:<http://purl.obofoundry.org/obo/obi>"
               }
-            ]
+            ],
+            "definition": {
+              "val": "An administrative note intended for its editor. It may not be included in the publication version of the ontology, so it should contain nothing necessary for end users to understand the ontology."
+            }
           },
           "type": "PROPERTY"
         },
@@ -10365,6 +10389,26 @@
           "type": "INDIVIDUAL"
         },
         {
+          "id": "http://purl.obolibrary.org/obo/IAO_0000700",
+          "lbl": "has ontology root term",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000111",
+                "val": "has ontology root term"
+              },
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
+                "val": "Nicolas Matentzoglu"
+              }
+            ],
+            "definition": {
+              "val": "Ontology annotation property. Relates an ontology to a term that is a designated root term of the ontology. Display tools like OLS can use terms annotated with this property as the starting point for rendering the ontology class hierarchy. There can be more than one root."
+            }
+          },
+          "type": "PROPERTY"
+        },
+        {
           "id": "http://purl.obolibrary.org/obo/IAO_0100001",
           "lbl": "term replaced by",
           "meta": {
@@ -10394,6 +10438,34 @@
             }
           },
           "type": "PROPERTY"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/OMO_0001000",
+          "lbl": "out of scope",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000116",
+                "val": "This obsolesence reason should be used conservatively. Typical valid examples are: un-necessary grouping classes in disease ontologies, a phenotype term added on the assumption it was a disease."
+              },
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
+                "val": "http://orcid.org/0000-0001-5208-3432"
+              },
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000233",
+                "val": "https://github.com/information-artifact-ontology/ontology-metadata/issues/77"
+              },
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000234",
+                "val": "https://orcid.org/0000-0001-5208-3432"
+              }
+            ],
+            "definition": {
+              "val": "The term was added to the ontology on the assumption it was in scope, but it turned out later that it was not."
+            }
+          },
+          "type": "INDIVIDUAL"
         },
         {
           "id": "http://purl.obolibrary.org/obo/PATO_0000001",
@@ -13009,6 +13081,78 @@
           "type": "PROPERTY"
         },
         {
+          "id": "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym",
+          "lbl": "has_exact_synonym",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
+                "val": "http://orcid.org/0000-0001-5208-3432"
+              },
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000233",
+                "val": "https://github.com/information-artifact-ontology/ontology-metadata/issues/20"
+              },
+              {
+                "pred": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+                "val": "https://github.com/information-artifact-ontology/ontology-metadata/issues/20"
+              }
+            ],
+            "definition": {
+              "val": "An alternative label for a class or property which has the exact same meaning than the preferred name/primary label."
+            }
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym",
+          "lbl": "has_narrow_synonym",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
+                "val": "http://orcid.org/0000-0001-5208-3432"
+              },
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000233",
+                "val": "https://github.com/information-artifact-ontology/ontology-metadata/issues/19"
+              },
+              {
+                "pred": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+                "val": "https://github.com/information-artifact-ontology/ontology-metadata/issues/19"
+              }
+            ],
+            "definition": {
+              "val": "An alternative label for a class or property which has a more specific meaning than the preferred name/primary label."
+            }
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
+          "lbl": "has_related_synonym",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
+                "val": "http://orcid.org/0000-0001-5208-3432"
+              },
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000233",
+                "val": "https://github.com/information-artifact-ontology/ontology-metadata/issues/21"
+              },
+              {
+                "pred": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+                "val": "https://github.com/information-artifact-ontology/ontology-metadata/issues/21"
+              }
+            ],
+            "definition": {
+              "val": "An alternative label for a class or property that has been used synonymously with the primary term name, but the usage is not strictly correct."
+            }
+          },
+          "type": "PROPERTY"
+        },
+        {
           "id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
           "lbl": "see also",
           "meta": {
@@ -13100,16 +13244,6 @@
           "type": "PROPERTY"
         },
         {
-          "id": "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym",
-          "lbl": "has_exact_synonym",
-          "type": "PROPERTY"
-        },
-        {
-          "id": "http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym",
-          "lbl": "has_narrow_synonym",
-          "type": "PROPERTY"
-        },
-        {
           "id": "http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion",
           "lbl": "has_obo_format_version",
           "type": "PROPERTY"
@@ -13117,11 +13251,6 @@
         {
           "id": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "lbl": "has_obo_namespace",
-          "type": "PROPERTY"
-        },
-        {
-          "id": "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
-          "lbl": "has_related_synonym",
           "type": "PROPERTY"
         },
         {
