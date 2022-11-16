@@ -142,6 +142,11 @@
           "sub": "http://purl.obolibrary.org/obo/BSPO_0020001"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/BFO_0000050",
+          "pred": "subPropertyOf",
+          "sub": "http://purl.obolibrary.org/obo/BSPO_0030006"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/BFO_0000051",
           "pred": "inverseOf",
           "sub": "http://purl.obolibrary.org/obo/BFO_0000050"
@@ -1577,6 +1582,11 @@
           "sub": "http://purl.obolibrary.org/obo/BSPO_0000114"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/BSPO_0000123",
+          "pred": "subPropertyOf",
+          "sub": "http://purl.obolibrary.org/obo/BSPO_0030004"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/BSPO_0000124",
           "pred": "subPropertyOf",
           "sub": "http://purl.obolibrary.org/obo/BSPO_0001106"
@@ -1595,6 +1605,11 @@
           "obj": "http://purl.obolibrary.org/obo/BSPO_0000126",
           "pred": "subPropertyOf",
           "sub": "http://purl.obolibrary.org/obo/BSPO_0000121"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/BSPO_0000126",
+          "pred": "subPropertyOf",
+          "sub": "http://purl.obolibrary.org/obo/BSPO_0030005"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/BSPO_0000129",
@@ -1795,6 +1810,16 @@
           "obj": "http://purl.obolibrary.org/obo/BSPO_0015017",
           "pred": "inverseOf",
           "sub": "http://purl.obolibrary.org/obo/BSPO_0015016"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/BSPO_0015101",
+          "pred": "subPropertyOf",
+          "sub": "http://purl.obolibrary.org/obo/BSPO_0030003"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/BSPO_0030006",
+          "pred": "subPropertyOf",
+          "sub": "http://purl.obolibrary.org/obo/BSPO_0030007"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/CARO_0000000",
@@ -2698,11 +2723,11 @@
           "restrictions": [
             {
               "fillerId": "http://purl.obolibrary.org/obo/BSPO_0000013",
-              "propertyId": "http://purl.obolibrary.org/obo/bspo#parallel_to"
+              "propertyId": "http://purl.obolibrary.org/obo/BSPO_0001102"
             },
             {
               "fillerId": "http://purl.obolibrary.org/obo/BSPO_0000016",
-              "propertyId": "http://purl.obolibrary.org/obo/bspo#parallel_to"
+              "propertyId": "http://purl.obolibrary.org/obo/BSPO_0001102"
             },
             {
               "fillerId": "http://purl.obolibrary.org/obo/BSPO_0000017",
@@ -2963,10 +2988,10 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2022-10-07"
+            "val": "2022-11-16"
           }
         ],
-        "version": "http://purl.obolibrary.org/obo/bspo/releases/2022-10-07/bspo-base.json"
+        "version": "http://purl.obolibrary.org/obo/bspo/releases/2022-11-16/bspo-base.json"
       },
       "nodes": [
         {
@@ -7685,6 +7710,25 @@
           "type": "PROPERTY"
         },
         {
+          "id": "http://purl.obolibrary.org/obo/BSPO_0001102",
+          "lbl": "parallel to",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "spatial"
+              }
+            ],
+            "definition": {
+              "val": "x is parallel t y iff x and y are lines or planes which when extended indefinitely do not cross.",
+              "xrefs": [
+                "BSPO:curators"
+              ]
+            }
+          },
+          "type": "PROPERTY"
+        },
+        {
           "id": "http://purl.obolibrary.org/obo/BSPO_0001106",
           "lbl": "proximalmost part of",
           "meta": {
@@ -8519,6 +8563,166 @@
           "type": "PROPERTY"
         },
         {
+          "id": "http://purl.obolibrary.org/obo/BSPO_0030003",
+          "lbl": "dorsalmost part of",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.org/dc/terms/contributor",
+                "val": "https://orcid.org/0000-0003-2699-3066"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "spatial"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#shorthand",
+                "val": "dorsalmost_part_of"
+              }
+            ],
+            "definition": {
+              "val": "x dorsalmost_part_of y iff x part_of y and there is no z which is part_of y and is more dorsal than x but not part_of x; x is adjacent to the dorsal boundary of y",
+              "xrefs": [
+                "https://orcid.org/0000-0003-2699-3066"
+              ]
+            },
+            "xrefs": [
+              {
+                "val": "BSPO:0030003"
+              }
+            ]
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/BSPO_0030004",
+          "lbl": "anteriormost part of",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.org/dc/terms/contributor",
+                "val": "https://orcid.org/0000-0003-2699-3066"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "spatial"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#shorthand",
+                "val": "anteriormost_part_of"
+              }
+            ],
+            "definition": {
+              "val": "x anteriormost_part_of y iff x part_of y and there is no z which is part_of y and is more anterior than x but not part_of x; x is adjacent to the anterior boundary of y",
+              "xrefs": [
+                "https://orcid.org/0000-0003-2699-3066"
+              ]
+            },
+            "xrefs": [
+              {
+                "val": "BSPO:0030004"
+              }
+            ]
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/BSPO_0030005",
+          "lbl": "lateralmost part of",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.org/dc/terms/contributor",
+                "val": "https://orcid.org/0000-0003-2699-3066"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "spatial"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#shorthand",
+                "val": "lateralmost_part_of"
+              }
+            ],
+            "definition": {
+              "val": "x lateralmost_part_of y iff x part_of y and there is no z which is part_of y and is more lateral than x but not part_of x; x is adjacent to the lateral boundary of y",
+              "xrefs": [
+                "https://orcid.org/0000-0003-2699-3066"
+              ]
+            },
+            "xrefs": [
+              {
+                "val": "BSPO:0030005"
+              }
+            ]
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/BSPO_0030006",
+          "lbl": "in medial side of",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.org/dc/terms/contributor",
+                "val": "https://orcid.org/0000-0003-2699-3066"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "spatial"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#shorthand",
+                "val": "in_medial_side_of"
+              }
+            ],
+            "definition": {
+              "val": "X medial side of Y <=> if Y is subdivided into two medial and lateral portions, X is part of the medial portion.",
+              "xrefs": [
+                "https://orcid.org/0000-0003-2699-3066"
+              ]
+            },
+            "xrefs": [
+              {
+                "val": "BSPO:0030006"
+              }
+            ]
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/BSPO_0030007",
+          "lbl": "medialmost part of",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.org/dc/terms/contributor",
+                "val": "https://orcid.org/0000-0003-2699-3066"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "spatial"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#shorthand",
+                "val": "medialmost_part_of"
+              }
+            ],
+            "definition": {
+              "val": "x medialmost_part_of y iff x part_of y and there is no z which is part_of y and is more medial than x but not part_of x; x is adjacent to the medial boundary of y",
+              "xrefs": [
+                "https://orcid.org/0000-0003-2699-3066"
+              ]
+            },
+            "xrefs": [
+              {
+                "val": "BSPO:0030007"
+              }
+            ]
+          },
+          "type": "PROPERTY"
+        },
+        {
           "id": "http://purl.obolibrary.org/obo/BSPO_1000000",
           "lbl": "preaxial to",
           "meta": {
@@ -8740,25 +8944,6 @@
                 "val": "http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"
               }
             ]
-          },
-          "type": "PROPERTY"
-        },
-        {
-          "id": "http://purl.obolibrary.org/obo/bspo#parallel_to",
-          "lbl": "parallel to",
-          "meta": {
-            "basicPropertyValues": [
-              {
-                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-                "val": "spatial"
-              }
-            ],
-            "definition": {
-              "val": "x is parallel t y iff x and y are lines or planes which when extended indefinitely do not cross.",
-              "xrefs": [
-                "BSPO:curators"
-              ]
-            }
           },
           "type": "PROPERTY"
         },

@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: bspo/releases/2022-10-07/bspo-base.owl
+data-version: bspo/releases/2022-11-16/bspo-base.owl
 synonymtypedef: human "synonym typically used in the context of human anatomy" NARROW
 synonymtypedef: vertebrate "synonym typically used in the context of vertebrate anatomy" NARROW
 default-namespace: spatial
@@ -11,7 +11,7 @@ property_value: http://purl.org/dc/elements/1.1/title "Biological Spatial Ontolo
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
 property_value: IAO:0000700 CARO:0000000
-property_value: owl:versionInfo "2022-10-07" xsd:string
+property_value: owl:versionInfo "2022-11-16" xsd:string
 
 [Term]
 id: BSPO:0000000
@@ -1263,9 +1263,9 @@ synonym: "median plane" EXACT []
 synonym: "sagittal section" EXACT []
 xref: FMA:11361
 intersection_of: BSPO:0000400 ! anatomical plane
+intersection_of: BSPO:0001102 BSPO:0000013 ! parallel to anterior-posterior axis
+intersection_of: BSPO:0001102 BSPO:0000016 ! parallel to dorsal-ventral axis
 intersection_of: orthogonal_to BSPO:0000017 ! left-right axis
-intersection_of: parallel_to BSPO:0000013 ! anterior-posterior axis
-intersection_of: parallel_to BSPO:0000016 ! dorsal-ventral axis
 
 [Term]
 id: BSPO:0000671
@@ -1518,6 +1518,11 @@ created_by: Jennifer Girón
 creation_date: 2021-04-21T01:01:01Z
 
 [Typedef]
+id: BSPO:0001102
+name: parallel to
+def: "x is parallel t y iff x and y are lines or planes which when extended indefinitely do not cross." [BSPO:curators]
+
+[Typedef]
 id: BSPO:0020001
 name: in central side of
 def: "X in_central_side Y <=> if Y is subdivided into left and right portions around some median divisor, all parts of X are closer to the median divisor than the outermost lateral sides." [BSPO:cjm]
@@ -1557,6 +1562,14 @@ property_value: seeAlso FBcv:0000039
 property_value: seeAlso FBql:00005863
 is_transitive: true
 inverse_of: posterior_to ! posterior to
+
+[Typedef]
+id: anteriormost_part_of
+name: anteriormost part of
+def: "x anteriormost_part_of y iff x part_of y and there is no z which is part_of y and is more anterior than x but not part_of x; x is adjacent to the anterior boundary of y" [https://orcid.org/0000-0003-2699-3066]
+xref: BSPO:0030004
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-2699-3066
+is_a: in_anterior_side_of ! in anterior side of
 
 [Typedef]
 id: approximately_perpendicular_to
@@ -1609,6 +1622,14 @@ property_value: seeAlso FBcv:0000041
 property_value: seeAlso FBql:00005865
 is_transitive: true
 inverse_of: ventral_to ! ventral to
+
+[Typedef]
+id: dorsalmost_part_of
+name: dorsalmost part of
+def: "x dorsalmost_part_of y iff x part_of y and there is no z which is part_of y and is more dorsal than x but not part_of x; x is adjacent to the dorsal boundary of y" [https://orcid.org/0000-0003-2699-3066]
+xref: BSPO:0030003
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-2699-3066
+is_a: in_dorsal_side_of ! in dorsal side of
 
 [Typedef]
 id: finishes_axis
@@ -1781,6 +1802,14 @@ is_a: in_lateral_side_of ! in lateral side of
 disjoint_from: in_right_side_of ! in right side of
 
 [Typedef]
+id: in_medial_side_of
+name: in medial side of
+def: "X medial side of Y <=> if Y is subdivided into two medial and lateral portions, X is part of the medial portion." [https://orcid.org/0000-0003-2699-3066]
+xref: BSPO:0030006
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-2699-3066
+is_a: part_of ! part of
+
+[Typedef]
 id: in_posterior_side_of
 name: in posterior side of
 def: "X posterior side of Y <=> if Y is subdivided into two anterior and posterior portions, X is part of the posterior portion." [BSPO:PATO_mtg_2009]
@@ -1833,12 +1862,28 @@ is_symmetric: true
 disjoint_from: contralateral_to ! contralateral to
 
 [Typedef]
+id: lateralmost_part_of
+name: lateralmost part of
+def: "x lateralmost_part_of y iff x part_of y and there is no z which is part_of y and is more lateral than x but not part_of x; x is adjacent to the lateral boundary of y" [https://orcid.org/0000-0003-2699-3066]
+xref: BSPO:0030005
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-2699-3066
+is_a: in_lateral_side_of ! in lateral side of
+
+[Typedef]
 id: left_of
 name: left of
 def: "Closer to the left side of the organism. Example: The dorsal fin is right of the left pectoral fin, but is left of the right eye. On the type level: X left of Y <=> every instance x of X is left of some instance y of Y, and there exists some organism o such that x part of o and y part of o." [BSPO:cjm]
 xref: BSPO:0000110
 is_transitive: true
 inverse_of: right_of ! right of
+
+[Typedef]
+id: medialmost_part_of
+name: medialmost part of
+def: "x medialmost_part_of y iff x part_of y and there is no z which is part_of y and is more medial than x but not part_of x; x is adjacent to the medial boundary of y" [https://orcid.org/0000-0003-2699-3066]
+xref: BSPO:0030007
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-2699-3066
+is_a: in_medial_side_of ! in medial side of
 
 [Typedef]
 id: obsolete_surrounded_by
@@ -1883,11 +1928,6 @@ name: overlaps
 def: "x overlaps y iff they have some part in common." [BSPO:cjm]
 comment: "(forall (x y) (iff (overlaps x y) (exists (z) (and (part of z x) (part of z y)))))" CLIF []
 xref: RO:0002131
-
-[Typedef]
-id: parallel_to
-name: parallel to
-def: "x is parallel t y iff x and y are lines or planes which when extended indefinitely do not cross." [BSPO:curators]
 
 [Typedef]
 id: part_of
