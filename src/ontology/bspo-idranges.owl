@@ -35,3 +35,7 @@ EquivalentTo: xsd:integer[> 20001 , <= 20999]
 Datatype: idrange:6
 Annotations: allocatedto: "Meghan Balk"
 EquivalentTo: xsd:integer[> 30001 , <= 30999]
+
+Datatype: idrange:7
+Annotations: allocatedto: "Jim Balhoff"
+EquivalentTo: xsd:integer[> 1099 , <= 1399]
