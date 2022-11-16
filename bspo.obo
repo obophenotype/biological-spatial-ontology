@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2022-10-07
+data-version: releases/2022-11-16
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -16,7 +16,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology for res
 property_value: http://purl.org/dc/elements/1.1/title "Biological Spatial Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
 property_value: IAO:0000700 CARO:0000000
-property_value: owl:versionInfo "2022-10-07" xsd:string
+property_value: owl:versionInfo "2022-11-16" xsd:string
 
 [Term]
 id: BFO:0000002
@@ -1311,12 +1311,12 @@ xref: FMA:11361
 is_a: BSPO:0000010 ! anatomical axis
 is_a: BSPO:0000400 ! anatomical plane
 intersection_of: BSPO:0000400 ! anatomical plane
+intersection_of: BSPO:0001102 BSPO:0000013 ! parallel to anterior-posterior axis
+intersection_of: BSPO:0001102 BSPO:0000016 ! parallel to dorsal-ventral axis
 intersection_of: orthogonal_to BSPO:0000017 ! left-right axis
-intersection_of: parallel_to BSPO:0000013 ! anterior-posterior axis
-intersection_of: parallel_to BSPO:0000016 ! dorsal-ventral axis
+relationship: BSPO:0001102 BSPO:0000013 ! parallel to anterior-posterior axis
+relationship: BSPO:0001102 BSPO:0000016 ! parallel to dorsal-ventral axis
 relationship: orthogonal_to BSPO:0000017 ! left-right axis
-relationship: parallel_to BSPO:0000013 ! anterior-posterior axis
-relationship: parallel_to BSPO:0000016 ! dorsal-ventral axis
 
 [Term]
 id: BSPO:0000671
@@ -1678,6 +1678,11 @@ created_by: Jennifer Girón
 creation_date: 2021-04-21T01:01:01Z
 
 [Typedef]
+id: BSPO:0001102
+name: parallel to
+def: "x is parallel t y iff x and y are lines or planes which when extended indefinitely do not cross." [BSPO:curators]
+
+[Typedef]
 id: BSPO:0020001
 name: in central side of
 def: "X in_central_side Y <=> if Y is subdivided into left and right portions around some median divisor, all parts of X are closer to the median divisor than the outermost lateral sides." [BSPO:cjm]
@@ -1972,12 +1977,10 @@ is_a: has_part ! has part
 [Typedef]
 id: RO:0002211
 name: regulates
-def: "process(P1) regulates process(P2) iff: P1 results in the initiation or termination of P2 OR affects the frequency of its initiation or termination OR affects the magnitude or rate of output of P2." []
+def: "p regulates q iff p is causally upstream of q, the execution of p is not constant and varies according to specific conditions, and p influences the rate or magnitude of execution of q due to an effect either on some enabler of q or some enabler of a part of q." []
 subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
 subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
 subset: http://purl.obolibrary.org/obo/valid_for_gocam
-property_value: IAO:0000114 IAO:0000125
-property_value: IAO:0000116 "We use 'regulates' here to specifically imply control. However, many colloquial usages of the term correctly correspond to the weaker relation of 'causally upstream of or within' (aka influences). Consider relabeling to make things more explicit" xsd:string
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000117 "David Hill" xsd:string
 property_value: IAO:0000117 "Tanya Berardini" xsd:string
@@ -1997,7 +2000,7 @@ transitive_over: RO:0002025 ! has effector activity
 [Typedef]
 id: RO:0002212
 name: negatively regulates
-def: "Process(P1) negatively regulates process(P2) iff: P1 terminates P2, or P1 descreases the the frequency of initiation of P2 or the magnitude or rate of output of P2." []
+def: "p negatively regulates q iff p regulates q, and p decreases the rate or magnitude of execution of q." []
 subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
 subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
 subset: http://purl.obolibrary.org/obo/valid_for_gocam
@@ -2012,7 +2015,7 @@ inverse_of: RO:0002335 ! negatively regulated by
 [Typedef]
 id: RO:0002213
 name: positively regulates
-def: "Process(P1) postively regulates process(P2) iff: P1 initiates P2, or P1 increases the the frequency of initiation of P2 or the magnitude or rate of output of P2." []
+def: "p positively regulates q iff p regulates q, and p increases the rate or magnitude of execution of q." []
 subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
 subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
 subset: http://purl.obolibrary.org/obo/valid_for_gocam
@@ -2105,6 +2108,7 @@ is_a: RO:0002500 ! causal agent in process
 [Typedef]
 id: RO:0002304
 name: causally upstream of, positive effect
+def: "p is causally upstream of, positive effect q iff p is casually upstream of q, and the execution of p is required for the execution of q." []
 comment: holds between x and y if and only if x is causally upstream of y and the progression of x increases the frequency, rate or extent of y
 subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
 subset: http://purl.obolibrary.org/obo/valid_for_gocam
@@ -2116,7 +2120,9 @@ is_a: RO:0004047 ! causally upstream of or within, positive effect
 [Typedef]
 id: RO:0002305
 name: causally upstream of, negative effect
-comment: holds between x and y if and only if x is causally upstream of y and the progression of x decreases the frequency, rate or extent of y
+def: "p is causally upstream of, negative effect q iff p is casually upstream of q, and the execution of p decreases the execution of q." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 property_value: http://purl.org/dc/terms/creator "cjm" xsd:string
 property_value: RO:0004050 RO:0002411
 is_a: RO:0002411 ! causally upstream of
@@ -2147,6 +2153,7 @@ property_value: RO:0001900 RO:0001901
 [Typedef]
 id: RO:0002327
 name: enables
+def: "c enables p iff c is capable of p and c acts to execute p." []
 subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
 property_value: IAO:0000112 "a particular instances of akt-2 enables some instance of protein kinase activity" xsd:string
 property_value: IAO:0000117 "Chris Mungall" xsd:string
@@ -2257,21 +2264,48 @@ is_a: RO:0002404 ! causally downstream of
 inverse_of: RO:0002412 ! immediately causally upstream of
 
 [Typedef]
+id: RO:0002407
+name: indirectly positively regulates
+def: "p indirectly positively regulates q iff p is indirectly causally upstream of q and p positively regulates q." []
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000118 "indirectly activates" xsd:string
+property_value: RO:0002579 RO:0002213
+holds_over_chain: RO:0002409 RO:0002409
+holds_over_chain: RO:0002629 RO:0002407
+holds_over_chain: RO:0002629 RO:0002629
+is_transitive: true
+is_a: RO:0002213 ! positively regulates
+is_a: RO:0012012 ! indirectly regulates
+transitive_over: RO:0002629 ! directly positively regulates
+
+[Typedef]
+id: RO:0002409
+name: indirectly negatively regulates
+def: "p indirectly negatively regulates q iff p is indirectly causally upstream of q and p negatively regulates q." []
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000118 "indirectly inhibits" xsd:string
+property_value: RO:0002579 RO:0002212
+holds_over_chain: RO:0002630 RO:0002409
+holds_over_chain: RO:0002630 RO:0002630
+is_transitive: true
+is_a: RO:0002212 ! negatively regulates
+is_a: RO:0012012 ! indirectly regulates
+transitive_over: RO:0002630 ! directly negatively regulates
+
+[Typedef]
 id: RO:0002410
 name: causally related to
-def: "This relation groups causal relations between material entities and causal relations between processes" []
-property_value: IAO:0000114 IAO:0000428
-property_value: IAO:0000116 "This branch of the ontology deals with causal relations between entities. It is divided into two branches: causal relations between occurrents/processes, and causal relations between material entities. We take an 'activity flow-centric approach', with the former as primary, and define causal relations between material entities in terms of causal relations between occurrents.\n\nTo define causal relations in an activity-flow type network, we make use of 3 primitives:\n\n * Temporal: how do the intervals of the two occurrents relate? \n * Is the causal relation regulatory?\n * Is the influence positive or negative\n\nThe first of these can be formalized in terms of the Allen Interval Algebra. Informally, the 3 bins we care about are 'direct', 'indirect' or overlapping. Note that all causal relations should be classified under a RO temporal relation (see the branch under 'temporally related to'). Note that all causal relations are temporal, but not all temporal relations are causal. Two occurrents can be related in time without being causally connected. We take causal influence to be primitive, elucidated as being such that has the upstream changed, some qualities of the donwstream would necessarily be modified.\n\nFor the second, we consider a relationship to be regulatory if the system in which the activities occur is capable of altering the relationship to achieve some objective. This could include changing the rate of production of a molecule.\n\nFor the third, we consider the effect of the upstream process on the output(s) of the downstream process. If the level of output is increased, or the rate of production of the output is increased, then the direction is increased. Direction can be positive, negative or neutral or capable of either direction. Two positives in succession yield a positive, two negatives in succession yield a positive, otherwise the default assumption is that the net effect is canceled and the influence is neutral.\n\nEach of these 3 primitives can be composed to yield a cross-product of different relation types." xsd:string
+def: "relation that links two events, processes, states, or objects such that one event, process, state, or object (a cause) contributes to the production of another event, process, state, or object (an effect) where the cause is partly or wholly responsible for the effect, and the effect is partly or wholly dependent on the cause." [https://en.wikipedia.org/wiki/Causality]
+property_value: IAO:0000116 "This branch of the ontology deals with causal relations between entities. It is divided into two branches: causal relations between occurrents/processes, and causal relations between material entities. We take an 'activity flow-centric approach', with the former as primary, and define causal relations between material entities in terms of causal relations between occurrents.\n\nTo define causal relations in an activity-flow type network, we make use of 3 primitives:\n\n * Temporal: how do the intervals of the two occurrents relate? \n * Is the causal relation regulatory?\n * Is the influence positive or negative?\n\nThe first of these can be formalized in terms of the Allen Interval Algebra. Informally, the 3 bins we care about are 'direct', 'indirect' or overlapping. Note that all causal relations should be classified under a RO temporal relation (see the branch under 'temporally related to'). Note that all causal relations are temporal, but not all temporal relations are causal. Two occurrents can be related in time without being causally connected. We take causal influence to be primitive, elucidated as being such that has the upstream changed, some qualities of the donwstream would necessarily be modified.\n\nFor the second, we consider a relationship to be regulatory if the system in which the activities occur is capable of altering the relationship to achieve some objective. This could include changing the rate of production of a molecule.\n\nFor the third, we consider the effect of the upstream process on the output(s) of the downstream process. If the level of output is increased, or the rate of production of the output is increased, then the direction is increased. Direction can be positive, negative or neutral or capable of either direction. Two positives in succession yield a positive, two negatives in succession yield a positive, otherwise the default assumption is that the net effect is canceled and the influence is neutral.\n\nEach of these 3 primitives can be composed to yield a cross-product of different relation types." xsd:string
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000232 "Do not use this relation directly. It is intended as a grouping for a diverse set of relations, all involving cause and effect." xsd:string
 
 [Typedef]
 id: RO:0002411
 name: causally upstream of
-def: "p is causally upstream of q if and only if p precedes q and p and q are linked in a causal chain" []
+def: "p is causally upstream of q iff p is causally related to q, the end of p precedes the end of q, and p is not an occurrent part of q." []
 subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
 subset: http://purl.obolibrary.org/obo/valid_for_gocam
-property_value: IAO:0000114 IAO:0000428
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 is_transitive: true
 is_a: BFO:0000063 ! precedes
@@ -2280,8 +2314,7 @@ is_a: RO:0002418 ! causally upstream of or within
 [Typedef]
 id: RO:0002412
 name: immediately causally upstream of
-def: "p is immediately causally upstream of q iff both (a) p immediately precedes q and (b) p is causally upstream of q. In addition, the output of p  must be an input of q." []
-property_value: IAO:0000114 IAO:0000428
+def: "p is immediately causally upstream of q iff p is causally upstream of q, and the end of p is coincident with the beginning of q." []
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: RO:0002575 RO:0002411
 is_a: RO:0002090 ! immediately precedes
@@ -2290,7 +2323,7 @@ is_a: RO:0002411 ! causally upstream of
 [Typedef]
 id: RO:0002418
 name: causally upstream of or within
-def: "p 'causally upstream or within' q iff (1) the end of p is before the end of q and (2) the execution of p exerts some causal influence over the outputs of q; i.e. if p was abolished or the outputs of p were to be modified, this would necessarily affect q." []
+def: "p is 'causally upstream or within' q iff p is causally related to q, and the end of p precedes, or is coincident with, the end of q." []
 synonym: "affects" RELATED []
 property_value: IAO:0000116 "We would like to make this disjoint with 'preceded by', but this is prohibited in OWL2" xsd:string
 property_value: IAO:0000117 "Chris Mungall" xsd:string
@@ -2445,7 +2478,7 @@ inverse_of: RO:0002608 ! process has causal agent
 [Typedef]
 id: RO:0002501
 name: causal relation between processes
-def: "p is causally related to q if and only if p or any part of p and q or any part of q are linked by a chain of events where each event pair is one of direct activation or direct inhibition. p may be upstream, downstream, part of or a container of q." []
+def: "p is causally related to q if and only if p or any part of p and q or any part of q are linked by a chain of events where each event pair is one where the execution of p influences the execution of q. p may be upstream, downstream, part of, or a container of q." []
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
 property_value: IAO:0000232 "Do not use this relation directly. It is intended as a grouping for a diverse set of relations, all involving cause and effect." xsd:string
@@ -2508,7 +2541,7 @@ is_a: RO:0002506 ! causal relation between entities
 [Typedef]
 id: RO:0002578
 name: directly regulates
-def: "Process(P1) directly regulates process(P2) iff: P1 regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  regulates the kinase activity (P2) of protein B then P1 directly regulates P2." []
+def: "p directly regulates q iff p is immediately causally upstream of q and p regulates q." []
 subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
 subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
 subset: http://purl.obolibrary.org/obo/valid_for_gocam
@@ -2576,7 +2609,7 @@ is_a: RO:0002410 ! causally related to
 [Typedef]
 id: RO:0002629
 name: directly positively regulates
-def: "Process(P1) directly postively regulates process(P2) iff: P1 positively regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding positively regulates the kinase activity (P2) of protein B then P1 directly positively regulates P2." []
+def: "p directly positively regulates q iff p is immediately causally upstream of q, and p positively regulates q." []
 subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
 subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
 subset: http://purl.obolibrary.org/obo/valid_for_gocam
@@ -2589,7 +2622,7 @@ is_a: RO:0002578 ! directly regulates
 [Typedef]
 id: RO:0002630
 name: directly negatively regulates
-def: "Process(P1) directly negatively regulates process(P2) iff: P1 negatively regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  negatively regulates the kinase activity (P2) of protein B then P1 directly negatively regulates P2." []
+def: "p directly negatively regulates q iff p is immediately causally upstream of q, and p negatively regulates q." []
 subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
 subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
 subset: http://purl.obolibrary.org/obo/valid_for_gocam
@@ -2681,6 +2714,23 @@ range: BFO:0000040 ! material entity
 is_a: RO:0002566 ! causally influences
 
 [Typedef]
+id: RO:0012011
+name: indirectly causally upstream of
+def: "p is indirectly causally upstream of q iff p is causally upstream of q and there exists some process r such that p is causally upstream of r and r is causally upstream of q." []
+is_a: RO:0002411 ! causally upstream of
+created_by: pg
+creation_date: 2022-09-26T06:07:17Z
+
+[Typedef]
+id: RO:0012012
+name: indirectly regulates
+def: "p indirectly regulates q iff p is indirectly causally upstream of q and p regulates q." []
+is_a: RO:0002211 ! regulates
+is_a: RO:0012011 ! indirectly causally upstream of
+created_by: pg
+creation_date: 2022-09-26T06:08:01Z
+
+[Typedef]
 id: RO:0017001
 name: device utilizes material
 def: "X device utilizes material Y means X and Y are material entities, and X is capable of some process P that has input Y." []
@@ -2767,6 +2817,14 @@ is_transitive: true
 inverse_of: posterior_to ! posterior to
 
 [Typedef]
+id: anteriormost_part_of
+name: anteriormost part of
+def: "x anteriormost_part_of y iff x part_of y and there is no z which is part_of y and is more anterior than x but not part_of x; x is adjacent to the anterior boundary of y" [https://orcid.org/0000-0003-2699-3066]
+xref: BSPO:0030004
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-2699-3066
+is_a: in_anterior_side_of ! in anterior side of
+
+[Typedef]
 id: approximately_perpendicular_to
 name: approximately perpendicular to
 def: "Crosses at an angle that is 90 degrees, or close to 90 degrees. In any non-linear organism, the main axes are rarely perpendicular when taken through the organism as a whole." [BSPO:cjm]
@@ -2817,6 +2875,14 @@ property_value: seeAlso FBcv:0000041
 property_value: seeAlso FBql:00005865
 is_transitive: true
 inverse_of: ventral_to ! ventral to
+
+[Typedef]
+id: dorsalmost_part_of
+name: dorsalmost part of
+def: "x dorsalmost_part_of y iff x part_of y and there is no z which is part_of y and is more dorsal than x but not part_of x; x is adjacent to the dorsal boundary of y" [https://orcid.org/0000-0003-2699-3066]
+xref: BSPO:0030003
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-2699-3066
+is_a: in_dorsal_side_of ! in dorsal side of
 
 [Typedef]
 id: finishes_axis
@@ -3003,6 +3069,14 @@ is_a: in_lateral_side_of ! in lateral side of
 disjoint_from: in_right_side_of ! in right side of
 
 [Typedef]
+id: in_medial_side_of
+name: in medial side of
+def: "X medial side of Y <=> if Y is subdivided into two medial and lateral portions, X is part of the medial portion." [https://orcid.org/0000-0003-2699-3066]
+xref: BSPO:0030006
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-2699-3066
+is_a: part_of ! part of
+
+[Typedef]
 id: in_posterior_side_of
 name: in posterior side of
 def: "X posterior side of Y <=> if Y is subdivided into two anterior and posterior portions, X is part of the posterior portion." [BSPO:PATO_mtg_2009]
@@ -3055,12 +3129,28 @@ is_symmetric: true
 disjoint_from: contralateral_to ! contralateral to
 
 [Typedef]
+id: lateralmost_part_of
+name: lateralmost part of
+def: "x lateralmost_part_of y iff x part_of y and there is no z which is part_of y and is more lateral than x but not part_of x; x is adjacent to the lateral boundary of y" [https://orcid.org/0000-0003-2699-3066]
+xref: BSPO:0030005
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-2699-3066
+is_a: in_lateral_side_of ! in lateral side of
+
+[Typedef]
 id: left_of
 name: left of
 def: "Closer to the left side of the organism. Example: The dorsal fin is right of the left pectoral fin, but is left of the right eye. On the type level: X left of Y <=> every instance x of X is left of some instance y of Y, and there exists some organism o such that x part of o and y part of o." [BSPO:cjm]
 xref: BSPO:0000110
 is_transitive: true
 inverse_of: right_of ! right of
+
+[Typedef]
+id: medialmost_part_of
+name: medialmost part of
+def: "x medialmost_part_of y iff x part_of y and there is no z which is part_of y and is more medial than x but not part_of x; x is adjacent to the medial boundary of y" [https://orcid.org/0000-0003-2699-3066]
+xref: BSPO:0030007
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-2699-3066
+is_a: in_medial_side_of ! in medial side of
 
 [Typedef]
 id: obsolete_surrounded_by
@@ -3118,11 +3208,6 @@ is_symmetric: true
 is_a: RO:0002323 ! mereotopologically related to
 transitive_over: part_of ! part of
 expand_expression_to: "http://purl.obolibrary.org/obo/BFO_0000051 some (http://purl.obolibrary.org/obo/BFO_0000050 some ?Y)" []
-
-[Typedef]
-id: parallel_to
-name: parallel to
-def: "x is parallel t y iff x and y are lines or planes which when extended indefinitely do not cross." [BSPO:curators]
 
 [Typedef]
 id: part_of

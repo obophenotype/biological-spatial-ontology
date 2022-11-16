@@ -14,7 +14,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/bspo/bspo-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/bspo/releases/2022-10-07/bspo-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/bspo/releases/2022-11-16/bspo-base.owl"/>
         <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
         <dc:description>An ontology for respresenting spatial concepts, anatomical axes, gradients, regions, planes, sides and surfaces. These concepts can be used at multiple biological scales and in a diversity of taxa, including plants, animals and fungi. The BSPO is used to provide a source of anatomical location descriptors for logically defining anatomical entity classes in anatomy ontologies.</dc:description>
         <dc:title>Biological Spatial Ontology</dc:title>
@@ -23,7 +23,7 @@
         <oboInOwl:NamespaceIdRule rdf:datatype="http://www.w3.org/2001/XMLSchema#string">* BSPO:$sequence(7,0,999999999)$</oboInOwl:NamespaceIdRule>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spatial</oboInOwl:default-namespace>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">based on FBql</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-10-07</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-11-16</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -877,6 +877,23 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BSPO_0001102 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BSPO_0001102">
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x is parallel t y iff x and y are lines or planes which when extended indefinitely do not cross.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spatial</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parallel_to</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parallel to</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BSPO_0001102"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x is parallel t y iff x and y are lines or planes which when extended indefinitely do not cross.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BSPO:curators</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/BSPO_0001106 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BSPO_0001106">
@@ -1448,6 +1465,111 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BSPO_0030003 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BSPO_0030003">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BSPO_0015101"/>
+        <obo:IAO_0000115>x dorsalmost_part_of y iff x part_of y and there is no z which is part_of y and is more dorsal than x but not part_of x; x is adjacent to the dorsal boundary of y</obo:IAO_0000115>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0003-2699-3066"/>
+        <oboInOwl:hasDbXref>BSPO:0030003</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>spatial</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>dorsalmost_part_of</oboInOwl:id>
+        <oboInOwl:shorthand>dorsalmost_part_of</oboInOwl:shorthand>
+        <rdfs:label xml:lang="en">dorsalmost part of</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BSPO_0030003"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>x dorsalmost_part_of y iff x part_of y and there is no z which is part_of y and is more dorsal than x but not part_of x; x is adjacent to the dorsal boundary of y</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0003-2699-3066</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BSPO_0030004 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BSPO_0030004">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BSPO_0000123"/>
+        <obo:IAO_0000115>x anteriormost_part_of y iff x part_of y and there is no z which is part_of y and is more anterior than x but not part_of x; x is adjacent to the anterior boundary of y</obo:IAO_0000115>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0003-2699-3066"/>
+        <oboInOwl:hasDbXref>BSPO:0030004</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>spatial</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>anteriormost_part_of</oboInOwl:id>
+        <oboInOwl:shorthand>anteriormost_part_of</oboInOwl:shorthand>
+        <rdfs:label xml:lang="en">anteriormost part of</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BSPO_0030004"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>x anteriormost_part_of y iff x part_of y and there is no z which is part_of y and is more anterior than x but not part_of x; x is adjacent to the anterior boundary of y</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0003-2699-3066</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BSPO_0030005 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BSPO_0030005">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BSPO_0000126"/>
+        <obo:IAO_0000115>x lateralmost_part_of y iff x part_of y and there is no z which is part_of y and is more lateral than x but not part_of x; x is adjacent to the lateral boundary of y</obo:IAO_0000115>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0003-2699-3066"/>
+        <oboInOwl:hasDbXref>BSPO:0030005</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>spatial</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>lateralmost_part_of</oboInOwl:id>
+        <oboInOwl:shorthand>lateralmost_part_of</oboInOwl:shorthand>
+        <rdfs:label xml:lang="en">lateralmost part of</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BSPO_0030005"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>x lateralmost_part_of y iff x part_of y and there is no z which is part_of y and is more lateral than x but not part_of x; x is adjacent to the lateral boundary of y</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0003-2699-3066</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BSPO_0030006 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BSPO_0030006">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        <obo:IAO_0000115>X medial side of Y &lt;=&gt; if Y is subdivided into two medial and lateral portions, X is part of the medial portion.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0003-2699-3066"/>
+        <oboInOwl:hasDbXref>BSPO:0030006</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>spatial</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>in_medial_side_of</oboInOwl:id>
+        <oboInOwl:shorthand>in_medial_side_of</oboInOwl:shorthand>
+        <rdfs:label xml:lang="en">in medial side of</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BSPO_0030006"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>X medial side of Y &lt;=&gt; if Y is subdivided into two medial and lateral portions, X is part of the medial portion.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0003-2699-3066</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BSPO_0030007 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BSPO_0030007">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BSPO_0030006"/>
+        <obo:IAO_0000115>x medialmost_part_of y iff x part_of y and there is no z which is part_of y and is more medial than x but not part_of x; x is adjacent to the medial boundary of y</obo:IAO_0000115>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0003-2699-3066"/>
+        <oboInOwl:hasDbXref>BSPO:0030007</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>spatial</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>medialmost_part_of</oboInOwl:id>
+        <oboInOwl:shorthand>medialmost_part_of</oboInOwl:shorthand>
+        <rdfs:label xml:lang="en">medialmost part of</rdfs:label>
+    </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BSPO_0030007"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>x medialmost_part_of y iff x part_of y and there is no z which is part_of y and is more medial than x but not part_of x; x is adjacent to the medial boundary of y</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0003-2699-3066</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/BSPO_1000000 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BSPO_1000000">
@@ -1507,23 +1629,6 @@
         <oboInOwl:shorthand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adjacent_to</oboInOwl:shorthand>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adjacent to</rdfs:label>
     </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/bspo#parallel_to -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/bspo#parallel_to">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x is parallel t y iff x and y are lines or planes which when extended indefinitely do not cross.</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spatial</oboInOwl:hasOBONamespace>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parallel_to</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parallel to</rdfs:label>
-    </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/bspo#parallel_to"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x is parallel t y iff x and y are lines or planes which when extended indefinitely do not cross.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BSPO:curators</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
@@ -5247,16 +5352,16 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BSPO_0000400"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BSPO_0015005"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BSPO_0000017"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/bspo#parallel_to"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BSPO_0001102"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BSPO_0000013"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/bspo#parallel_to"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BSPO_0001102"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BSPO_0000016"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BSPO_0015005"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BSPO_0000017"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
