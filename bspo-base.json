@@ -2988,10 +2988,10 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2022-11-16"
+            "val": "2023-05-27"
           }
         ],
-        "version": "http://purl.obolibrary.org/obo/bspo/releases/2022-11-16/bspo-base.json"
+        "version": "http://purl.obolibrary.org/obo/bspo/releases/2023-05-27/bspo-base.json"
       },
       "nodes": [
         {
@@ -5918,6 +5918,9 @@
             "xrefs": [
               {
                 "val": "BSPO:0000100"
+              },
+              {
+                "val": "NCIT:C25236"
               }
             ]
           },
@@ -6384,6 +6387,9 @@
             "xrefs": [
               {
                 "val": "BSPO:0000120"
+              },
+              {
+                "val": "NCIT:C25229"
               }
             ]
           },
@@ -6416,6 +6422,9 @@
             "xrefs": [
               {
                 "val": "BSPO:0000121"
+              },
+              {
+                "val": "NCIT:C25228"
               }
             ]
           },

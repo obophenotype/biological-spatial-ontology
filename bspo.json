@@ -370,17 +370,7 @@
         {
           "obj": "http://purl.obolibrary.org/obo/BFO_0000004",
           "pred": "is_a",
-          "sub": "http://purl.obolibrary.org/obo/CARO_0030000"
-        },
-        {
-          "obj": "http://purl.obolibrary.org/obo/BFO_0000015",
-          "pred": "is_a",
-          "sub": "http://purl.obolibrary.org/obo/GO_0003674"
-        },
-        {
-          "obj": "http://purl.obolibrary.org/obo/BFO_0000015",
-          "pred": "is_a",
-          "sub": "http://purl.obolibrary.org/obo/GO_0008150"
+          "sub": "http://purl.obolibrary.org/obo/CARO_0000000"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/BFO_0000016",
@@ -416,11 +406,6 @@
           "obj": "http://purl.obolibrary.org/obo/BFO_0000031",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/IAO_0000030"
-        },
-        {
-          "obj": "http://purl.obolibrary.org/obo/BFO_0000040",
-          "pred": "is_a",
-          "sub": "http://purl.obolibrary.org/obo/CARO_0000006"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/BFO_0000050",
@@ -2003,27 +1988,7 @@
           "sub": "http://purl.obolibrary.org/obo/BSPO_0000400"
         },
         {
-          "obj": "http://purl.obolibrary.org/obo/CARO_0030000",
-          "pred": "is_a",
-          "sub": "http://purl.obolibrary.org/obo/CARO_0000000"
-        },
-        {
           "obj": "http://purl.obolibrary.org/obo/GO_0003674",
-          "pred": "is_a",
-          "sub": "http://purl.obolibrary.org/obo/GO_0003824"
-        },
-        {
-          "obj": "http://purl.obolibrary.org/obo/GO_0003824",
-          "pred": "is_a",
-          "sub": "http://purl.obolibrary.org/obo/GO_0016740"
-        },
-        {
-          "obj": "http://purl.obolibrary.org/obo/GO_0016740",
-          "pred": "is_a",
-          "sub": "http://purl.obolibrary.org/obo/GO_0016772"
-        },
-        {
-          "obj": "http://purl.obolibrary.org/obo/GO_0016772",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/GO_0016301"
         },
@@ -3930,10 +3895,10 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2022-11-16"
+            "val": "2023-05-27"
           }
         ],
-        "version": "http://purl.obolibrary.org/obo/bspo/releases/2022-11-16/bspo.json"
+        "version": "http://purl.obolibrary.org/obo/bspo/releases/2023-05-27/bspo.json"
       },
       "nodes": [
         {
@@ -7123,6 +7088,9 @@
             "xrefs": [
               {
                 "val": "BSPO:0000100"
+              },
+              {
+                "val": "NCIT:C25236"
               }
             ]
           },
@@ -7589,6 +7557,9 @@
             "xrefs": [
               {
                 "val": "BSPO:0000120"
+              },
+              {
+                "val": "NCIT:C25229"
               }
             ]
           },
@@ -7621,6 +7592,9 @@
             "xrefs": [
               {
                 "val": "BSPO:0000121"
+              },
+              {
+                "val": "NCIT:C25228"
               }
             ]
           },
@@ -9978,13 +9952,12 @@
           "meta": {
             "basicPropertyValues": [
               {
-                "pred": "http://purl.obolibrary.org/obo/IAO_0000412",
-                "val": "http://purl.obolibrary.org/obo/caro.owl"
-              },
-              {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
                 "val": "spatial"
               }
+            ],
+            "comments": [
+              "Following BFO, material anatomical entities may have immaterial parts (the lumen of your stomach is part of your stomach).  The granularity limit follows the limits set by the Gene Ontology on the granularity limit for GO:cellular_component. Note that substances produced by an organism (sweat, feaces, urine) do not need to be part of an organism to qualify as an anatomical structure."
             ],
             "definition": {
               "val": "Biological entity that is either an individual member of a biological species or constitutes the structural organization of an individual member of a biological species.",
@@ -10001,13 +9974,12 @@
           "meta": {
             "basicPropertyValues": [
               {
-                "pred": "http://purl.obolibrary.org/obo/IAO_0000412",
-                "val": "http://purl.obolibrary.org/obo/caro.owl"
-              },
-              {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
                 "val": "spatial"
               }
+            ],
+            "comments": [
+              "Note that the definition does not say 'generated exclusively by the co-ordinated expression of the organism's own genome', so this is still valid for cases where normal morphogenesis requires the actions of a facultative symbiont, or some looser dependency such as the a requirement for the presence of gut flora for normal gut development."
             ],
             "definition": {
               "val": "Material anatomical entity that is a single connected structure with inherent 3D shape generated by coordinated expression of the organism's own genome.",
@@ -10023,10 +9995,6 @@
           "lbl": "material anatomical entity",
           "meta": {
             "basicPropertyValues": [
-              {
-                "pred": "http://purl.obolibrary.org/obo/IAO_0000412",
-                "val": "http://purl.obolibrary.org/obo/caro.owl"
-              },
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
                 "val": "spatial"
@@ -10052,10 +10020,7 @@
               }
             ],
             "definition": {
-              "val": "An anatomical entity that has no mass.",
-              "xrefs": [
-                "CC:DOS"
-              ]
+              "val": "Anatomical entity that has no mass."
             }
           },
           "type": "CLASS"
@@ -10102,10 +10067,98 @@
           "id": "http://purl.obolibrary.org/obo/GO_0003674",
           "lbl": "molecular_function",
           "meta": {
+            "comments": [
+              "Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex."
+            ],
+            "definition": {
+              "val": "A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs. These actions are described from two distinct but related perspectives: (1) biochemical activity, and (2) role as a component in a larger system/process.",
+              "xrefs": [
+                "GOC:pdt"
+              ]
+            },
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "molecular function"
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/GO_0008150",
+          "lbl": "biological_process",
+          "meta": {
             "basicPropertyValues": [
               {
-                "pred": "http://purl.obolibrary.org/obo/IAO_0000589",
-                "val": "molecular process"
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "jl"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#creation_date",
+                "val": "2012-09-19T15:05:24Z"
+              }
+            ],
+            "comments": [
+              "Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this."
+            ],
+            "definition": {
+              "val": "A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.",
+              "xrefs": [
+                "GOC:pdt"
+              ]
+            },
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "biological process"
+              },
+              {
+                "pred": "hasExactSynonym",
+                "val": "physiological process"
+              },
+              {
+                "pred": "hasRelatedSynonym",
+                "val": "single organism process"
+              },
+              {
+                "pred": "hasRelatedSynonym",
+                "val": "single-organism process"
+              }
+            ],
+            "xrefs": [
+              {
+                "val": "Wikipedia:Biological_process"
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/GO_0016301",
+          "lbl": "kinase activity",
+          "meta": {
+            "comments": [
+              "Note that this term encompasses all activities that transfer a single phosphate group; although ATP is by far the most common phosphate donor, reactions using other phosphate donors are included in this term."
+            ],
+            "definition": {
+              "val": "Catalysis of the transfer of a phosphate group, usually from ATP, to a substrate molecule.",
+              "xrefs": [
+                "ISBN:0198506732"
+              ]
+            },
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "phosphokinase activity"
+              }
+            ],
+            "xrefs": [
+              {
+                "val": "Reactome:R-HSA-6788855"
+              },
+              {
+                "val": "Reactome:R-HSA-6788867"
               }
             ]
           },
@@ -10710,12 +10763,12 @@
           "id": "http://purl.obolibrary.org/obo/PATO_0000001",
           "lbl": "quality",
           "meta": {
-            "basicPropertyValues": [
-              {
-                "pred": "http://purl.obolibrary.org/obo/IAO_0000589",
-                "val": "quality (PATO)"
-              }
-            ]
+            "definition": {
+              "val": "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities",
+              "xrefs": [
+                "PATOC:GVG"
+              ]
+            }
           },
           "type": "CLASS"
         },
@@ -11304,6 +11357,10 @@
                 "val": "David Osumi-Sutherland"
               },
               {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
+                "val": "https://orcid.org/0000-0002-7073-9172"
+              },
+              {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000118",
                 "val": "ends_at_start_of"
               },
@@ -11388,7 +11445,7 @@
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000119",
@@ -11462,15 +11519,15 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0001-7476-6306"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "David Hill"
+                "val": "https://orcid.org/0000-0002-3837-8864"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Tanya Berardini"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000119",
@@ -11511,7 +11568,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000119",
@@ -11544,7 +11601,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000119",
@@ -11585,7 +11642,7 @@
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000118",
@@ -11620,7 +11677,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000118",
@@ -11668,7 +11725,7 @@
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/RO_0001900",
@@ -11710,7 +11767,7 @@
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000119",
@@ -11745,7 +11802,7 @@
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000118",
@@ -11827,7 +11884,7 @@
               },
               {
                 "pred": "http://purl.org/dc/terms/creator",
-                "val": "cjm"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               }
             ],
             "comments": [
@@ -11854,7 +11911,7 @@
               },
               {
                 "pred": "http://purl.org/dc/terms/creator",
-                "val": "cjm"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               }
             ],
             "definition": {
@@ -11878,7 +11935,7 @@
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000118",
@@ -11910,7 +11967,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000232",
@@ -11938,7 +11995,7 @@
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000118",
@@ -11981,7 +12038,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000232",
@@ -12001,7 +12058,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000118",
@@ -12021,7 +12078,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000118",
@@ -12049,7 +12106,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               }
             ],
             "definition": {
@@ -12068,7 +12125,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000589",
@@ -12091,7 +12148,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               }
             ],
             "definition": {
@@ -12110,7 +12167,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               }
             ],
             "definition": {
@@ -12129,7 +12186,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               }
             ],
             "definition": {
@@ -12153,7 +12210,7 @@
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               }
             ],
             "definition": {
@@ -12173,7 +12230,7 @@
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               }
             ]
           },
@@ -12186,7 +12243,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000118",
@@ -12210,7 +12267,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000118",
@@ -12238,7 +12295,7 @@
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000232",
@@ -12261,7 +12318,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               }
             ],
             "definition": {
@@ -12281,7 +12338,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/RO_0002575",
@@ -12305,7 +12362,7 @@
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000118",
@@ -12331,7 +12388,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000119",
@@ -12354,7 +12411,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               }
             ],
             "definition": {
@@ -12370,7 +12427,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/RO_0004049",
@@ -12390,7 +12447,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/RO_0004050",
@@ -12414,7 +12471,7 @@
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000118",
@@ -12442,7 +12499,7 @@
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000232",
@@ -12479,7 +12536,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000118",
@@ -12515,7 +12572,7 @@
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000118",
@@ -12532,11 +12589,11 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Vasundra Touré"
+                "val": "https://orcid.org/0000-0003-4639-4431"
               }
             ],
             "definition": {
@@ -12558,11 +12615,11 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Vasundra Touré"
+                "val": "https://orcid.org/0000-0003-4639-4431"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000118",
@@ -12588,11 +12645,11 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Vasundra Touré"
+                "val": "https://orcid.org/0000-0003-4639-4431"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000118",
@@ -12618,7 +12675,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000232",
@@ -12635,7 +12692,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               }
             ]
           },
@@ -12664,7 +12721,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000119",
@@ -12688,7 +12745,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
@@ -12709,7 +12766,7 @@
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000119",
@@ -12730,7 +12787,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000119",
@@ -12751,7 +12808,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
@@ -12772,7 +12829,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               }
             ]
           },
@@ -12785,11 +12842,11 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Vasundra Touré"
+                "val": "https://orcid.org/0000-0003-4639-4431"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000119",
@@ -12813,7 +12870,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000119",
@@ -12870,7 +12927,7 @@
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               }
             ],
             "definition": {
@@ -12890,7 +12947,7 @@
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Chris Mungall"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000119",
@@ -13040,7 +13097,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
-                "val": "cjm"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#creation_date",
@@ -13064,7 +13121,7 @@
               },
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
-                "val": "cjm"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#creation_date",
@@ -13092,7 +13149,7 @@
               },
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
-                "val": "cjm"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#creation_date",
@@ -13116,7 +13173,7 @@
               },
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
-                "val": "cjm"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#creation_date",
@@ -13147,7 +13204,7 @@
               },
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
-                "val": "cjm"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#creation_date",
@@ -13178,7 +13235,7 @@
               },
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
-                "val": "cjm"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#creation_date",
@@ -13199,7 +13256,7 @@
               },
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
-                "val": "cjm"
+                "val": "https://orcid.org/0000-0002-6601-2165"
               },
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#creation_date",
@@ -13216,7 +13273,7 @@
             "basicPropertyValues": [
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
-                "val": "Vasundra Touré"
+                "val": "https://orcid.org/0000-0003-4639-4431"
               }
             ],
             "definition": {
@@ -13497,36 +13554,6 @@
         {
           "id": "http://purl.obolibrary.org/obo/BFO_0000141",
           "lbl": "immaterial entity",
-          "type": "CLASS"
-        },
-        {
-          "id": "http://purl.obolibrary.org/obo/CARO_0030000",
-          "lbl": "biological entity",
-          "type": "CLASS"
-        },
-        {
-          "id": "http://purl.obolibrary.org/obo/GO_0003824",
-          "lbl": "catalytic activity",
-          "type": "CLASS"
-        },
-        {
-          "id": "http://purl.obolibrary.org/obo/GO_0008150",
-          "lbl": "biological_process",
-          "type": "CLASS"
-        },
-        {
-          "id": "http://purl.obolibrary.org/obo/GO_0016301",
-          "lbl": "kinase activity",
-          "type": "CLASS"
-        },
-        {
-          "id": "http://purl.obolibrary.org/obo/GO_0016740",
-          "lbl": "transferase activity",
-          "type": "CLASS"
-        },
-        {
-          "id": "http://purl.obolibrary.org/obo/GO_0016772",
-          "lbl": "transferase activity, transferring phosphorus-containing groups",
           "type": "CLASS"
         },
         {

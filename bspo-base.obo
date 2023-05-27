@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: bspo/releases/2022-11-16/bspo-base.owl
+data-version: bspo/releases/2023-05-27/bspo-base.owl
 synonymtypedef: human "synonym typically used in the context of human anatomy" NARROW
 synonymtypedef: vertebrate "synonym typically used in the context of vertebrate anatomy" NARROW
 default-namespace: spatial
@@ -11,7 +11,7 @@ property_value: http://purl.org/dc/elements/1.1/title "Biological Spatial Ontolo
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
 property_value: IAO:0000700 CARO:0000000
-property_value: owl:versionInfo "2022-11-16" xsd:string
+property_value: owl:versionInfo "2023-05-27" xsd:string
 
 [Term]
 id: BSPO:0000000
@@ -1797,6 +1797,7 @@ id: in_left_side_of
 name: in left side of
 def: "X in left side of Y <=> if Y is subdivided into two left and right portions, X is part of the left portion." [BSPO:PATO_mtg_2009]
 xref: BSPO:0000120
+xref: NCIT:C25229
 property_value: seeAlso https://github.com/obophenotype/uberon/wiki/Modeling-paired-structures-Design-Pattern xsd:anyURI
 is_a: in_lateral_side_of ! in lateral side of
 disjoint_from: in_right_side_of ! in right side of
@@ -1828,6 +1829,7 @@ id: in_right_side_of
 name: in right side of
 def: "X in right side of Y <=> if Y is subdivided into two left and right portions, X is part of the right portion." [BSPO:PATO_mtg_2009]
 xref: BSPO:0000121
+xref: NCIT:C25228
 property_value: seeAlso https://github.com/obophenotype/uberon/wiki/Modeling-paired-structures-Design-Pattern xsd:anyURI
 is_a: in_lateral_side_of ! in lateral side of
 
@@ -1989,6 +1991,7 @@ name: proximal to
 def: "x proximal to y iff x is closer to the point of attachment with the body than y." [BSPO:cjm]
 comment: The elbow is proximal to the hand, but distal to the shoulder.
 xref: BSPO:0000100
+xref: NCIT:C25236
 property_value: seeAlso FBcv:0000047
 property_value: seeAlso FBql:00005868
 is_transitive: true
